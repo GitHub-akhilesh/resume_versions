@@ -1,0 +1,115 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.45in]{geometry}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+\usepackage{enumitem}
+
+\definecolor{primaryblue}{HTML}{1a1a1a}
+\definecolor{darkgray}{HTML}{333333}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primaryblue,
+    urlcolor=primaryblue,
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\newcommand{\resumesection}[1]{%
+  \vspace{6pt}%
+  {\fontfamily{phv}\selectfont\textbf{\large\MakeUppercase{#1}}}%
+  \vspace{2pt}%
+  \hrule%
+  \vspace{4pt}%
+}
+
+\setlist[itemize]{leftmargin=*,noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,label=\textbullet}
+
+\begin{center}
+    {\fontfamily{phv}\selectfont\textbf{\Huge AKHILESH KUMAR MISHRA}} \\
+    \vspace{3pt}
+    {\fontfamily{phv}\selectfont\large\textbf{\textcolor{primaryblue}{Software Engineer / Full Stack Engineer}}} \\
+    \vspace{4pt}
+    {\small
+    \textcolor{primaryblue}{\faPhone*}~+91 88580 45785 \quad | \quad 
+    \href{mailto:makhileshkumar1@gmail.com}{\textcolor{primaryblue}{\faEnvelope}~makhileshkumar1@gmail.com} \quad | \quad 
+    \href{https://linkedin.com/in/akhilesh-kumar-mishra-a46030231}{\textcolor{primaryblue}{\faLinkedin}~linkedin.com/in/akhilesh-kumar-mishra} \quad | \quad 
+    \href{https://github.com/GitHub-akhilesh}{\textcolor{primaryblue}{\faGithub}~github.com/GitHub-akhilesh}
+    }
+\end{center}
+\vspace{-10pt}
+
+\resumesection{Summary}
+Versatile Software Development Engineer with extensive experience building secure, scalable full-stack web applications and microservice architectures across multiple technology stacks (MERN, Java Full Stack, Python Full Stack). Expert in system design, API development, and database engineering. Proven success in re-architecting monolithic services into containerized microservices, building real-time telemetry pipelines via WebSockets, and optimizing transaction-heavy ledger platforms. Led development teams and streamlined DevOps workflows using Docker and CI/CD.
+
+\resumesection{Experience}
+{\textbf{Software Development Engineer}} \\
+{\textbf{\textcolor{primaryblue}{CSC e-Governance Services India Ltd. (MeitY, Government of India)}}} \\
+{\footnotesize\textcolor{primaryblue}{\faCalendar*}~12/2023 -- Present \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~New Delhi, India}
+\begin{itemize}
+    \item Re-architected monolithic backend services to distributed microservices using \textbf{Spring Boot}, \textbf{FastAPI}, and \textbf{Node.js}, improving performance and reliability for 20 lakh+ users.
+    \item Architected transactional endpoints for AEPS, MATM, and UPI platforms, managing 5 lakh+ daily transactions with an $\sim$80\% success rate.
+    \item Secured backend APIs utilizing \textbf{JWT Authentication} and \textbf{RBAC}, integrating device binding, rate limiting, and OTP security features.
+    \item Designed and optimized databases using \textbf{MySQL}, \textbf{PostgreSQL}, and \textbf{MongoDB}, utilizing sharding, indexing, and query tuning to process transaction logs.
+    \item Established asynchronous task processing and event-driven communication using \textbf{Kafka}, \textbf{Celery}, and \textbf{Redis} cache.
+    \item Integrated telemetry tracking and transaction monitoring dashboards using \textbf{React.js}, \textbf{Redux Toolkit}, and \textbf{WebSockets}.
+\end{itemize}
+
+\vspace{4pt}
+{\textbf{Freelance Software Engineer}} \\
+{\textbf{\textcolor{primaryblue}{Workforce Telemetry \& Operations}}} \\
+{\footnotesize\textcolor{primaryblue}{\faCalendar*}~06/2023 -- 11/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Remote, India}
+\begin{itemize}
+    \item Designed and developed a real-time workforce telemetry and geofencing system using a \textbf{React} frontend and a \textbf{FastAPI / Node.js} backend.
+    \item Built an interactive live tracking dashboard in \textbf{React} using Ant Design (antd) to display real-time coordinates, speed, and alerts via WebSockets.
+    \item Developed an asynchronous location ingestion pipeline utilizing \textbf{FastAPI}, \textbf{Celery}, and \textbf{Redis} to capture GPS coordinates.
+\end{itemize}
+
+\resumesection{Projects}
+{\textbf{MERN FinTech \& E-commerce Platform}} \\
+{\small A collection of full-stack web applications featuring secure user authentication, interactive dashboards, and REST APIs built with React, Node, Express, and MongoDB.} \\
+{\footnotesize\textbf{STACK:} React.js / Node.js / Express.js / MongoDB / JWT / Redux}
+
+\vspace{4pt}
+{\textbf{Facial Recognition Attendance System}} \\
+{\small Engineered an automated student attendance tracking application integrating Python face detection algorithms (OpenCV/LBPH) with MySQL database.} \\
+{\footnotesize\textbf{STACK:} Python / OpenCV / Tkinter / MySQL / Pandas}
+
+\vspace{4pt}
+{\textbf{Himalayan Edges Website Development}} \\
+{\small Created an e-commerce platform using React.js and Django with PWA capabilities, hosted on AWS, increasing page speed by 30\%.} \\
+{\footnotesize\textbf{STACK:} React.js / Django / SQLite / AWS / PWA}
+
+\vspace{4pt}
+{\textbf{Traveling Portal \& Landing Page}} \\
+{\small A fully responsive, modern front-end landing page for a travel agency designed with HTML, CSS, and Bootstrap layouts.} \\
+{\footnotesize\textbf{STACK:} HTML5 / CSS3 / JavaScript / Bootstrap}
+
+\resumesection{Skills}
+\textbf{Languages:} Python, Java, JavaScript (ES6+), TypeScript, SQL, C++, HTML5, CSS3 \\
+\textbf{Frameworks:} Spring Boot, Django, FastAPI, Node.js, Express.js, React.js, Next.js, Redux \\
+\textbf{Data \& Messaging:} MySQL, PostgreSQL, MongoDB, Redis, Apache Kafka, Mongoose, Hibernate, JPA \\
+\textbf{DevOps \& Tools:} Docker, Git, GitHub Actions, CI/CD, Postman, Linux, OpenCV, Pandas, Maven
+
+\resumesection{Education}
+{\textbf{B.Tech.}} \\
+{\textbf{\textcolor{primaryblue}{Kanpur Institute of Technology}}} \\
+{\footnotesize\textcolor{primaryblue}{\faCalendar*}~07/2019 -- 05/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Kanpur, UP}
+
+\resumesection{Certifications}
+GeeksforGeeks MERN Stack Certification \quad | \quad Coding Ninjas DBMS Certification \\
+Coding Ninjas DSA Certification \quad | \quad IIT Kanpur Prutor Cyber Security Certification
+
+\resumesection{Achievements}
+\begin{itemize}
+    \item Graduated with First Class Honors, maintaining top academic rank.
+    \item Earned a 4-Star Gold Badge in SQL on HackerRank.
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,115 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.45in]{geometry}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+\usepackage{enumitem}
+
+\definecolor{primaryblue}{HTML}{1e293b}
+\definecolor{darkgray}{HTML}{333333}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primaryblue,
+    urlcolor=primaryblue,
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\newcommand{\resumesection}[1]{%
+  \vspace{6pt}%
+  {\fontfamily{phv}\selectfont\textbf{\large\MakeUppercase{#1}}}%
+  \vspace{2pt}%
+  \hrule%
+  \vspace{4pt}%
+}
+
+\setlist[itemize]{leftmargin=*,noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,label=\textbullet}
+
+\begin{center}
+    {\fontfamily{phv}\selectfont\textbf{\Huge AKHILESH KUMAR MISHRA}} \\
+    \vspace{3pt}
+    {\fontfamily{phv}\selectfont\large\textbf{\textcolor{primaryblue}{Python Full Stack Developer}}} \\
+    \vspace{4pt}
+    {\small
+    \textcolor{primaryblue}{\faPhone*}~+91 88580 45785 \quad | \quad 
+    \href{mailto:makhileshkumar1@gmail.com}{\textcolor{primaryblue}{\faEnvelope}~makhileshkumar1@gmail.com} \quad | \quad 
+    \href{https://linkedin.com/in/akhilesh-kumar-mishra-a46030231}{\textcolor{primaryblue}{\faLinkedin}~linkedin.com/in/akhilesh-kumar-mishra} \quad | \quad 
+    \href{https://github.com/GitHub-akhilesh}{\textcolor{primaryblue}{\faGithub}~github.com/GitHub-akhilesh}
+    }
+\end{center}
+\vspace{-10pt}
+
+\resumesection{Summary}
+Software Development Engineer specializing in Python Full Stack development, with a track record of building secure, scalable backend architectures and web systems. Expert in Python, Django, Django REST Framework (DRF), FastAPI, Celery, and database design in PostgreSQL/MySQL. Proven experience in migrating monoliths to async microservices, designing event-driven pipelines using Celery/Redis, and building real-time dashboards via WebSockets. Optimizes database queries and scales backend infrastructures using Docker.
+
+\resumesection{Experience}
+{\textbf{Software Development Engineer}} \\
+{\textbf{\textcolor{primaryblue}{CSC e-Governance Services India Ltd. (MeitY, Government of India)}}} \\
+{\footnotesize\textcolor{primaryblue}{\faCalendar*}~12/2023 -- Present \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~New Delhi, India}
+\begin{itemize}
+    \item Re-architected monolithic web services into scalable, asynchronous \textbf{FastAPI} and \textbf{Django} microservices, improving reliability for 20 lakh+ users.
+    \item Designed and scaled transaction orchestration services for AEPS, MATM, and VATM platforms using Django REST Framework, handling 5 lakh+ daily transactions.
+    \item Implemented secure API authentication using \textbf{JWT} and role-based access control (\textbf{RBAC}), including OTP verification.
+    \item Developed an asynchronous task queuing pipeline using \textbf{Celery} and \textbf{Redis} to handle high-volume wallet ledger records.
+    \item Tuned \textbf{PostgreSQL} and \textbf{MySQL} database schemas using indexing and query partitioning, lowering transaction query latency.
+    \item Constructed real-time transaction tracking APIs utilizing \textbf{FastAPI WebSockets} to stream live status updates.
+\end{itemize}
+
+\vspace{4pt}
+{\textbf{Freelance Software Engineer}} \\
+{\textbf{\textcolor{primaryblue}{Workforce Telemetry \& Operations}}} \\
+{\footnotesize\textcolor{primaryblue}{\faCalendar*}~06/2023 -- 11/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Remote, India}
+\begin{itemize}
+    \item Developed a real-time workforce telemetry and geofencing system utilizing \textbf{FastAPI}, \textbf{SQLAlchemy} (asyncio), and \textbf{React.js}.
+    \item Built an interactive live telemetry dashboard in \textbf{React} using Ant Design (antd) to visualize coordinates, speed, and geofences.
+    \item Implemented a high-performance, asynchronous ingestion API to capture GPS locations (\texttt{/api/v1/tracking/ingest}) using \textbf{FastAPI}.
+\end{itemize}
+
+\resumesection{Projects}
+{\textbf{Facial Recognition Attendance Dashboard}} \\
+{\small Developed an automated student attendance tracking application in Python using OpenCV (Haarcascade \& LBPH) and MySQL, with custom Excel reports via Pandas.} \\
+{\footnotesize\textbf{STACK:} Python / OpenCV / Tkinter / MySQL / Pandas}
+
+\vspace{4pt}
+{\textbf{Himalayan Edges Website Development}} \\
+{\small Created an e-commerce platform using Django and React.js with PWA features, hosted on AWS, boosting page speeds and usage by 30\%.} \\
+{\footnotesize\textbf{STACK:} Python / Django / React.js / SQLite / AWS / PWA}
+
+\vspace{4pt}
+{\textbf{Persistent Task Management Dashboard}} \\
+{\small Programmed a desktop utility for task planning, category filtering, and JSON data persistence, featuring clean MVC architecture patterns.} \\
+{\footnotesize\textbf{STACK:} Python / Tkinter / JSON / MVC Patterns}
+
+\vspace{4pt}
+{\textbf{Traveling Portal \& Landing Page}} \\
+{\small A fully responsive, modern front-end landing page for a travel agency designed with HTML, CSS, and Bootstrap layouts.} \\
+{\footnotesize\textbf{STACK:} HTML5 / CSS3 / JavaScript / Bootstrap}
+
+\resumesection{Skills}
+\textbf{Backend:} Python, Django, FastAPI, Celery, Django REST Framework, SQLAlchemy (asyncio), Pandas \\
+\textbf{Frontend \& APIs:} React.js, JavaScript, HTML5, CSS3, Bootstrap, RESTful APIs, WebSockets, JWT Security \\
+\textbf{Data \& Messaging:} PostgreSQL, MySQL, SQLite, Redis cache/broker, database schema design, query indexing \\
+\textbf{Tools \& Cloud:} Git, GitHub, Docker, Postman, Linux environments, OpenCV, LBPH face recognition
+
+\resumesection{Education}
+{\textbf{B.Tech.}} \\
+{\textbf{\textcolor{primaryblue}{Kanpur Institute of Technology}}} \\
+{\footnotesize\textcolor{primaryblue}{\faCalendar*}~07/2019 -- 05/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Kanpur, UP}
+
+\resumesection{Certifications}
+GeeksforGeeks MERN Stack Certification \quad | \quad Coding Ninjas DBMS Certification \\
+Coding Ninjas DSA Certification \quad | \quad IIT Kanpur Prutor Cyber Security Certification
+
+\resumesection{Achievements}
+\begin{itemize}
+    \item Graduated with First Class Honors, maintaining top academic rank.
+    \item Earned a 4-Star Gold Badge in SQL on HackerRank.
+\end{itemize}
+
+\end{document}
