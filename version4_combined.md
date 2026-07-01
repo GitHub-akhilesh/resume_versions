@@ -19,7 +19,7 @@ Versatile Software Development Engineer with extensive experience building secur
 * Re-architected monolithic backend services to distributed microservices using **Spring Boot**, **FastAPI**, and **Node.js**, improving performance and reliability for 20 lakh+ users.
 * Architected transactional endpoints for AEPS, MATM, and UPI platforms, managing 5 lakh+ daily transactions with an ~80% success rate.
 * Secured backend APIs utilizing **JWT Authentication** and **RBAC**, integrating device binding and OTP security, reducing unauthorized access attempts by 99.9%.
-* Designed and optimized databases using **MySQL**, **PostgreSQL**, and **MongoDB**, utilizing sharding, indexing, and query tuning to process transaction logs.
+* Architected and optimized databases using **MySQL**, **PostgreSQL**, and **MongoDB**, utilizing sharding, indexing, and query tuning to process transaction logs.
 * Established event-driven communication using **Kafka**, **Celery**, and **Redis** cache, boosting message processing throughput by 35%.
 * Integrated transaction monitoring dashboards using **React.js**, **Redux**, and **WebSockets**, enabling real-time status updates under 500ms.
 * Set up centralized logging and performance monitoring using **ELK Stack**, **Prometheus**, and **Grafana**.
@@ -30,7 +30,7 @@ Versatile Software Development Engineer with extensive experience building secur
 **Workforce Telemetry & Geofencing System**
 *06/2023 – 11/2023*
 *Real-Time Telemetry & Operations Platform*
-* Designed and developed a real-time workforce telemetry platform using React and FastAPI backend, serving **1,000+ active field agents**.
+* Created and developed a real-time workforce telemetry platform using React and FastAPI backend, serving **1,000+ active field agents**.
 * Built an interactive live tracking dashboard in **React** using Ant Design (antd) to display real-time coordinates, speed, and alerts.
 * Developed an asynchronous location ingestion pipeline utilizing **FastAPI**, **Celery**, and **Redis** to capture coordinates, speed, and GPS accuracy parameters.
 * Enforced secure role-based access control (RBAC) and authorization APIs using **JWT** and secure middleware routers.
@@ -46,7 +46,7 @@ Versatile Software Development Engineer with extensive experience building secur
 ### Automatic Attendance Through Face Detection
 *05/2024 – 07/2024*
 * Developed a student attendance tracking application in **Python** using **OpenCV** (Haarcascade & LBPH) and **MySQL** database.
-* Designed an interactive desktop GUI using **Tkinter** for registering student profiles, capturing training images, and logging attendance.
+* Developed an interactive desktop GUI using **Tkinter** for registering student profiles, capturing training images, and logging attendance.
 * Programmed data analysis and exporting scripts using **Pandas** to compile Excel sheets, cutting manual attendance work by 70%.
 
 ## 5. Education
@@ -132,7 +132,7 @@ Versatile Software Development Engineer with extensive experience building secur
     \item Re-architected monolithic backend services to distributed microservices using \textbf{Spring Boot}, \textbf{FastAPI}, and \textbf{Node.js}, improving performance and reliability for 20 lakh+ users.
     \item Architected transactional endpoints for AEPS, MATM, and UPI platforms, managing 5 lakh+ daily transactions with an $\sim$80\% success rate.
     \item Secured backend APIs utilizing \textbf{JWT Authentication} and \textbf{RBAC}, integrating device binding and OTP security, reducing unauthorized access attempts by 99.9\%.
-    \item Designed and optimized databases using \textbf{MySQL}, \textbf{PostgreSQL}, and \textbf{MongoDB}, utilizing sharding and query tuning to reduce read/write latency by 45\%.
+    \item Architected and optimized databases using \textbf{MySQL}, \textbf{PostgreSQL}, and \textbf{MongoDB}, utilizing sharding and query tuning to reduce read/write latency by 45\%.
     \item Established event-driven communication using \textbf{Kafka}, \textbf{Celery}, and \textbf{Redis} cache, boosting message processing throughput by 35\%.
     \item Integrated transaction monitoring dashboards using \textbf{React.js}, \textbf{Redux}, and \textbf{WebSockets}, enabling real-time status updates under 500ms.
 \end{itemize}
@@ -142,7 +142,7 @@ Versatile Software Development Engineer with extensive experience building secur
 {\textbf{\textcolor{primaryblue}{Workforce Telemetry \& Operations}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~06/2023 -- 11/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Remote, India}
 \begin{itemize}
-    \item Designed and developed a real-time workforce telemetry platform using React and FastAPI backend, serving 1,000+ active field agents.
+    \item Created and developed a real-time workforce telemetry platform using React and FastAPI backend, serving 1,000+ active field agents.
     \item Built an interactive live map dashboard in \textbf{React} using Ant Design to display speeds and alerts, reducing UI load times by 30\%.
     \item Developed an asynchronous location ingestion pipeline utilizing \textbf{FastAPI}, \textbf{Celery}, and \textbf{Redis}, processing 10,000+ concurrent GPS pings with 99.9\% uptime.
 \end{itemize}
@@ -164,7 +164,7 @@ Versatile Software Development Engineer with extensive experience building secur
 
 \vspace{4pt}
 {\textbf{Traveling Portal \& Landing Page}} \\
-{\small A fully responsive, modern front-end landing page for a travel agency designed with HTML, CSS, and Bootstrap layouts.} \\
+{\small A fully responsive, modern front-end landing page for a travel agency built with HTML, CSS, and Bootstrap layouts.} \\
 {\footnotesize\textbf{STACK:} HTML5 / CSS3 / JavaScript / Bootstrap}
 
 \resumesection{Skills}

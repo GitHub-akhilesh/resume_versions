@@ -28,7 +28,7 @@ Software Development Engineer specializing in Java Full Stack development, with 
 **Workforce Telemetry & Geofencing System**
 *06/2023 – 11/2023*
 *Real-Time Telemetry & Operations Platform*
-* Designed and developed a real-time workforce tracking application utilizing **Java**, **Spring Boot**, and **React.js**, serving **1,000+ active field agents**.
+* Created and developed a real-time workforce tracking application utilizing **Java**, **Spring Boot**, and **React.js**, serving **1,000+ active field agents**.
 * Built a responsive map-based dashboard in **React.js** using **Ant Design** (antd), connecting via WebSockets to a Spring Boot backend for live coordinates.
 * Implemented a secure backend API in Spring Boot using **Spring Security** and **JWT** to manage role-based dashboard access control (Admin, Supervisor, Employee).
 * Utilized **Hibernate** and **Spring Data JPA** to manage and query location tracking logs, geofence violations, and route history.
@@ -139,14 +139,14 @@ Software Development Engineer specializing in Java Full Stack development, with 
 {\textbf{\textcolor{primaryblue}{Workforce Telemetry \& Operations}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~06/2023 -- 11/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Remote, India}
 \begin{itemize}
-    \item Designed and developed a real-time workforce tracking application utilizing \textbf{Java}, \textbf{Spring Boot}, and \textbf{React.js}.
+    \item Created and developed a real-time workforce tracking application utilizing \textbf{Java}, \textbf{Spring Boot}, and \textbf{React.js}.
     \item Built a responsive map-based dashboard in \textbf{React.js} using \textbf{Ant Design} (antd), connecting via WebSockets to a Spring Boot backend.
     \item Implemented a secure backend API in Spring Boot using \textbf{Spring Security} and \textbf{JWT} to manage role-based dashboard access control.
 \end{itemize}
 
 \resumesection{Projects}
 {\textbf{Java Authentication \& Secure Login Portal}} \\
-{\small Designed a secure backend service featuring user registration, password hashing, JWT token generation, and secure routes mapping.} \\
+{\small Engineered a secure backend service featuring user registration, password hashing, JWT token generation, and secure routes mapping.} \\
 {\footnotesize\textbf{STACK:} Java / Spring Boot / Spring Security / JWT / Hibernate / MySQL}
 
 \vspace{4pt}
@@ -161,7 +161,7 @@ Software Development Engineer specializing in Java Full Stack development, with 
 
 \vspace{4pt}
 {\textbf{Traveling Portal \& Landing Page}} \\
-{\small A fully responsive, modern front-end landing page for a travel agency designed with HTML, CSS, and Bootstrap layouts.} \\
+{\small A fully responsive, modern front-end landing page for a travel agency built with HTML, CSS, and Bootstrap layouts.} \\
 {\footnotesize\textbf{STACK:} HTML5 / CSS3 / JavaScript / Bootstrap}
 
 \resumesection{Skills}

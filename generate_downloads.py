@@ -1030,7 +1030,7 @@ def generate_pdfs():
                 path=output_path,
                 format="Letter",
                 print_background=True,
-                margin={"top": "0.45in", "bottom": "0.45in", "left": "0.45in", "right": "0.45in"}
+                margin={"top": "0", "bottom": "0", "left": "0", "right": "0"}
             )
             print(f"Generated PDF: {output_path}")
             
