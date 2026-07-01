@@ -466,6 +466,51 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
+        /* Responsive scaling wrapper */
+        .resume-wrapper {
+            display: none;
+            width: 100%;
+            justify-content: center;
+            align-items: flex-start;
+            overflow: visible;
+        }
+        .resume-wrapper.active {
+            display: flex;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column !important;
+                overflow: auto !important;
+                height: auto !important;
+            }
+            .sidebar {
+                position: fixed !important;
+                top: 0;
+                left: 0;
+                width: 280px !important;
+                height: 100vh !important;
+                z-index: 1000 !important;
+                box-shadow: 5px 0 25px rgba(0,0,0,0.3) !important;
+            }
+            .preview-area {
+                padding: 16px !important;
+                padding-top: 80px !important;
+                width: 100% !important;
+                overflow: visible !important;
+            }
+            .action-bar {
+                width: 100% !important;
+                flex-direction: column !important;
+                gap: 8px !important;
+                margin-bottom: 24px !important;
+            }
+            .action-btn {
+                width: 100% !important;
+                justify-content: center !important;
+            }
+        }
+
         /* PRINT MEDIA QUERY FOR PDF EXPORT */
         @media print {
             body {
@@ -4513,19 +4558,23 @@ Coding Ninjas DSA Certification \quad | \quad IIT Kanpur Prutor Cyber Security C
             document.getElementById('btn-style-' + styleId).classList.add('active');
             
             // Show only the correct sheet matching (currentVersion + '-' + currentStyle)
-            const sheets = document.querySelectorAll('.resume-sheet');
-            sheets.forEach(sheet => {
-                sheet.classList.remove('active');
-                sheet.style.display = 'none';
+            const wrappers = document.querySelectorAll('.resume-wrapper');
+            wrappers.forEach(wrap => {
+                wrap.classList.remove('active');
+                wrap.style.display = 'none';
             });
             
             const activeSheet = document.getElementById(currentVersion + '-' + currentStyle);
             if (activeSheet) {
-                activeSheet.classList.add('active');
+                const wrapper = activeSheet.parentNode;
+                wrapper.classList.add('active');
+                wrapper.style.display = 'flex';
                 activeSheet.style.display = 'block';
+                activeSheet.classList.add('active');
             }
             
             updateDownloadLinks();
+            adjustScale();
         }
 
         function switchTab(versionId) {
@@ -4541,19 +4590,23 @@ Coding Ninjas DSA Certification \quad | \quad IIT Kanpur Prutor Cyber Security C
             document.getElementById('btn-' + versionId).classList.add('active');
 
             // Show active resume sheet matching current style
-            const sheets = document.querySelectorAll('.resume-sheet');
-            sheets.forEach(sheet => {
-                sheet.classList.remove('active');
-                sheet.style.display = 'none';
+            const wrappers = document.querySelectorAll('.resume-wrapper');
+            wrappers.forEach(wrap => {
+                wrap.classList.remove('active');
+                wrap.style.display = 'none';
             });
             
             const activeSheet = document.getElementById(versionId + '-' + currentStyle);
             if (activeSheet) {
-                activeSheet.classList.add('active');
+                const wrapper = activeSheet.parentNode;
+                wrapper.classList.add('active');
+                wrapper.style.display = 'flex';
                 activeSheet.style.display = 'block';
+                activeSheet.classList.add('active');
             }
 
             updateDownloadLinks();
+            adjustScale();
         }
 
         function toggleSidebar(show) {
@@ -4566,10 +4619,57 @@ Coding Ninjas DSA Certification \quad | \quad IIT Kanpur Prutor Cyber Security C
                 sidebar.classList.add('closed');
                 openBtn.style.display = 'flex';
             }
+            adjustScale();
         }
+
+        function adjustScale() {
+            const wrappers = document.querySelectorAll('.resume-wrapper');
+            const previewArea = document.querySelector('.preview-area');
+            if (!previewArea) return;
+            
+            const padding = window.innerWidth < 768 ? 32 : 80;
+            const containerWidth = previewArea.clientWidth - padding;
+            const sheetWidth = 794; // 8.27in * 96 = 794px
+            
+            wrappers.forEach(wrapper => {
+                const sheet = wrapper.querySelector('.resume-sheet');
+                if (!sheet) return;
+                
+                if (containerWidth < sheetWidth) {
+                    const scale = containerWidth / sheetWidth;
+                    sheet.style.transform = `scale(${scale})`;
+                    sheet.style.transformOrigin = 'top center';
+                    
+                    const unscaledHeight = sheet.offsetHeight;
+                    wrapper.style.height = (unscaledHeight * scale) + 'px';
+                } else {
+                    sheet.style.transform = 'none';
+                    sheet.style.transformOrigin = 'initial';
+                    wrapper.style.height = 'auto';
+                }
+            });
+        }
+
+        // Dynamically wrap each .resume-sheet in a .resume-wrapper on load
+        document.querySelectorAll('.resume-sheet').forEach(sheet => {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'resume-wrapper';
+            
+            if (sheet.classList.contains('active')) {
+                wrapper.classList.add('active');
+                wrapper.style.display = 'flex';
+            }
+            
+            sheet.parentNode.insertBefore(wrapper, sheet);
+            wrapper.appendChild(sheet);
+        });
 
         // Initialize at page load
         updateDownloadLinks();
+        adjustScale();
+
+        window.addEventListener('resize', adjustScale);
+        window.addEventListener('load', adjustScale);
     </script>
 </body>
 </html>
