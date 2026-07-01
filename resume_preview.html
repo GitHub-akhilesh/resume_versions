@@ -4664,6 +4664,17 @@ Coding Ninjas DSA Certification \quad | \quad IIT Kanpur Prutor Cyber Security C
             wrapper.appendChild(sheet);
         });
 
+        // Initialize sidebar state based on viewport width at page load
+        const sidebar = document.querySelector('.sidebar');
+        const openBtn = document.getElementById('btn-open-sidebar');
+        if (window.innerWidth < 768) {
+            sidebar.classList.add('closed');
+            openBtn.style.display = 'flex';
+        } else {
+            sidebar.classList.remove('closed');
+            openBtn.style.display = 'none';
+        }
+
         // Initialize at page load
         updateDownloadLinks();
         adjustScale();
