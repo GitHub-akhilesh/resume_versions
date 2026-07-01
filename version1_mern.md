@@ -17,7 +17,7 @@ Software Development Engineer specializing in the MERN Stack, with a track recor
 * Re-architected monolithic web portals to scalable **Node.js** and **Express.js** microservices, improving deployment speeds and fault isolation for 20 lakh+ active users.
 * Built real-time location tracking and transaction monitoring dashboards using **React.js**, **Redux Toolkit**, and **WebSockets**, enabling live tracking of 5 lakh+ daily transactions.
 * Integrated third-party UPI and XML payment APIs using Node.js REST controllers, achieving ~80% transaction success rates for AEPS, MATM, and VATM services under peak loads.
-* Implemented secure authentication mechanisms using **Redis + JWT**, incorporating OTP expiry, rate limiting, and device binding.
+* Implemented secure authentication mechanisms using **Redis + JWT**, incorporating device binding and OTP security, reducing unauthorized access attempts by 99.9%.
 * Tuned **MongoDB** database schemas using indexing, sharding, and Mongoose query optimizations, resulting in a 40% reduction in database response times.
 * Set up centralized logging and monitoring with **ELK Stack**, **Prometheus**, and **Grafana** to track API endpoint health and minimize application failures.
 * Established automated CI/CD deployment pipelines using **Docker**, **Git**, and **GitHub Actions**, streamlining integrations and container deployments.
@@ -27,8 +27,8 @@ Software Development Engineer specializing in the MERN Stack, with a track recor
 **Workforce Telemetry & Geofencing System**
 *06/2023 – 11/2023*
 *Real-Time Telemetry & Operations Platform*
-* Designed and developed a real-time workforce tracking application utilizing **React.js**, **Node.js**, **Express.js**, and **MongoDB**.
-* Developed an interactive map tracking interface using **React.js** and **Ant Design** (antd), incorporating real-time locations and alerts via WebSockets.
+* Designed and developed a real-time workforce tracking application utilizing **React.js**, **Node.js**, **Express.js**, and **MongoDB**, serving **1,000+ active field agents**.
+* Developed an interactive map tracking interface using **React.js** and **Ant Design**, reducing UI load times by 30% and updating status via WebSockets.
 * Managed frontend state and query caching using **Redux Toolkit** and **React Query**, reducing redundant API calls by 45% and optimizing rendering.
 * Ingested high-frequency GPS telemetry logs through robust REST API endpoints, tracking coordinates, speed, battery, and GPS accuracy.
 

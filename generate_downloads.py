@@ -13,6 +13,10 @@ DOWNLOADS_DIR = "downloads"
 
 # Version mapping: key in HTML id -> file name prefix
 VERSIONS = {
+    "version1-enhancv": "Akhilesh_Mishra_MERN_Stack_Enhancv",
+    "version2-enhancv": "Akhilesh_Mishra_Java_Full_Stack_Enhancv",
+    "version3-enhancv": "Akhilesh_Mishra_Python_Full_Stack_Enhancv",
+    "version4-enhancv": "Akhilesh_Mishra_Software_Engineer_Enhancv",
     "version1-modern": "Akhilesh_Mishra_MERN_Stack",
     "version2-modern": "Akhilesh_Mishra_Java_Full_Stack",
     "version3-modern": "Akhilesh_Mishra_Python_Full_Stack",
@@ -93,6 +97,13 @@ def extract_latex():
                 out.write(exec_source)
             print(f"Generated LaTeX (Executive): {exec_path}")
 
+            # 5. Enhancv tex (blue accent)
+            enhancv_source = latex_source.replace("{0c4f6b}", "{007bb6}")
+            enhancv_path = os.path.join(DOWNLOADS_DIR, f"{VERSIONS[ver + '-enhancv']}.tex")
+            with open(enhancv_path, "w", encoding="utf-8") as out:
+                out.write(enhancv_source)
+            print(f"Generated LaTeX (Enhancv): {enhancv_path}")
+
 def add_p_border_bottom(paragraph, color_hex="0C4F6B", size="8"):
     pPr = paragraph._p.get_or_add_pPr()
     pBdr = parse_xml(r'<w:pBdr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">'
@@ -135,6 +146,7 @@ def generate_word_docs():
         is_classic = ver_id.endswith("-classic")
         is_minimal = ver_id.endswith("-minimal")
         is_executive = ver_id.endswith("-executive")
+        is_enhancv = ver_id.endswith("-enhancv")
         
         font_name = "Georgia" if is_minimal else "Arial"
         
@@ -147,27 +159,80 @@ def generate_word_docs():
         elif is_minimal:
             primary_color_rgb = RGBColor(0x1a, 0x1a, 0x1a)
             border_hex = "1A1A1A"
-        else: # executive
+        elif is_executive:
             primary_color_rgb = RGBColor(0x1e, 0x29, 0x3b)
             border_hex = "1E293B"
+        else: # enhancv
+            primary_color_rgb = RGBColor(0x00, 0x7b, 0xb6)
+            border_hex = "007BB6"
 
-        header_align = WD_ALIGN_PARAGRAPH.LEFT if (is_modern or is_executive) else WD_ALIGN_PARAGRAPH.CENTER
+        header_align = WD_ALIGN_PARAGRAPH.LEFT if (is_modern or is_executive or is_enhancv) else WD_ALIGN_PARAGRAPH.CENTER
 
-        if is_executive:
-            # 2-COLUMN EXECUTIVE LAYOUT
+        if is_enhancv:
+            # Render Enhancv full-width header at the top
+            header = sheet.xpath('.//div[@class="header"]')[0]
+            name = header.xpath('.//div[@class="name"]/text()')[0]
+            title = header.xpath('.//div[@class="title"]/text()')[0]
+            
+            p_name = doc.add_paragraph()
+            p_name.paragraph_format.space_before = Pt(0)
+            p_name.paragraph_format.space_after = Pt(2)
+            run = p_name.add_run(name.strip())
+            run.bold = True
+            run.font.name = font_name
+            run.font.size = Pt(20)
+            run.font.color.rgb = RGBColor(0x1a, 0x1a, 0x1a)
+            
+            p_title = doc.add_paragraph()
+            p_title.paragraph_format.space_before = Pt(0)
+            p_title.paragraph_format.space_after = Pt(4)
+            run = p_title.add_run(title.strip())
+            run.bold = True
+            run.font.name = font_name
+            run.font.size = Pt(11)
+            run.font.color.rgb = primary_color_rgb
+            
+            # Contact Info
+            contact_lines = header.xpath('.//div[@class="contact-info"]/span//text() | .//div[@class="contact-info"]/span/a//text()')
+            contact_lines = [l.strip() for l in contact_lines if l.strip() and l.strip() != "|"]
+            p_contact = doc.add_paragraph()
+            p_contact.paragraph_format.space_before = Pt(0)
+            p_contact.paragraph_format.space_after = Pt(8)
+            p_contact.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.LEFT
+            add_p_border_bottom(p_contact, color_hex="1A1A1A", size="8")
+            
+            first = True
+            for line in contact_lines:
+                if not first:
+                    p_contact.add_run("   |   ")
+                first = False
+                run = p_contact.add_run(line)
+                run.font.name = font_name
+                run.font.size = Pt(8.5)
+                run.font.color.rgb = RGBColor(0x2d, 0x37, 0x48)
+
+        if is_executive or is_enhancv:
+            # 2-COLUMN LAYOUT
+            # 2-COLUMN LAYOUT
             table = doc.add_table(rows=1, cols=2)
             table.autofit = False
             
-            table.rows[0].cells[0].width = Inches(2.3)
-            table.rows[0].cells[1].width = Inches(5.2)
+            if is_executive:
+                table.rows[0].cells[0].width = Inches(2.3)
+                table.rows[0].cells[1].width = Inches(5.2)
+                sidebar_cell = table.cell(0, 0)
+                main_cell = table.cell(0, 1)
+            else: # enhancv
+                table.rows[0].cells[0].width = Inches(5.2)
+                table.rows[0].cells[1].width = Inches(2.3)
+                main_cell = table.cell(0, 0)
+                sidebar_cell = table.cell(0, 1)
             
-            sidebar_cell = table.cell(0, 0)
-            main_cell = table.cell(0, 1)
-            
-            # Sidebar background shading
+            # Sidebar background shading for Executive only
             tcPr_side = sidebar_cell._tc.get_or_add_tcPr()
-            shd_side = parse_xml(r'<w:shd xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" w:fill="F8FAFC"/>')
-            tcPr_side.append(shd_side)
+            if is_executive:
+                shd_side = parse_xml(r'<w:shd xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" w:fill="F8FAFC"/>')
+                tcPr_side.append(shd_side)
             
             # Cell Margins for sidebar
             tcMar_side = parse_xml(r'<w:tcMar xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">'
@@ -188,104 +253,42 @@ def generate_word_docs():
                                    r'</w:tcMar>')
             tcPr_main.append(tcMar_main)
 
-            # Sidebar Content Building
-            sidebar_el = sheet.xpath('.//div[@class="executive-sidebar"]')[0]
-            
-            # Name Block
-            name = sidebar_el.xpath('.//div[@class="name"]/text()')
-            title = sidebar_el.xpath('.//div[@class="title"]/text()')
-            if name:
-                p_name = sidebar_cell.paragraphs[0]
-                p_name.paragraph_format.space_before = Pt(0)
-                p_name.paragraph_format.space_after = Pt(2)
-                run = p_name.add_run(" ".join(name).strip())
-                run.bold = True
-                run.font.name = font_name
-                run.font.size = Pt(18)
-                run.font.color.rgb = primary_color_rgb
-            
-            if title:
-                p_title = sidebar_cell.add_paragraph()
-                p_title.paragraph_format.space_before = Pt(0)
-                p_title.paragraph_format.space_after = Pt(8)
-                run = p_title.add_run(title[0].strip())
-                run.bold = True
-                run.font.name = font_name
-                run.font.size = Pt(9.5)
-                run.font.color.rgb = RGBColor(0x64, 0x74, 0x8b)
+            if is_executive:
+                # Sidebar Content Building (Original Executive style)
+                sidebar_el = sheet.xpath('.//div[@class="executive-sidebar"]')[0]
+                
+                # Name Block
+                name = sidebar_el.xpath('.//div[@class="name"]/text()')
+                title = sidebar_el.xpath('.//div[@class="title"]/text()')
+                if name:
+                    p_name = sidebar_cell.paragraphs[0]
+                    p_name.paragraph_format.space_before = Pt(0)
+                    p_name.paragraph_format.space_after = Pt(2)
+                    run = p_name.add_run(" ".join(name).strip())
+                    run.bold = True
+                    run.font.name = font_name
+                    run.font.size = Pt(18)
+                    run.font.color.rgb = primary_color_rgb
+                
+                if title:
+                    p_title = sidebar_cell.add_paragraph()
+                    p_title.paragraph_format.space_before = Pt(0)
+                    p_title.paragraph_format.space_after = Pt(8)
+                    run = p_title.add_run(title[0].strip())
+                    run.bold = True
+                    run.font.name = font_name
+                    run.font.size = Pt(9.5)
+                    run.font.color.rgb = RGBColor(0x64, 0x74, 0x8b)
 
-            # Contact
-            sidebar_cell.add_paragraph().add_run("CONTACT").bold = True
-            add_p_border_bottom(sidebar_cell.paragraphs[-1], color_hex=border_hex, size="4")
-            sidebar_cell.paragraphs[-1].paragraph_format.space_before = Pt(8)
-            sidebar_cell.paragraphs[-1].paragraph_format.space_after = Pt(4)
-            
-            contact_lines = sidebar_el.xpath('.//div[@class="contact-info"]/span//text() | .//div[@class="contact-info"]/span/a//text()')
-            # Filter clean text
-            contact_lines = [l.strip() for l in contact_lines if l.strip() and l.strip() != "|"]
-            for line in contact_lines:
-                p = sidebar_cell.add_paragraph()
-                p.paragraph_format.space_before = Pt(0)
-                p.paragraph_format.space_after = Pt(2)
-                run = p.add_run(line)
-                run.font.name = font_name
-                run.font.size = Pt(8.5)
-                run.font.color.rgb = RGBColor(0x47, 0x55, 0x69)
-
-            # Skills
-            p_sk = sidebar_cell.add_paragraph()
-            p_sk.paragraph_format.space_before = Pt(12)
-            p_sk.paragraph_format.space_after = Pt(4)
-            p_sk.add_run("CORE SKILLS").bold = True
-            add_p_border_bottom(p_sk, color_hex=border_hex, size="4")
-            
-            skills_items = sidebar_el.xpath('.//div[@class="sidebar-skills"]/div[@class="edu-item"]')
-            for sk in skills_items:
-                strong_tag = sk.find('strong')
-                p = sidebar_cell.add_paragraph()
-                p.paragraph_format.space_before = Pt(2)
-                p.paragraph_format.space_after = Pt(2)
-                if strong_tag is not None:
-                    run_strong = p.add_run(strong_tag.text_content().strip() + "\n")
-                    run_strong.bold = True
-                    run_strong.font.name = font_name
-                    run_strong.font.size = Pt(8.5)
-                    run_strong.font.color.rgb = primary_color_rgb
-                    
-                    rest_text = sk.text_content()[len(strong_tag.text_content()):].strip()
-                    run_rest = p.add_run(rest_text)
-                    run_rest.font.name = font_name
-                    run_rest.font.size = Pt(8)
-                    run_rest.font.color.rgb = RGBColor(0x47, 0x55, 0x69)
-
-            # Education
-            p_edu = sidebar_cell.add_paragraph()
-            p_edu.paragraph_format.space_before = Pt(12)
-            p_edu.paragraph_format.space_after = Pt(4)
-            p_edu.add_run("EDUCATION").bold = True
-            add_p_border_bottom(p_edu, color_hex=border_hex, size="4")
-            
-            edu_el = sidebar_el.xpath('.//div[contains(@class,"edu-item") and not(parent::div[@class="sidebar-skills"])]')
-            if edu_el:
-                p = sidebar_cell.add_paragraph()
-                p.paragraph_format.space_before = Pt(2)
-                p.paragraph_format.space_after = Pt(2)
-                run = p.add_run(edu_el[0].text_content().strip())
-                run.font.name = font_name
-                run.font.size = Pt(8.5)
-                run.font.color.rgb = RGBColor(0x47, 0x55, 0x69)
-
-            # Certifications
-            p_cert = sidebar_cell.add_paragraph()
-            p_cert.paragraph_format.space_before = Pt(12)
-            p_cert.paragraph_format.space_after = Pt(4)
-            p_cert.add_run("CERTIFICATIONS").bold = True
-            add_p_border_bottom(p_cert, color_hex=border_hex, size="4")
-            
-            cert_el = sidebar_el.xpath('.//div[@class="cert-list"]')
-            if cert_el:
-                cert_lines = [l.strip() for l in cert_el[0].text_content().split('\n') if l.strip()]
-                for line in cert_lines:
+                # Contact
+                sidebar_cell.add_paragraph().add_run("CONTACT").bold = True
+                add_p_border_bottom(sidebar_cell.paragraphs[-1], color_hex=border_hex, size="4")
+                sidebar_cell.paragraphs[-1].paragraph_format.space_before = Pt(8)
+                sidebar_cell.paragraphs[-1].paragraph_format.space_after = Pt(4)
+                
+                contact_lines = sidebar_el.xpath('.//div[@class="contact-info"]/span//text() | .//div[@class="contact-info"]/span/a//text()')
+                contact_lines = [l.strip() for l in contact_lines if l.strip() and l.strip() != "|"]
+                for line in contact_lines:
                     p = sidebar_cell.add_paragraph()
                     p.paragraph_format.space_before = Pt(0)
                     p.paragraph_format.space_after = Pt(2)
@@ -294,8 +297,173 @@ def generate_word_docs():
                     run.font.size = Pt(8.5)
                     run.font.color.rgb = RGBColor(0x47, 0x55, 0x69)
 
+                # Skills
+                p_sk = sidebar_cell.add_paragraph()
+                p_sk.paragraph_format.space_before = Pt(12)
+                p_sk.paragraph_format.space_after = Pt(4)
+                p_sk.add_run("CORE SKILLS").bold = True
+                add_p_border_bottom(p_sk, color_hex=border_hex, size="4")
+                
+                skills_items = sidebar_el.xpath('.//div[@class="sidebar-skills"]/div[@class="edu-item"]')
+                for sk in skills_items:
+                    strong_tag = sk.find('strong')
+                    p = sidebar_cell.add_paragraph()
+                    p.paragraph_format.space_before = Pt(2)
+                    p.paragraph_format.space_after = Pt(2)
+                    if strong_tag is not None:
+                        run_strong = p.add_run(strong_tag.text_content().strip() + "\n")
+                        run_strong.bold = True
+                        run_strong.font.name = font_name
+                        run_strong.font.size = Pt(8.5)
+                        run_strong.font.color.rgb = primary_color_rgb
+                        
+                        rest_text = sk.text_content()[len(strong_tag.text_content()):].strip()
+                        run_rest = p.add_run(rest_text)
+                        run_rest.font.name = font_name
+                        run_rest.font.size = Pt(8)
+                        run_rest.font.color.rgb = RGBColor(0x47, 0x55, 0x69)
+
+                # Education
+                p_edu = sidebar_cell.add_paragraph()
+                p_edu.paragraph_format.space_before = Pt(12)
+                p_edu.paragraph_format.space_after = Pt(4)
+                p_edu.add_run("EDUCATION").bold = True
+                add_p_border_bottom(p_edu, color_hex=border_hex, size="4")
+                
+                edu_el = sidebar_el.xpath('.//div[contains(@class,"edu-item") and not(parent::div[@class="sidebar-skills"])]')
+                if edu_el:
+                    p = sidebar_cell.add_paragraph()
+                    p.paragraph_format.space_before = Pt(2)
+                    p.paragraph_format.space_after = Pt(2)
+                    run = p.add_run(edu_el[0].text_content().strip())
+                    run.font.name = font_name
+                    run.font.size = Pt(8.5)
+                    run.font.color.rgb = RGBColor(0x47, 0x55, 0x69)
+
+                # Certifications
+                p_cert = sidebar_cell.add_paragraph()
+                p_cert.paragraph_format.space_before = Pt(12)
+                p_cert.paragraph_format.space_after = Pt(4)
+                p_cert.add_run("CERTIFICATIONS").bold = True
+                add_p_border_bottom(p_cert, color_hex=border_hex, size="4")
+                
+                cert_el = sidebar_el.xpath('.//div[@class="cert-list"]')
+                if cert_el:
+                    cert_lines = [l.strip() for l in cert_el[0].text_content().split('\n') if l.strip()]
+                    for line in cert_lines:
+                        p = sidebar_cell.add_paragraph()
+                        p.paragraph_format.space_before = Pt(0)
+                        p.paragraph_format.space_after = Pt(2)
+                        run = p.add_run(line)
+                        run.font.name = font_name
+                        run.font.size = Pt(8.5)
+                        run.font.color.rgb = RGBColor(0x47, 0x55, 0x69)
+            else:
+                # Enhancv Sidebar (Right column) Content Building
+                sidebar_el = sheet.xpath('.//div[@class="enhancv-right"]')[0]
+                
+                # Profile Summary
+                p_sum = sidebar_cell.paragraphs[0]
+                p_sum.paragraph_format.space_before = Pt(0)
+                p_sum.paragraph_format.space_after = Pt(4)
+                p_sum.add_run("SUMMARY").bold = True
+                add_p_border_bottom(p_sum, color_hex=border_hex, size="4")
+                
+                sum_text = sidebar_el.xpath('.//div[@class="summary-box"]/div[@class="summary-text"]/text()')
+                if sum_text:
+                    p = sidebar_cell.add_paragraph()
+                    p.paragraph_format.space_before = Pt(2)
+                    p.paragraph_format.space_after = Pt(8)
+                    run = p.add_run(sum_text[0].strip())
+                    run.font.name = font_name
+                    run.font.size = Pt(8.5)
+                    run.font.color.rgb = RGBColor(0x4a, 0x55, 0x68)
+
+                # Education
+                p_edu = sidebar_cell.add_paragraph()
+                p_edu.paragraph_format.space_before = Pt(8)
+                p_edu.paragraph_format.space_after = Pt(4)
+                p_edu.add_run("EDUCATION").bold = True
+                add_p_border_bottom(p_edu, color_hex=border_hex, size="4")
+                
+                edu_box = sidebar_el.xpath('.//div[@class="education-bar"]')[0]
+                p = sidebar_cell.add_paragraph()
+                p.paragraph_format.space_before = Pt(2)
+                p.paragraph_format.space_after = Pt(2)
+                run = p.add_run(edu_box.text_content().strip())
+                run.font.name = font_name
+                run.font.size = Pt(8.5)
+                run.font.color.rgb = RGBColor(0x4a, 0x55, 0x68)
+
+                # Skills
+                p_sk = sidebar_cell.add_paragraph()
+                p_sk.paragraph_format.space_before = Pt(12)
+                p_sk.paragraph_format.space_after = Pt(4)
+                p_sk.add_run("SKILLS").bold = True
+                add_p_border_bottom(p_sk, color_hex=border_hex, size="4")
+                
+                sk_sections = sidebar_el.xpath('.//div[@class="skills-section"]')
+                for section in sk_sections:
+                    sec_title = section.xpath('.//div[@class="skills-sec-title"]/text()')[0].strip()
+                    tags = section.xpath('.//span[@class="skill-tag"]/text()')
+                    tags_str = ", ".join([t.strip() for t in tags])
+                    
+                    p = sidebar_cell.add_paragraph()
+                    p.paragraph_format.space_before = Pt(2)
+                    p.paragraph_format.space_after = Pt(2)
+                    run_title = p.add_run(sec_title + ": ")
+                    run_title.bold = True
+                    run_title.font.name = font_name
+                    run_title.font.size = Pt(8.5)
+                    run_title.font.color.rgb = primary_color_rgb
+                    
+                    run_tags = p.add_run(tags_str)
+                    run_tags.font.name = font_name
+                    run_tags.font.size = Pt(8)
+                    run_tags.font.color.rgb = RGBColor(0x2d, 0x37, 0x48)
+
+                # Certifications
+                p_cert = sidebar_cell.add_paragraph()
+                p_cert.paragraph_format.space_before = Pt(12)
+                p_cert.paragraph_format.space_after = Pt(4)
+                p_cert.add_run("CERTIFICATIONS").bold = True
+                add_p_border_bottom(p_cert, color_hex=border_hex, size="4")
+                
+                cert_box = sidebar_el.xpath('.//div[@class="cert-list"]')[0]
+                cert_lines = [l.strip() for l in cert_box.text_content().split('\n') if l.strip()]
+                for line in cert_lines:
+                    p = sidebar_cell.add_paragraph()
+                    p.paragraph_format.space_before = Pt(0)
+                    p.paragraph_format.space_after = Pt(2)
+                    run = p.add_run(line)
+                    run.font.name = font_name
+                    run.font.size = Pt(8)
+                    run.font.color.rgb = RGBColor(0x4a, 0x55, 0x68)
+
+                # Achievements
+                p_ach = sidebar_cell.add_paragraph()
+                p_ach.paragraph_format.space_before = Pt(12)
+                p_ach.paragraph_format.space_after = Pt(4)
+                p_ach.add_run("ACHIEVEMENTS").bold = True
+                add_p_border_bottom(p_ach, color_hex=border_hex, size="4")
+                
+                ach_items = sidebar_el.xpath('.//ul[@class="achievements-list"]/li/text()')
+                for ach in ach_items:
+                    p = sidebar_cell.add_paragraph(style='List Bullet')
+                    p.paragraph_format.space_before = Pt(0)
+                    p.paragraph_format.space_after = Pt(2)
+                    run = p.add_run(ach.strip())
+                    run.font.name = font_name
+                    run.font.size = Pt(8)
+                    run.font.color.rgb = RGBColor(0x4a, 0x55, 0x68)
+
+
             # Main Content Cell Building
-            main_el = sheet.xpath('.//div[@class="executive-main"]')[0]
+            if is_executive:
+                main_el = sheet.xpath('.//div[@class="executive-main"]')[0]
+            else: # enhancv
+                main_el = sheet.xpath('.//div[@class="enhancv-left"]')[0]
+                
             main_children = main_el.xpath('./*')
             
             first_p = True

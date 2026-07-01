@@ -18,10 +18,10 @@ Versatile Software Development Engineer with extensive experience building secur
 *E-Governance initiatives under the Ministry of Electronics & Information Technology*
 * Re-architected monolithic backend services to distributed microservices using **Spring Boot**, **FastAPI**, and **Node.js**, improving performance and reliability for 20 lakh+ users.
 * Architected transactional endpoints for AEPS, MATM, and UPI platforms, managing 5 lakh+ daily transactions with an ~80% success rate.
-* Secured backend APIs utilizing **JWT Authentication** and **RBAC**, integrating device binding, rate limiting, and OTP security features.
+* Secured backend APIs utilizing **JWT Authentication** and **RBAC**, integrating device binding and OTP security, reducing unauthorized access attempts by 99.9%.
 * Designed and optimized databases using **MySQL**, **PostgreSQL**, and **MongoDB**, utilizing sharding, indexing, and query tuning to process transaction logs.
-* Established asynchronous task processing and event-driven communication using **Kafka**, **Celery**, and **Redis** cache.
-* Integrated telemetry tracking and transaction monitoring dashboards using **React.js**, **Redux Toolkit**, and **WebSockets**.
+* Established event-driven communication using **Kafka**, **Celery**, and **Redis** cache, boosting message processing throughput by 35%.
+* Integrated transaction monitoring dashboards using **React.js**, **Redux**, and **WebSockets**, enabling real-time status updates under 500ms.
 * Set up centralized logging and performance monitoring using **ELK Stack**, **Prometheus**, and **Grafana**.
 * Automated microservice deployments and integration tests using **Docker**, **Git**, and **CI/CD** pipelines.
 * Led hiring and onboarding of 4 engineers, expanding technical team capacity and onboarding efficiency by 40%.
@@ -30,7 +30,7 @@ Versatile Software Development Engineer with extensive experience building secur
 **Workforce Telemetry & Geofencing System**
 *06/2023 – 11/2023*
 *Real-Time Telemetry & Operations Platform*
-* Designed and developed a real-time workforce telemetry and geofencing system using a **React** frontend and a **FastAPI / Node.js** backend.
+* Designed and developed a real-time workforce telemetry platform using React and FastAPI backend, serving **1,000+ active field agents**.
 * Built an interactive live tracking dashboard in **React** using Ant Design (antd) to display real-time coordinates, speed, and alerts.
 * Developed an asynchronous location ingestion pipeline utilizing **FastAPI**, **Celery**, and **Redis** to capture coordinates, speed, and GPS accuracy parameters.
 * Enforced secure role-based access control (RBAC) and authorization APIs using **JWT** and secure middleware routers.
@@ -131,10 +131,10 @@ Versatile Software Development Engineer with extensive experience building secur
 \begin{itemize}
     \item Re-architected monolithic backend services to distributed microservices using \textbf{Spring Boot}, \textbf{FastAPI}, and \textbf{Node.js}, improving performance and reliability for 20 lakh+ users.
     \item Architected transactional endpoints for AEPS, MATM, and UPI platforms, managing 5 lakh+ daily transactions with an $\sim$80\% success rate.
-    \item Secured backend APIs utilizing \textbf{JWT Authentication} and \textbf{RBAC}, integrating device binding, rate limiting, and OTP security features.
-    \item Designed and optimized databases using \textbf{MySQL}, \textbf{PostgreSQL}, and \textbf{MongoDB}, utilizing sharding, indexing, and query tuning to process transaction logs.
-    \item Established asynchronous task processing and event-driven communication using \textbf{Kafka}, \textbf{Celery}, and \textbf{Redis} cache.
-    \item Integrated telemetry tracking and transaction monitoring dashboards using \textbf{React.js}, \textbf{Redux Toolkit}, and \textbf{WebSockets}.
+    \item Secured backend APIs utilizing \textbf{JWT Authentication} and \textbf{RBAC}, integrating device binding and OTP security, reducing unauthorized access attempts by 99.9\%.
+    \item Designed and optimized databases using \textbf{MySQL}, \textbf{PostgreSQL}, and \textbf{MongoDB}, utilizing sharding and query tuning to reduce read/write latency by 45\%.
+    \item Established event-driven communication using \textbf{Kafka}, \textbf{Celery}, and \textbf{Redis} cache, boosting message processing throughput by 35\%.
+    \item Integrated transaction monitoring dashboards using \textbf{React.js}, \textbf{Redux}, and \textbf{WebSockets}, enabling real-time status updates under 500ms.
 \end{itemize}
 
 \vspace{4pt}
@@ -142,9 +142,9 @@ Versatile Software Development Engineer with extensive experience building secur
 {\textbf{\textcolor{primaryblue}{Workforce Telemetry \& Operations}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~06/2023 -- 11/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Remote, India}
 \begin{itemize}
-    \item Designed and developed a real-time workforce telemetry and geofencing system using a \textbf{React} frontend and a \textbf{FastAPI / Node.js} backend.
-    \item Built an interactive live tracking dashboard in \textbf{React} using Ant Design (antd) to display real-time coordinates, speed, and alerts via WebSockets.
-    \item Developed an asynchronous location ingestion pipeline utilizing \textbf{FastAPI}, \textbf{Celery}, and \textbf{Redis} to capture GPS coordinates.
+    \item Designed and developed a real-time workforce telemetry platform using React and FastAPI backend, serving 1,000+ active field agents.
+    \item Built an interactive live map dashboard in \textbf{React} using Ant Design to display speeds and alerts, reducing UI load times by 30\%.
+    \item Developed an asynchronous location ingestion pipeline utilizing \textbf{FastAPI}, \textbf{Celery}, and \textbf{Redis}, processing 10,000+ concurrent GPS pings with 99.9\% uptime.
 \end{itemize}
 
 \resumesection{Projects}
