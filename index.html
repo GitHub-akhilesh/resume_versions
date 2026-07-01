@@ -46,6 +46,10 @@
             border-right: 1px solid #1e293b;
             padding: 24px 16px;
             flex-shrink: 0;
+            transition: transform 0.3s ease, width 0.3s ease;
+        }
+        .sidebar.closed {
+            display: none !important;
         }
 
         .sidebar-title {
@@ -1311,8 +1315,9 @@
 
     <!-- Sidebar Selector -->
     <div class="sidebar">
-        <div class="sidebar-title">
-            <i class="fa-solid fa-file-invoice"></i> Resume Selector
+        <div class="sidebar-title" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+            <span><i class="fa-solid fa-file-invoice"></i> Resume Selector</span>
+            <button id="btn-close-sidebar" class="sidebar-toggle-btn" onclick="toggleSidebar(false)" style="background: none; border: none; color: #94a3b8; cursor: pointer; font-size: 1.1rem; padding: 4px; display: flex; align-items: center; justify-content: center; transition: color 0.2s;"><i class="fa-solid fa-xmark"></i></button>
         </div>
         <button class="tab-btn active" id="btn-version1" onclick="switchTab('version1')">
             <i class="fa-solid fa-code"></i> MERN Stack Dev
@@ -1357,6 +1362,7 @@
 
     <!-- Preview Area -->
     <div class="preview-area">
+        <button id="btn-open-sidebar" class="open-sidebar-btn" onclick="toggleSidebar(true)" style="position: fixed; top: 20px; left: 20px; z-index: 999; background-color: #0f172a; color: #38bdf8; border: 1px solid #1e293b; border-radius: 50%; width: 42px; height: 42px; display: none; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.15); font-size: 1.1rem; transition: all 0.2s ease;"><i class="fa-solid fa-bars"></i></button>
         <!-- Action Buttons -->
         <div class="action-bar">
             <a id="download-pdf" class="action-btn pdf-btn" download><i class="fa-solid fa-file-pdf"></i> Download PDF</a>
@@ -4548,6 +4554,18 @@ Coding Ninjas DSA Certification \quad | \quad IIT Kanpur Prutor Cyber Security C
             }
 
             updateDownloadLinks();
+        }
+
+        function toggleSidebar(show) {
+            const sidebar = document.querySelector('.sidebar');
+            const openBtn = document.getElementById('btn-open-sidebar');
+            if (show) {
+                sidebar.classList.remove('closed');
+                openBtn.style.display = 'none';
+            } else {
+                sidebar.classList.add('closed');
+                openBtn.style.display = 'flex';
+            }
         }
 
         // Initialize at page load
