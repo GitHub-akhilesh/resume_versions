@@ -27,7 +27,7 @@ Software Development Engineer specializing in the MERN Stack, with a track recor
 **Workforce Telemetry & Geofencing System**
 *06/2023 – 11/2023*
 *Real-Time Telemetry & Operations Platform*
-* Designed and developed a real-time workforce tracking application utilizing **React.js**, **Node.js**, **Express.js**, and **MongoDB**, serving **1,000+ active field agents**.
+* Engineered and developed a real-time workforce tracking application utilizing **React.js**, **Node.js**, **Express.js**, and **MongoDB**, serving **1,000+ active field agents**.
 * Developed an interactive map tracking interface using **React.js** and **Ant Design**, reducing UI load times by 30% and updating status via WebSockets.
 * Managed frontend state and query caching using **Redux Toolkit** and **React Query**, reducing redundant API calls by 45% and optimizing rendering.
 * Ingested high-frequency GPS telemetry logs through robust REST API endpoints, tracking coordinates, speed, battery, and GPS accuracy.
@@ -35,9 +35,9 @@ Software Development Engineer specializing in the MERN Stack, with a track recor
 ## 4. Projects
 ### Himalayan Edges Website Development
 *10/2024 – 11/2024*
-* Designed and launched an e-commerce platform using the **MERN stack** (React, Node, Express, MongoDB) with PWA features, hosted on AWS, increasing speed and usage by 30%.
+* Created and launched an e-commerce platform using the **MERN stack** (React, Node, Express, MongoDB) with PWA features, hosted on AWS, increasing speed and usage by 30%.
 * Enforced role-based authentication with email verification for 5,000+ users, streamlining user account management.
-* Designed modular backend API routes using Express and Node, tested under 500+ concurrent users with a 20% cart conversion rate.
+* Structured modular backend API routes using Express and Node, tested under 500+ concurrent users with a 20% cart conversion rate.
 * Integrated Google Reviews dynamically to increase site authority and improve conversions by 15%.
 
 ### Automatic Attendance Through Web Dashboard
@@ -139,7 +139,7 @@ Software Development Engineer specializing in the MERN Stack, with a track recor
 {\textbf{\textcolor{primaryblue}{Workforce Telemetry \& Operations}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~06/2023 -- 11/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Remote, India}
 \begin{itemize}
-    \item Designed and developed a real-time workforce tracking application utilizing \textbf{React.js}, \textbf{Node.js}, \textbf{Express.js}, and \textbf{MongoDB}.
+    \item Engineered and developed a real-time workforce tracking application utilizing \textbf{React.js}, \textbf{Node.js}, \textbf{Express.js}, and \textbf{MongoDB}.
     \item Developed an interactive map tracking interface using \textbf{React.js} and \textbf{Ant Design} (antd), incorporating real-time locations and alerts via WebSockets.
     \item Managed frontend state and query caching using \textbf{Redux Toolkit} and \textbf{React Query}, reducing redundant API calls by 45\%.
 \end{itemize}
@@ -151,7 +151,7 @@ Software Development Engineer specializing in the MERN Stack, with a track recor
 
 \vspace{4pt}
 {\textbf{Himalayan Edges Website Development}} \\
-{\small Designed and launched an e-commerce platform using the MERN stack with PWA features, hosted on AWS, increasing page load speeds and client usage by 30\%.} \\
+{\small Created and launched an e-commerce platform using the MERN stack with PWA features, hosted on AWS, increasing page load speeds and client usage by 30\%.} \\
 {\footnotesize\textbf{STACK:} React.js / Node.js / Express.js / MongoDB / PWA / AWS S3}
 
 \vspace{4pt}

@@ -30,7 +30,7 @@ Versatile Software Development Engineer with extensive experience building secur
 **Workforce Telemetry & Geofencing System**
 *06/2023 – 11/2023*
 *Real-Time Telemetry & Operations Platform*
-* Designed and developed a real-time workforce telemetry platform using React and FastAPI backend, serving **1,000+ active field agents**.
+* Created and developed a real-time workforce telemetry platform using React and FastAPI backend, serving **1,000+ active field agents**.
 * Built an interactive live tracking dashboard in **React** using Ant Design (antd) to display real-time coordinates, speed, and alerts.
 * Developed an asynchronous location ingestion pipeline utilizing **FastAPI**, **Celery**, and **Redis** to capture coordinates, speed, and GPS accuracy parameters.
 * Enforced secure role-based access control (RBAC) and authorization APIs using **JWT** and secure middleware routers.
@@ -38,7 +38,7 @@ Versatile Software Development Engineer with extensive experience building secur
 ## 4. Projects
 ### Himalayan Edges Website Development
 *10/2024 – 11/2024*
-* Designed and launched an e-commerce platform using **React.js** and **Django** with PWA capabilities, hosted on AWS, increasing page speed by 30%.
+* Launched an e-commerce platform using **React.js** and **Django** with PWA capabilities, hosted on AWS, increasing page speed by 30%.
 * Enforced role-based authentication with email verification for 5,000+ users, ensuring secure login capabilities.
 * Structured product and backend architecture with modular routes, tested with 500+ concurrent simulated users and a 20% cart conversion rate.
 * Added Google Reviews integration to display user testimonials dynamically, increasing site conversions by 15%.
@@ -142,7 +142,7 @@ Versatile Software Development Engineer with extensive experience building secur
 {\textbf{\textcolor{primaryblue}{Workforce Telemetry \& Operations}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~06/2023 -- 11/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Remote, India}
 \begin{itemize}
-    \item Designed and developed a real-time workforce telemetry platform using React and FastAPI backend, serving 1,000+ active field agents.
+    \item Created and developed a real-time workforce telemetry platform using React and FastAPI backend, serving 1,000+ active field agents.
     \item Built an interactive live map dashboard in \textbf{React} using Ant Design to display speeds and alerts, reducing UI load times by 30\%.
     \item Developed an asynchronous location ingestion pipeline utilizing \textbf{FastAPI}, \textbf{Celery}, and \textbf{Redis}, processing 10,000+ concurrent GPS pings with 99.9\% uptime.
 \end{itemize}
@@ -159,7 +159,7 @@ Versatile Software Development Engineer with extensive experience building secur
 
 \vspace{4pt}
 {\textbf{Himalayan Edges Website Development}} \\
-{\small Designed and launched an e-commerce platform using React.js and Django with PWA capabilities, hosted on AWS, increasing page speed by 30\%.} \\
+{\small Launched an e-commerce platform using React.js and Django with PWA capabilities, hosted on AWS, increasing page speed by 30\%.} \\
 {\footnotesize\textbf{STACK:} React.js / Django / SQLite / AWS / PWA}
 
 \vspace{4pt}

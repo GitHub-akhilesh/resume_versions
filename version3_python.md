@@ -16,7 +16,7 @@ Software Development Engineer specializing in Python Full Stack development, wit
 *12/2023 – Present*
 *E-Governance initiatives under the Ministry of Electronics & Information Technology*
 * Re-architected monolithic web services into scalable, asynchronous **FastAPI** and **Django** microservices, improving deployment speeds and fault isolation for 2 million+ users.
-* Designed and scaled transaction orchestration services for AEPS, MATM, and VATM platforms using Django REST Framework, handling 500,000+ daily transactions with a 99% success rate.
+* Architected and scaled transaction orchestration services for AEPS, MATM, and VATM platforms using Django REST Framework, handling 500,000+ daily transactions with a 99% success rate.
 * Implemented secure API authentication using **JWT** and role-based access control (**RBAC**), including OTP verification and device binding.
 * Developed an asynchronous task queuing pipeline using **Celery** and **Redis** to handle high-volume wallet ledger records and notifications.
 * Tuned **PostgreSQL** and **MySQL** database schemas using indexing and query partitioning, lowering average transaction query latency under peak loads.
@@ -37,9 +37,9 @@ Software Development Engineer specializing in Python Full Stack development, wit
 ## 4. Projects
 ### Himalayan Edges Website Development
 *10/2024 – 11/2024*
-* Designed and launched an e-commerce platform using **Django** and **React.js** with PWA features, hosted on AWS, boosting speed and usage by 30%.
+* Launched an e-commerce platform using **Django** and **React.js** with PWA features, hosted on AWS, boosting speed and usage by 30%.
 * Enforced role-based authentication with email verification using JWT in Django REST Framework, securing 5,000+ accounts.
-* Designed modular model-view-controller architectures in Django, tested under 500+ concurrent users with a 20% cart conversion rate.
+* Structured modular model-view-controller architectures in Django, tested under 500+ concurrent users with a 20% cart conversion rate.
 * Integrated Google Reviews dynamically to increase site authority and improve conversions by 15%.
 
 ### Automatic Attendance Through Face Detection
@@ -129,7 +129,7 @@ Software Development Engineer specializing in Python Full Stack development, wit
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~12/2023 -- Present \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~New Delhi, India}
 \begin{itemize}
     \item Re-architected monolithic web services into scalable, asynchronous \textbf{FastAPI} and \textbf{Django} microservices, improving reliability for 2 million+ users.
-    \item Designed and scaled transaction orchestration services for AEPS, MATM, and VATM platforms using Django REST Framework, handling 500,000+ daily transactions.
+    \item Architected and scaled transaction orchestration services for AEPS, MATM, and VATM platforms using Django REST Framework, handling 500,000+ daily transactions.
     \item Implemented secure API authentication using \textbf{JWT} and role-based access control (\textbf{RBAC}), including OTP verification.
     \item Developed an asynchronous task queuing pipeline using \textbf{Celery} and \textbf{Redis} to handle high-volume wallet ledger records.
     \item Tuned \textbf{PostgreSQL} and \textbf{MySQL} database schemas using indexing and query partitioning, lowering transaction query latency.
@@ -153,7 +153,7 @@ Software Development Engineer specializing in Python Full Stack development, wit
 
 \vspace{4pt}
 {\textbf{Himalayan Edges Website Development}} \\
-{\small Designed and launched an e-commerce platform using Django and React.js with PWA features, hosted on AWS, boosting page speeds and usage by 30\%.} \\
+{\small Launched an e-commerce platform using Django and React.js with PWA features, hosted on AWS, boosting page speeds and usage by 30\%.} \\
 {\footnotesize\textbf{STACK:} Python / Django / React.js / SQLite / AWS / PWA}
 
 \vspace{4pt}

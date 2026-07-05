@@ -15,7 +15,7 @@ Software Development Engineer specializing in Java Full Stack development, with 
 *12/2023 – Present*
 *E-Governance initiatives under the Ministry of Electronics & Information Technology*
 * Re-architected monolithic e-governance systems into scalable **Java** and **Spring Boot** microservices, improving service reliability and deployment speed for 2 million+ users.
-* Designed and scaled transaction orchestration services for AEPS, MATM, and VATM platforms using **Spring Boot**, handling 500,000+ daily transactions with a 99% success rate.
+* Architected and scaled transaction orchestration services for AEPS, MATM, and VATM platforms using **Spring Boot**, handling 500,000+ daily transactions with a 99% success rate.
 * Secured enterprise APIs using **Spring Security** with **JWT Authentication** and Role-Based Access Control (**RBAC**), implementing device binding and OTP retry policies.
 * Engineered high-performance wallet and ledger systems using **Spring Data JPA** and **Hibernate**, processing over ₹10 billion (INR 10B) in daily transactions.
 * Optimized database transactions and search queries in **MySQL** and **PostgreSQL** using indexing and cache tuning, reducing latency under peak loads.
@@ -28,7 +28,7 @@ Software Development Engineer specializing in Java Full Stack development, with 
 **Workforce Telemetry & Geofencing System**
 *06/2023 – 11/2023*
 *Real-Time Telemetry & Operations Platform*
-* Designed and developed a real-time workforce tracking application utilizing **Java**, **Spring Boot**, and **React.js**, serving **1,000+ active field agents**.
+* Created and developed a real-time workforce tracking application utilizing **Java**, **Spring Boot**, and **React.js**, serving **1,000+ active field agents**.
 * Built a responsive map-based dashboard in **React.js** using **Ant Design** (antd), connecting via WebSockets to a Spring Boot backend for live coordinates.
 * Implemented a secure backend API in Spring Boot using **Spring Security** and **JWT** to manage role-based dashboard access control (Admin, Supervisor, Employee).
 * Utilized **Hibernate** and **Spring Data JPA** to manage and query location tracking logs, geofence violations, and route history.
@@ -36,14 +36,14 @@ Software Development Engineer specializing in Java Full Stack development, with 
 ## 4. Projects
 ### Himalayan Edges Website Development
 *10/2024 – 11/2024*
-* Designed and launched an e-commerce platform using **Spring Boot** and **React.js** with PWA capabilities, hosted on AWS, boosting speed and usage by 30%.
+* Launched an e-commerce platform using **Spring Boot** and **React.js** with PWA capabilities, hosted on AWS, boosting speed and usage by 30%.
 * Implemented role-based login authentication using Spring Security, securing credentials and accounts for 5,000+ users.
-* Designed modular REST controllers and database schemas, verified with 500+ concurrent simulated users and a 20% cart conversion rate.
+* Structured modular REST controllers and database schemas, verified with 500+ concurrent simulated users and a 20% cart conversion rate.
 * Added Google Reviews integration to display user testimonials dynamically, increasing site conversions by 15%.
 
 ### Automatic Attendance System
 *05/2024 – 07/2024*
-* Designed a student attendance system by linking a Python face detection script (OpenCV and LBPH) with a Spring Boot enterprise database.
+* Programmed a student attendance system by linking a Python face detection script (OpenCV and LBPH) with a Spring Boot enterprise database.
 * Developed a web administration dashboard in React to manage student registrations, log daily attendance, and export Excel reports, cutting manual tasks by 70%.
 
 ## 5. Education
@@ -127,7 +127,7 @@ Software Development Engineer specializing in Java Full Stack development, with 
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~12/2023 -- Present \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~New Delhi, India}
 \begin{itemize}
     \item Re-architected monolithic e-governance systems into scalable \textbf{Java} and \textbf{Spring Boot} microservices, improving service reliability and deployment speed for 2 million+ active users.
-    \item Designed and scaled transaction orchestration services for AEPS, MATM, and VATM platforms using \textbf{Spring Boot}, handling 500,000+ daily transactions.
+    \item Architected and scaled transaction orchestration services for AEPS, MATM, and VATM platforms using \textbf{Spring Boot}, handling 500,000+ daily transactions.
     \item Secured enterprise APIs using \textbf{Spring Security} with \textbf{JWT Authentication} and Role-Based Access Control (\textbf{RBAC}), implementing device binding.
     \item Engineered high-performance wallet and ledger systems using \textbf{Spring Data JPA} and \textbf{Hibernate}, processing over ₹10 billion (INR 10B) in daily transactions.
     \item Optimized database transactions and search queries in \textbf{MySQL} and \textbf{PostgreSQL} using indexing and cache tuning.
@@ -139,7 +139,7 @@ Software Development Engineer specializing in Java Full Stack development, with 
 {\textbf{\textcolor{primaryblue}{Workforce Telemetry \& Operations}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~06/2023 -- 11/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Remote, India}
 \begin{itemize}
-    \item Designed and developed a real-time workforce tracking application utilizing \textbf{Java}, \textbf{Spring Boot}, and \textbf{React.js}.
+    \item Created and developed a real-time workforce tracking application utilizing \textbf{Java}, \textbf{Spring Boot}, and \textbf{React.js}.
     \item Built a responsive map-based dashboard in \textbf{React.js} using \textbf{Ant Design} (antd), connecting via WebSockets to a Spring Boot backend.
     \item Implemented a secure backend API in Spring Boot using \textbf{Spring Security} and \textbf{JWT} to manage role-based dashboard access control.
 \end{itemize}
@@ -151,12 +151,12 @@ Software Development Engineer specializing in Java Full Stack development, with 
 
 \vspace{4pt}
 {\textbf{Himalayan Edges Website Development}} \\
-{\small Designed and launched an e-commerce platform using Spring Boot and React.js with PWA capabilities, hosted on AWS, boosting speed and usage by 30\%.} \\
+{\small Launched an e-commerce platform using Spring Boot and React.js with PWA capabilities, hosted on AWS, boosting speed and usage by 30\%.} \\
 {\footnotesize\textbf{STACK:} Java / Spring Boot / React.js / MySQL / AWS / PWA}
 
 \vspace{4pt}
 {\textbf{Facial Recognition Attendance Dashboard}} \\
-{\small Designed a student attendance system by linking a Python face detection script (OpenCV) with a Spring Boot enterprise database backend.} \\
+{\small Programmed a student attendance system by linking a Python face detection script (OpenCV) with a Spring Boot enterprise database backend.} \\
 {\footnotesize\textbf{STACK:} Java / Spring Boot / Python / OpenCV / MySQL / React.js}
 
 \vspace{4pt}
