@@ -18,7 +18,7 @@ Software Development Engineer specializing in Python Full Stack development, wit
 * Re-architected monolithic web services into scalable, asynchronous **FastAPI** and **Django** microservices, improving deployment speeds and fault isolation for 2 million+ users.
 * Architected and scaled transaction orchestration services for AEPS, MATM, and VATM platforms using Django REST Framework, handling 500,000+ daily transactions with a 99% success rate.
 * Implemented secure API authentication using **JWT** and role-based access control (**RBAC**), including OTP verification and device binding.
-* Developed an asynchronous task queuing pipeline using **Celery** and **Redis** to handle high-volume wallet ledger records and notifications.
+* Built an asynchronous task queuing pipeline using **Celery** and **Redis** to handle high-volume wallet ledger records and notifications.
 * Tuned **PostgreSQL** and **MySQL** database schemas using indexing and query partitioning, lowering average transaction query latency under peak loads.
 * Constructed real-time transaction tracking APIs utilizing **FastAPI WebSockets** to stream live status updates to frontend clients.
 * Set up centralized logging using **ELK Stack** and implemented system metrics collection with Prometheus and Grafana.
@@ -29,7 +29,7 @@ Software Development Engineer specializing in Python Full Stack development, wit
 **Workforce Telemetry & Geofencing System**
 *06/2023 – 11/2023*
 *Real-Time Telemetry & Operations Platform*
-* Developed a real-time workforce telemetry and geofencing system utilizing **FastAPI**, **SQLAlchemy** (asyncio), and **React.js**, serving **1,000+ active field agents**.
+* Engineered a real-time workforce telemetry and geofencing system utilizing **FastAPI**, **SQLAlchemy** (asyncio), and **React.js**, serving **1,000+ active field agents**.
 * Built an interactive live telemetry dashboard in **React** using Ant Design (antd) to visualize real-time coordinates, speed, and geofence compliance.
 * Implemented a high-performance, asynchronous ingestion API to capture GPS locations (`/api/v1/tracking/ingest`) using **FastAPI** and **asynchronous SQLite**.
 * Utilized **Celery** tasks and **Redis** as a message broker to queue location analytics, processing geofence entry/exit transitions asynchronously.
@@ -44,7 +44,7 @@ Software Development Engineer specializing in Python Full Stack development, wit
 
 ### Automatic Attendance Through Face Detection
 *05/2024 – 07/2024*
-* Developed an automated attendance tracking application in **Python** using **OpenCV** (Haar Cascade & LBPH) and **MySQL**.
+* Programmed an automated attendance tracking application in **Python** using **OpenCV** (Haar Cascade & LBPH) and **MySQL**.
 * Created a custom desktop graphical interface using **Tkinter** for registering student profiles, capturing training images, and logging attendance.
 * Programmed data export scripts using **Pandas** to compile attendance reports in Excel, reducing manual tracking work by 70%.
 
@@ -131,7 +131,7 @@ Software Development Engineer specializing in Python Full Stack development, wit
     \item Re-architected monolithic web services into scalable, asynchronous \textbf{FastAPI} and \textbf{Django} microservices, improving reliability for 2 million+ users.
     \item Architected and scaled transaction orchestration services for AEPS, MATM, and VATM platforms using Django REST Framework, handling 500,000+ daily transactions.
     \item Implemented secure API authentication using \textbf{JWT} and role-based access control (\textbf{RBAC}), including OTP verification.
-    \item Developed an asynchronous task queuing pipeline using \textbf{Celery} and \textbf{Redis} to handle high-volume wallet ledger records.
+    \item Built an asynchronous task queuing pipeline using \textbf{Celery} and \textbf{Redis} to handle high-volume wallet ledger records.
     \item Tuned \textbf{PostgreSQL} and \textbf{MySQL} database schemas using indexing and query partitioning, lowering transaction query latency.
     \item Constructed real-time transaction tracking APIs utilizing \textbf{FastAPI WebSockets} to stream live status updates.
 \end{itemize}
@@ -141,14 +141,14 @@ Software Development Engineer specializing in Python Full Stack development, wit
 {\textbf{\textcolor{primaryblue}{Workforce Telemetry \& Operations}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~06/2023 -- 11/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Remote, India}
 \begin{itemize}
-    \item Developed a real-time workforce telemetry and geofencing system utilizing \textbf{FastAPI}, \textbf{SQLAlchemy} (asyncio), and \textbf{React.js}.
+    \item Engineered a real-time workforce telemetry and geofencing system utilizing \textbf{FastAPI}, \textbf{SQLAlchemy} (asyncio), and \textbf{React.js}.
     \item Built an interactive live telemetry dashboard in \textbf{React} using Ant Design (antd) to visualize coordinates, speed, and geofences.
     \item Implemented a high-performance, asynchronous ingestion API to capture GPS locations (\texttt{/api/v1/tracking/ingest}) using \textbf{FastAPI}.
 \end{itemize}
 
 \resumesection{Projects}
 {\textbf{Facial Recognition Attendance Dashboard}} \\
-{\small Developed an automated student attendance tracking application in Python using OpenCV (Haar Cascade \& LBPH) and MySQL, with custom Excel reports via Pandas.} \\
+{\small Programmed an automated student attendance tracking application in Python using OpenCV (Haar Cascade \& LBPH) and MySQL, with custom Excel reports via Pandas.} \\
 {\footnotesize\textbf{STACK:} Python / OpenCV / Tkinter / MySQL / Pandas}
 
 \vspace{4pt}

@@ -28,7 +28,7 @@ Software Development Engineer specializing in Java Full Stack development, with 
 **Workforce Telemetry & Geofencing System**
 *06/2023 – 11/2023*
 *Real-Time Telemetry & Operations Platform*
-* Created and developed a real-time workforce tracking application utilizing **Java**, **Spring Boot**, and **React.js**, serving **1,000+ active field agents**.
+* Created and implemented a real-time workforce tracking application utilizing **Java**, **Spring Boot**, and **React.js**, serving **1,000+ active field agents**.
 * Built a responsive map-based dashboard in **React.js** using **Ant Design** (antd), connecting via WebSockets to a Spring Boot backend for live coordinates.
 * Implemented a secure backend API in Spring Boot using **Spring Security** and **JWT** to manage role-based dashboard access control (Admin, Supervisor, Employee).
 * Utilized **Hibernate** and **Spring Data JPA** to manage and query location tracking logs, geofence violations, and route history.
@@ -44,7 +44,7 @@ Software Development Engineer specializing in Java Full Stack development, with 
 ### Automatic Attendance System
 *05/2024 – 07/2024*
 * Programmed a student attendance system by linking a Python face detection script (OpenCV and LBPH) with a Spring Boot enterprise database.
-* Developed a web administration dashboard in React to manage student registrations, log daily attendance, and export Excel reports, cutting manual tasks by 70%.
+* Built a web administration dashboard in React to manage student registrations, log daily attendance, and export Excel reports, cutting manual tasks by 70%.
 
 ## 5. Education
 ### B.Tech.
@@ -139,7 +139,7 @@ Software Development Engineer specializing in Java Full Stack development, with 
 {\textbf{\textcolor{primaryblue}{Workforce Telemetry \& Operations}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~06/2023 -- 11/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Remote, India}
 \begin{itemize}
-    \item Created and developed a real-time workforce tracking application utilizing \textbf{Java}, \textbf{Spring Boot}, and \textbf{React.js}.
+    \item Created and implemented a real-time workforce tracking application utilizing \textbf{Java}, \textbf{Spring Boot}, and \textbf{React.js}.
     \item Built a responsive map-based dashboard in \textbf{React.js} using \textbf{Ant Design} (antd), connecting via WebSockets to a Spring Boot backend.
     \item Implemented a secure backend API in Spring Boot using \textbf{Spring Security} and \textbf{JWT} to manage role-based dashboard access control.
 \end{itemize}

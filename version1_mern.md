@@ -27,8 +27,8 @@ Software Development Engineer specializing in the MERN Stack, with a track recor
 **Workforce Telemetry & Geofencing System**
 *06/2023 – 11/2023*
 *Real-Time Telemetry & Operations Platform*
-* Engineered and developed a real-time workforce tracking application utilizing **React.js**, **Node.js**, **Express.js**, and **MongoDB**, serving **1,000+ active field agents**.
-* Developed an interactive map tracking interface using **React.js** and **Ant Design**, reducing UI load times by 30% and updating status via WebSockets.
+* Engineered and implemented a real-time workforce tracking application utilizing **React.js**, **Node.js**, **Express.js**, and **MongoDB**, serving **1,000+ active field agents**.
+* Created an interactive map tracking interface using **React.js** and **Ant Design**, reducing UI load times by 30% and updating status via WebSockets.
 * Managed frontend state and query caching using **Redux Toolkit** and **React Query**, reducing redundant API calls by 45% and optimizing rendering.
 * Ingested high-frequency GPS telemetry logs through robust REST API endpoints, tracking coordinates, speed, battery, and GPS accuracy.
 
@@ -139,8 +139,8 @@ Software Development Engineer specializing in the MERN Stack, with a track recor
 {\textbf{\textcolor{primaryblue}{Workforce Telemetry \& Operations}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~06/2023 -- 11/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Remote, India}
 \begin{itemize}
-    \item Engineered and developed a real-time workforce tracking application utilizing \textbf{React.js}, \textbf{Node.js}, \textbf{Express.js}, and \textbf{MongoDB}.
-    \item Developed an interactive map tracking interface using \textbf{React.js} and \textbf{Ant Design} (antd), incorporating real-time locations and alerts via WebSockets.
+    \item Engineered and implemented a real-time workforce tracking application utilizing \textbf{React.js}, \textbf{Node.js}, \textbf{Express.js}, and \textbf{MongoDB}.
+    \item Created an interactive map tracking interface using \textbf{React.js} and \textbf{Ant Design} (antd), incorporating real-time locations and alerts via WebSockets.
     \item Managed frontend state and query caching using \textbf{Redux Toolkit} and \textbf{React Query}, reducing redundant API calls by 45\%.
 \end{itemize}
 
@@ -156,7 +156,7 @@ Software Development Engineer specializing in the MERN Stack, with a track recor
 
 \vspace{4pt}
 {\textbf{Facial Recognition Attendance Dashboard}} \\
-{\small Developed an automated student attendance tracking system integrating a Python face recognition script (OpenCV and LBPH) with a Node.js/Express backend API and a React dashboard.} \\
+{\small Created an automated student attendance tracking system integrating a Python face recognition script (OpenCV and LBPH) with a Node.js/Express backend API and a React dashboard.} \\
 {\footnotesize\textbf{STACK:} React.js / Node.js / Express.js / Python / OpenCV / MySQL}
 
 \vspace{4pt}

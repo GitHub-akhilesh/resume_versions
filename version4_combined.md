@@ -30,9 +30,9 @@ Versatile Software Development Engineer with extensive experience building secur
 **Workforce Telemetry & Geofencing System**
 *06/2023 – 11/2023*
 *Real-Time Telemetry & Operations Platform*
-* Created and developed a real-time workforce telemetry platform using React and FastAPI backend, serving **1,000+ active field agents**.
+* Engineered a real-time workforce telemetry platform using React and FastAPI backend, serving **1,000+ active field agents**.
 * Built an interactive live tracking dashboard in **React** using Ant Design (antd) to display real-time coordinates, speed, and alerts.
-* Developed an asynchronous location ingestion pipeline utilizing **FastAPI**, **Celery**, and **Redis** to capture coordinates, speed, and GPS accuracy parameters.
+* Implemented an asynchronous location ingestion pipeline utilizing **FastAPI**, **Celery**, and **Redis** to capture coordinates, speed, and GPS accuracy parameters.
 * Enforced secure role-based access control (RBAC) and authorization APIs using **JWT** and secure middleware routers.
 
 ## 4. Projects
@@ -45,8 +45,8 @@ Versatile Software Development Engineer with extensive experience building secur
 
 ### Automatic Attendance Through Face Detection
 *05/2024 – 07/2024*
-* Developed a student attendance tracking application in **Python** using **OpenCV** (Haar Cascade & LBPH) and **MySQL** database.
-* Developed an interactive desktop GUI using **Tkinter** for registering student profiles, capturing training images, and logging attendance.
+* Created a student attendance tracking application in **Python** using **OpenCV** (Haar Cascade & LBPH) and **MySQL** database.
+* Created an interactive desktop GUI using **Tkinter** for registering student profiles, capturing training images, and logging attendance.
 * Programmed data analysis and exporting scripts using **Pandas** to compile Excel sheets, cutting manual attendance work by 70%.
 
 ## 5. Education
@@ -142,9 +142,9 @@ Versatile Software Development Engineer with extensive experience building secur
 {\textbf{\textcolor{primaryblue}{Workforce Telemetry \& Operations}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~06/2023 -- 11/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Remote, India}
 \begin{itemize}
-    \item Created and developed a real-time workforce telemetry platform using React and FastAPI backend, serving 1,000+ active field agents.
+    \item Engineered a real-time workforce telemetry platform using React and FastAPI backend, serving 1,000+ active field agents.
     \item Built an interactive live map dashboard in \textbf{React} using Ant Design to display speeds and alerts, reducing UI load times by 30\%.
-    \item Developed an asynchronous location ingestion pipeline utilizing \textbf{FastAPI}, \textbf{Celery}, and \textbf{Redis}, processing 10,000+ concurrent GPS pings with 99.9\% uptime.
+    \item Implemented an asynchronous location ingestion pipeline utilizing \textbf{FastAPI}, \textbf{Celery}, and \textbf{Redis}, processing 10,000+ concurrent GPS pings with 99.9\% uptime.
 \end{itemize}
 
 \resumesection{Projects}
@@ -154,7 +154,7 @@ Versatile Software Development Engineer with extensive experience building secur
 
 \vspace{4pt}
 {\textbf{Facial Recognition Attendance System}} \\
-{\small Developed an automated student attendance tracking application integrating Python face detection algorithms (OpenCV and LBPH) with MySQL database.} \\
+{\small Created an automated student attendance tracking application integrating Python face detection algorithms (OpenCV and LBPH) with MySQL database.} \\
 {\footnotesize\textbf{STACK:} Python / OpenCV / Tkinter / MySQL / Pandas}
 
 \vspace{4pt}
