@@ -35,7 +35,7 @@ Software Development Engineer specializing in the MERN Stack, with a track recor
 ## 4. Projects
 ### Himalayan Edges Website Development
 *10/2024 – 11/2024*
-* Engineered an e-commerce platform using the **MERN stack** (React, Node, Express, MongoDB) with PWA features, hosted on AWS, increasing speed and usage by 30%.
+* Designed and launched an e-commerce platform using the **MERN stack** (React, Node, Express, MongoDB) with PWA features, hosted on AWS, increasing speed and usage by 30%.
 * Enforced role-based authentication with email verification for 5,000+ users, streamlining user account management.
 * Designed modular backend API routes using Express and Node, tested under 500+ concurrent users with a 20% cart conversion rate.
 * Integrated Google Reviews dynamically to increase site authority and improve conversions by 15%.
@@ -52,10 +52,10 @@ Software Development Engineer specializing in the MERN Stack, with a track recor
 *07/2019 – 05/2023*
 
 ## 6. Certifications
-* GeeksforGeeks MERN Stack Certification
-* Coding Ninjas DBMS Certification
-* Coding Ninjas DSA Certification
-* IIT Kanpur Prutor Cyber Security Certification
+* Advanced MERN Stack Developer Certification
+* Database Systems & SQL Certification
+* Data Structures & Algorithms Certification
+* IIT Kanpur Cyber Security Certification
 
 ## 7. Achievements
 * Graduated with First Class Honors, maintaining top academic rank.
@@ -151,7 +151,7 @@ Software Development Engineer specializing in the MERN Stack, with a track recor
 
 \vspace{4pt}
 {\textbf{Himalayan Edges Website Development}} \\
-{\small Engineered an e-commerce platform using the MERN stack with PWA features, hosted on AWS, increasing page load speeds and client usage by 30\%.} \\
+{\small Designed and launched an e-commerce platform using the MERN stack with PWA features, hosted on AWS, increasing page load speeds and client usage by 30\%.} \\
 {\footnotesize\textbf{STACK:} React.js / Node.js / Express.js / MongoDB / PWA / AWS S3}
 
 \vspace{4pt}
@@ -176,8 +176,8 @@ Software Development Engineer specializing in the MERN Stack, with a track recor
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~07/2019 -- 05/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Kanpur, UP}
 
 \resumesection{Certifications}
-GeeksforGeeks MERN Stack Certification \quad | \quad Coding Ninjas DBMS Certification \\
-Coding Ninjas DSA Certification \quad | \quad IIT Kanpur Prutor Cyber Security Certification
+Advanced MERN Stack Developer Certification \quad | \quad Database Systems & SQL Certification \\
+Data Structures & Algorithms Certification \quad | \quad IIT Kanpur Cyber Security Certification
 
 \resumesection{Achievements}
 \begin{itemize}

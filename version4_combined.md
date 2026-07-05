@@ -38,7 +38,7 @@ Versatile Software Development Engineer with extensive experience building secur
 ## 4. Projects
 ### Himalayan Edges Website Development
 *10/2024 – 11/2024*
-* Engineered an e-commerce platform using **React.js** and **Django** with PWA capabilities, hosted on AWS, increasing page speed by 30%.
+* Designed and launched an e-commerce platform using **React.js** and **Django** with PWA capabilities, hosted on AWS, increasing page speed by 30%.
 * Enforced role-based authentication with email verification for 5,000+ users, ensuring secure login capabilities.
 * Structured product and backend architecture with modular routes, tested with 500+ concurrent simulated users and a 20% cart conversion rate.
 * Added Google Reviews integration to display user testimonials dynamically, increasing site conversions by 15%.
@@ -55,10 +55,10 @@ Versatile Software Development Engineer with extensive experience building secur
 *07/2019 – 05/2023*
 
 ## 6. Certifications
-* GeeksforGeeks MERN Stack Certification
-* Coding Ninjas DBMS Certification
-* Coding Ninjas DSA Certification
-* IIT Kanpur Prutor Cyber Security Certification
+* Advanced MERN Stack Developer Certification
+* Database Systems & SQL Certification
+* Data Structures & Algorithms Certification
+* IIT Kanpur Cyber Security Certification
 
 ## 7. Achievements
 * Graduated with First Class Honors, maintaining top academic rank.
@@ -154,12 +154,12 @@ Versatile Software Development Engineer with extensive experience building secur
 
 \vspace{4pt}
 {\textbf{Facial Recognition Attendance System}} \\
-{\small Engineered an automated student attendance tracking application integrating Python face detection algorithms (OpenCV and LBPH) with MySQL database.} \\
+{\small Developed an automated student attendance tracking application integrating Python face detection algorithms (OpenCV and LBPH) with MySQL database.} \\
 {\footnotesize\textbf{STACK:} Python / OpenCV / Tkinter / MySQL / Pandas}
 
 \vspace{4pt}
 {\textbf{Himalayan Edges Website Development}} \\
-{\small Engineered an e-commerce platform using React.js and Django with PWA capabilities, hosted on AWS, increasing page speed by 30\%.} \\
+{\small Designed and launched an e-commerce platform using React.js and Django with PWA capabilities, hosted on AWS, increasing page speed by 30\%.} \\
 {\footnotesize\textbf{STACK:} React.js / Django / SQLite / AWS / PWA}
 
 \vspace{4pt}
@@ -179,8 +179,8 @@ Versatile Software Development Engineer with extensive experience building secur
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~07/2019 -- 05/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Kanpur, UP}
 
 \resumesection{Certifications}
-GeeksforGeeks MERN Stack Certification \quad | \quad Coding Ninjas DBMS Certification \\
-Coding Ninjas DSA Certification \quad | \quad IIT Kanpur Prutor Cyber Security Certification
+Advanced MERN Stack Developer Certification \quad | \quad Database Systems & SQL Certification \\
+Data Structures & Algorithms Certification \quad | \quad IIT Kanpur Cyber Security Certification
 
 \resumesection{Achievements}
 \begin{itemize}

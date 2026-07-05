@@ -31,13 +31,13 @@ Software Development Engineer specializing in Python Full Stack development, wit
 *Real-Time Telemetry & Operations Platform*
 * Developed a real-time workforce telemetry and geofencing system utilizing **FastAPI**, **SQLAlchemy** (asyncio), and **React.js**, serving **1,000+ active field agents**.
 * Built an interactive live telemetry dashboard in **React** using Ant Design (antd) to visualize real-time coordinates, speed, and geofence compliance.
-* Implemented a high-performance, asynchronous ingestion API to capture GPS locations (`/api/v1/tracking/ingest`) using **FastAPI** and **aiosqlite**.
+* Implemented a high-performance, asynchronous ingestion API to capture GPS locations (`/api/v1/tracking/ingest`) using **FastAPI** and **asynchronous SQLite**.
 * Utilized **Celery** tasks and **Redis** as a message broker to queue location analytics, processing geofence entry/exit transitions asynchronously.
 
 ## 4. Projects
 ### Himalayan Edges Website Development
 *10/2024 – 11/2024*
-* Engineered an e-commerce platform using **Django** and **React.js** with PWA features, hosted on AWS, boosting speed and usage by 30%.
+* Designed and launched an e-commerce platform using **Django** and **React.js** with PWA features, hosted on AWS, boosting speed and usage by 30%.
 * Enforced role-based authentication with email verification using JWT in Django REST Framework, securing 5,000+ accounts.
 * Designed modular model-view-controller architectures in Django, tested under 500+ concurrent users with a 20% cart conversion rate.
 * Integrated Google Reviews dynamically to increase site authority and improve conversions by 15%.
@@ -54,10 +54,10 @@ Software Development Engineer specializing in Python Full Stack development, wit
 *07/2019 – 05/2023*
 
 ## 6. Certifications
-* GeeksforGeeks MERN Stack Certification
-* Coding Ninjas DBMS Certification
-* Coding Ninjas DSA Certification
-* IIT Kanpur Prutor Cyber Security Certification
+* Advanced MERN Stack Developer Certification
+* Database Systems & SQL Certification
+* Data Structures & Algorithms Certification
+* IIT Kanpur Cyber Security Certification
 
 ## 7. Achievements
 * Graduated with First Class Honors, maintaining top academic rank.
@@ -153,7 +153,7 @@ Software Development Engineer specializing in Python Full Stack development, wit
 
 \vspace{4pt}
 {\textbf{Himalayan Edges Website Development}} \\
-{\small Engineered an e-commerce platform using Django and React.js with PWA features, hosted on AWS, boosting page speeds and usage by 30\%.} \\
+{\small Designed and launched an e-commerce platform using Django and React.js with PWA features, hosted on AWS, boosting page speeds and usage by 30\%.} \\
 {\footnotesize\textbf{STACK:} Python / Django / React.js / SQLite / AWS / PWA}
 
 \vspace{4pt}
@@ -178,8 +178,8 @@ Software Development Engineer specializing in Python Full Stack development, wit
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~07/2019 -- 05/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Kanpur, UP}
 
 \resumesection{Certifications}
-GeeksforGeeks MERN Stack Certification \quad | \quad Coding Ninjas DBMS Certification \\
-Coding Ninjas DSA Certification \quad | \quad IIT Kanpur Prutor Cyber Security Certification
+Advanced MERN Stack Developer Certification \quad | \quad Database Systems & SQL Certification \\
+Data Structures & Algorithms Certification \quad | \quad IIT Kanpur Cyber Security Certification
 
 \resumesection{Achievements}
 \begin{itemize}

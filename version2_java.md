@@ -17,7 +17,7 @@ Software Development Engineer specializing in Java Full Stack development, with 
 * Re-architected monolithic e-governance systems into scalable **Java** and **Spring Boot** microservices, improving service reliability and deployment speed for 2 million+ users.
 * Designed and scaled transaction orchestration services for AEPS, MATM, and VATM platforms using **Spring Boot**, handling 500,000+ daily transactions with a 99% success rate.
 * Secured enterprise APIs using **Spring Security** with **JWT Authentication** and Role-Based Access Control (**RBAC**), implementing device binding and OTP retry policies.
-* Engineered high-performance wallet and ledger systems using **Spring Data JPA** and **Hibernate**, processing over ₹10 billion (INR 100 Crore) in daily transactions.
+* Engineered high-performance wallet and ledger systems using **Spring Data JPA** and **Hibernate**, processing over ₹10 billion (INR 10B) in daily transactions.
 * Optimized database transactions and search queries in **MySQL** and **PostgreSQL** using indexing and cache tuning, reducing latency under peak loads.
 * Established event-driven communication between microservices using Apache Kafka, enhancing asynchronous data processing speed.
 * Configured system monitoring and observability using **Spring Boot Actuator**, **Prometheus**, and **Grafana**, ensuring high availability.
@@ -36,14 +36,14 @@ Software Development Engineer specializing in Java Full Stack development, with 
 ## 4. Projects
 ### Himalayan Edges Website Development
 *10/2024 – 11/2024*
-* Engineered an e-commerce platform using **Spring Boot** and **React.js** with PWA capabilities, hosted on AWS, boosting speed and usage by 30%.
+* Designed and launched an e-commerce platform using **Spring Boot** and **React.js** with PWA capabilities, hosted on AWS, boosting speed and usage by 30%.
 * Implemented role-based login authentication using Spring Security, securing credentials and accounts for 5,000+ users.
 * Designed modular REST controllers and database schemas, verified with 500+ concurrent simulated users and a 20% cart conversion rate.
 * Added Google Reviews integration to display user testimonials dynamically, increasing site conversions by 15%.
 
 ### Automatic Attendance System
 *05/2024 – 07/2024*
-* Developed a student attendance system by linking a Python face detection script (OpenCV and LBPH) with a Spring Boot enterprise database.
+* Designed a student attendance system by linking a Python face detection script (OpenCV and LBPH) with a Spring Boot enterprise database.
 * Developed a web administration dashboard in React to manage student registrations, log daily attendance, and export Excel reports, cutting manual tasks by 70%.
 
 ## 5. Education
@@ -52,10 +52,10 @@ Software Development Engineer specializing in Java Full Stack development, with 
 *07/2019 – 05/2023*
 
 ## 6. Certifications
-* GeeksforGeeks MERN Stack Certification
-* Coding Ninjas DBMS Certification
-* Coding Ninjas DSA Certification
-* IIT Kanpur Prutor Cyber Security Certification
+* Advanced MERN Stack Developer Certification
+* Database Systems & SQL Certification
+* Data Structures & Algorithms Certification
+* IIT Kanpur Cyber Security Certification
 
 ## 7. Achievements
 * Graduated with First Class Honors, maintaining top academic rank.
@@ -129,7 +129,7 @@ Software Development Engineer specializing in Java Full Stack development, with 
     \item Re-architected monolithic e-governance systems into scalable \textbf{Java} and \textbf{Spring Boot} microservices, improving service reliability and deployment speed for 2 million+ active users.
     \item Designed and scaled transaction orchestration services for AEPS, MATM, and VATM platforms using \textbf{Spring Boot}, handling 500,000+ daily transactions.
     \item Secured enterprise APIs using \textbf{Spring Security} with \textbf{JWT Authentication} and Role-Based Access Control (\textbf{RBAC}), implementing device binding.
-    \item Engineered high-performance wallet and ledger systems using \textbf{Spring Data JPA} and \textbf{Hibernate}, processing over ₹10 billion (INR 100 Crore) in daily transactions.
+    \item Engineered high-performance wallet and ledger systems using \textbf{Spring Data JPA} and \textbf{Hibernate}, processing over ₹10 billion (INR 10B) in daily transactions.
     \item Optimized database transactions and search queries in \textbf{MySQL} and \textbf{PostgreSQL} using indexing and cache tuning.
     \item Established event-driven communication between microservices using Apache Kafka, enhancing asynchronous data processing speed.
 \end{itemize}
@@ -146,17 +146,17 @@ Software Development Engineer specializing in Java Full Stack development, with 
 
 \resumesection{Projects}
 {\textbf{Java Authentication \& Secure Login Portal}} \\
-{\small Engineered a secure backend service featuring user registration, password hashing, JWT token generation, and secure routes mapping.} \\
+{\small Architected a secure backend service featuring user registration, password hashing, JWT token generation, and secure routes mapping.} \\
 {\footnotesize\textbf{STACK:} Java / Spring Boot / Spring Security / JWT / Hibernate / MySQL}
 
 \vspace{4pt}
 {\textbf{Himalayan Edges Website Development}} \\
-{\small Engineered an e-commerce platform using Spring Boot and React.js with PWA capabilities, hosted on AWS, boosting speed and usage by 30\%.} \\
+{\small Designed and launched an e-commerce platform using Spring Boot and React.js with PWA capabilities, hosted on AWS, boosting speed and usage by 30\%.} \\
 {\footnotesize\textbf{STACK:} Java / Spring Boot / React.js / MySQL / AWS / PWA}
 
 \vspace{4pt}
 {\textbf{Facial Recognition Attendance Dashboard}} \\
-{\small Developed a student attendance system by linking a Python face detection script (OpenCV) with a Spring Boot enterprise database backend.} \\
+{\small Designed a student attendance system by linking a Python face detection script (OpenCV) with a Spring Boot enterprise database backend.} \\
 {\footnotesize\textbf{STACK:} Java / Spring Boot / Python / OpenCV / MySQL / React.js}
 
 \vspace{4pt}
@@ -176,8 +176,8 @@ Software Development Engineer specializing in Java Full Stack development, with 
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~07/2019 -- 05/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Kanpur, UP}
 
 \resumesection{Certifications}
-GeeksforGeeks MERN Stack Certification \quad | \quad Coding Ninjas DBMS Certification \\
-Coding Ninjas DSA Certification \quad | \quad IIT Kanpur Prutor Cyber Security Certification
+Advanced MERN Stack Developer Certification \quad | \quad Database Systems & SQL Certification \\
+Data Structures & Algorithms Certification \quad | \quad IIT Kanpur Cyber Security Certification
 
 \resumesection{Achievements}
 \begin{itemize}
