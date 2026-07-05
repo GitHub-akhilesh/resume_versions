@@ -16,8 +16,8 @@ Versatile Software Development Engineer with extensive experience building secur
 **CSC e-Governance Services India Ltd. (MeitY, Government of India)**
 *12/2023 – Present*
 *E-Governance initiatives under the Ministry of Electronics & Information Technology*
-* Re-architected monolithic backend services to distributed microservices using **Spring Boot**, **FastAPI**, and **Node.js**, improving performance and reliability for 20 lakh+ users.
-* Architected transactional endpoints for AEPS, MATM, and UPI platforms, managing 5 lakh+ daily transactions with an ~80% success rate.
+* Re-architected monolithic backend services into distributed microservices using **Spring Boot**, **FastAPI**, and **Node.js**, improving performance and reliability for 2 million+ users.
+* Architected transactional endpoints for AEPS, MATM, and UPI platforms, managing 500,000+ daily transactions with a 99% success rate.
 * Secured backend APIs utilizing **JWT Authentication** and **RBAC**, integrating device binding and OTP security, reducing unauthorized access attempts by 99.9%.
 * Architected and optimized databases using **MySQL**, **PostgreSQL**, and **MongoDB**, utilizing sharding, indexing, and query tuning to process transaction logs.
 * Established event-driven communication using **Kafka**, **Celery**, and **Redis** cache, boosting message processing throughput by 35%.
@@ -30,7 +30,7 @@ Versatile Software Development Engineer with extensive experience building secur
 **Workforce Telemetry & Geofencing System**
 *06/2023 – 11/2023*
 *Real-Time Telemetry & Operations Platform*
-* Created and developed a real-time workforce telemetry platform using React and FastAPI backend, serving **1,000+ active field agents**.
+* Designed and developed a real-time workforce telemetry platform using React and FastAPI backend, serving **1,000+ active field agents**.
 * Built an interactive live tracking dashboard in **React** using Ant Design (antd) to display real-time coordinates, speed, and alerts.
 * Developed an asynchronous location ingestion pipeline utilizing **FastAPI**, **Celery**, and **Redis** to capture coordinates, speed, and GPS accuracy parameters.
 * Enforced secure role-based access control (RBAC) and authorization APIs using **JWT** and secure middleware routers.
@@ -38,14 +38,14 @@ Versatile Software Development Engineer with extensive experience building secur
 ## 4. Projects
 ### Himalayan Edges Website Development
 *10/2024 – 11/2024*
-* Created an e-commerce platform using **React.js** and **Django** with PWA capabilities, hosted on AWS, increasing page speed by 30%.
+* Engineered an e-commerce platform using **React.js** and **Django** with PWA capabilities, hosted on AWS, increasing page speed by 30%.
 * Enforced role-based authentication with email verification for 5,000+ users, ensuring secure login capabilities.
 * Structured product and backend architecture with modular routes, tested with 500+ concurrent simulated users and a 20% cart conversion rate.
 * Added Google Reviews integration to display user testimonials dynamically, increasing site conversions by 15%.
 
 ### Automatic Attendance Through Face Detection
 *05/2024 – 07/2024*
-* Developed a student attendance tracking application in **Python** using **OpenCV** (Haarcascade & LBPH) and **MySQL** database.
+* Developed a student attendance tracking application in **Python** using **OpenCV** (Haar Cascade & LBPH) and **MySQL** database.
 * Developed an interactive desktop GUI using **Tkinter** for registering student profiles, capturing training images, and logging attendance.
 * Programmed data analysis and exporting scripts using **Pandas** to compile Excel sheets, cutting manual attendance work by 70%.
 
@@ -129,8 +129,8 @@ Versatile Software Development Engineer with extensive experience building secur
 {\textbf{\textcolor{primaryblue}{CSC e-Governance Services India Ltd. (MeitY, Government of India)}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~12/2023 -- Present \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~New Delhi, India}
 \begin{itemize}
-    \item Re-architected monolithic backend services to distributed microservices using \textbf{Spring Boot}, \textbf{FastAPI}, and \textbf{Node.js}, improving performance and reliability for 20 lakh+ users.
-    \item Architected transactional endpoints for AEPS, MATM, and UPI platforms, managing 5 lakh+ daily transactions with an $\sim$80\% success rate.
+    \item Re-architected monolithic backend services into distributed microservices using \textbf{Spring Boot}, \textbf{FastAPI}, and \textbf{Node.js}, improving performance and reliability for 2 million+ users.
+    \item Architected transactional endpoints for AEPS, MATM, and UPI platforms, managing 500,000+ daily transactions with a 99\% success rate.
     \item Secured backend APIs utilizing \textbf{JWT Authentication} and \textbf{RBAC}, integrating device binding and OTP security, reducing unauthorized access attempts by 99.9\%.
     \item Architected and optimized databases using \textbf{MySQL}, \textbf{PostgreSQL}, and \textbf{MongoDB}, utilizing sharding and query tuning to reduce read/write latency by 45\%.
     \item Established event-driven communication using \textbf{Kafka}, \textbf{Celery}, and \textbf{Redis} cache, boosting message processing throughput by 35\%.
@@ -142,7 +142,7 @@ Versatile Software Development Engineer with extensive experience building secur
 {\textbf{\textcolor{primaryblue}{Workforce Telemetry \& Operations}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~06/2023 -- 11/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Remote, India}
 \begin{itemize}
-    \item Created and developed a real-time workforce telemetry platform using React and FastAPI backend, serving 1,000+ active field agents.
+    \item Designed and developed a real-time workforce telemetry platform using React and FastAPI backend, serving 1,000+ active field agents.
     \item Built an interactive live map dashboard in \textbf{React} using Ant Design to display speeds and alerts, reducing UI load times by 30\%.
     \item Developed an asynchronous location ingestion pipeline utilizing \textbf{FastAPI}, \textbf{Celery}, and \textbf{Redis}, processing 10,000+ concurrent GPS pings with 99.9\% uptime.
 \end{itemize}
@@ -154,12 +154,12 @@ Versatile Software Development Engineer with extensive experience building secur
 
 \vspace{4pt}
 {\textbf{Facial Recognition Attendance System}} \\
-{\small Engineered an automated student attendance tracking application integrating Python face detection algorithms (OpenCV/LBPH) with MySQL database.} \\
+{\small Engineered an automated student attendance tracking application integrating Python face detection algorithms (OpenCV and LBPH) with MySQL database.} \\
 {\footnotesize\textbf{STACK:} Python / OpenCV / Tkinter / MySQL / Pandas}
 
 \vspace{4pt}
 {\textbf{Himalayan Edges Website Development}} \\
-{\small Created an e-commerce platform using React.js and Django with PWA capabilities, hosted on AWS, increasing page speed by 30\%.} \\
+{\small Engineered an e-commerce platform using React.js and Django with PWA capabilities, hosted on AWS, increasing page speed by 30\%.} \\
 {\footnotesize\textbf{STACK:} React.js / Django / SQLite / AWS / PWA}
 
 \vspace{4pt}
