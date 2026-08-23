@@ -2,7 +2,7 @@
 > Single-stack by design. This version mentions only the technologies relevant to the target role.
 
 ## 1. Professional Summary
-Software Development Engineer specializing in Python Full Stack development, building secure, asynchronous backend architectures for high-volume FinTech platforms. Deep expertise in Python, Django, Django REST Framework, FastAPI, Celery, SQLAlchemy, and PostgreSQL/MySQL schema design. Migrated monoliths to async microservices serving 2 million+ users, built Celery and Redis pipelines that cleared 35% of peak-load processing bottlenecks, and streamed live transaction status over FastAPI WebSockets in under 500ms.
+Python full stack developer focused on asynchronous backends for high-volume FinTech. Django and Django REST Framework where the domain is CRUD-heavy, FastAPI where latency matters, Celery and Redis for whatever belongs off the request path. Currently on services clearing 500,000+ transactions a day for 2 million+ users, streaming live status over WebSockets in under 500ms. Reads the query plan before adding the index.
 
 ## 2. Technical Skills
 * **Core Python:** Python, Django, Django REST Framework, FastAPI, Celery, SQLAlchemy, asyncio
@@ -14,19 +14,19 @@ Software Development Engineer specializing in Python Full Stack development, bui
 ### Software Development Engineer
 **CSC e-Governance Services India Ltd. (MeitY, Government of India)**
 *12/2023 – Present | New Delhi, India*
-* Re-architected monolithic web services into asynchronous **FastAPI** and **Django** microservices, improving reliability for **2 million+ users**.
-* Scaled transaction orchestration services for AEPS, MATM, and VATM platforms on **Django REST Framework**, sustaining **500,000+ daily transactions**.
-* Secured APIs with **JWT** authentication and role-based access control (**RBAC**) plus OTP verification, halving authentication latency.
-* Built an asynchronous task pipeline with **Celery** and **Redis**, clearing **35%** of processing bottlenecks under peak traffic.
-* Tuned **PostgreSQL** and **MySQL** schemas with indexing and query partitioning, lowering transaction query latency by **45%**.
-* Streamed live transaction status through **FastAPI WebSockets**, delivering updates to monitoring clients in under **500ms**.
+* Moved monolithic web services onto async **FastAPI** and **Django** microservices serving **2 million+ users**.
+* Scaled AEPS, MATM and VATM orchestration on **Django REST Framework** to **500,000+ daily transactions** at a **99% success rate**.
+* Cut authentication latency **50%** with **JWT**, **RBAC** and OTP verification.
+* Pushed slow work off the request path with **Celery** and **Redis**, clearing **35%** of the backlog that showed up at peak traffic.
+* Partitioned and indexed the **PostgreSQL** and **MySQL** schemas, taking transaction query latency down **45%**.
+* Streamed live transaction status over **FastAPI WebSockets** — updates land in under **500ms**.
 
 ### Freelance Software Engineer
 **Workforce Telemetry & Operations**
 *06/2023 – 11/2023 | Remote, India*
-* Developed a real-time workforce telemetry and geofencing system on **FastAPI** and **SQLAlchemy** (asyncio), serving **1,000+ active field agents**.
-* Built a high-throughput asynchronous GPS ingestion API, sustaining **10,000+ concurrent location pings at 99.9% uptime**.
-* Delivered the live telemetry dashboard in **React.js** against FastAPI WebSocket endpoints, cutting UI load times by **30%**.
+* Built a workforce telemetry and geofencing system on **FastAPI** and async **SQLAlchemy** for **1,000+ field agents**.
+* Held **99.9% uptime** on the GPS ingestion API while it absorbed **10,000+ concurrent** location pings.
+* Wired the telemetry dashboard in **React.js** to FastAPI WebSocket endpoints, **30%** quicker to load.
 
 ## 4. Projects
 ### Facial Recognition Attendance System
@@ -116,19 +116,19 @@ Python desktop utility for task planning, category filtering, and JSON persisten
 \vspace{-10pt}
 
 \resumesection{Summary}
-Software Development Engineer specializing in Python Full Stack development, building secure, asynchronous backend architectures for high-volume FinTech platforms. Deep expertise in Python, Django, Django REST Framework, FastAPI, Celery, SQLAlchemy, and PostgreSQL/MySQL schema design. Migrated monoliths to async microservices serving 2 million+ users, built Celery and Redis pipelines that cleared 35\% of peak-load processing bottlenecks, and streamed live transaction status over FastAPI WebSockets in under 500ms.
+Python full stack developer focused on asynchronous backends for high-volume FinTech. Django and Django REST Framework where the domain is CRUD-heavy, FastAPI where latency matters, Celery and Redis for whatever belongs off the request path. Currently on services clearing 500,000+ transactions a day for 2 million+ users, streaming live status over WebSockets in under 500ms. Reads the query plan before adding the index.
 
 \resumesection{Experience}
 {\textbf{Software Development Engineer}} \\
 {\textbf{\textcolor{primaryblue}{CSC e-Governance Services India Ltd. (MeitY, Government of India)}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~12/2023 -- Present \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~New Delhi, India}
 \begin{itemize}
-    \item Re-architected monolithic web services into asynchronous \textbf{FastAPI} and \textbf{Django} microservices, improving reliability for \textbf{2 million+ users}.
-    \item Scaled transaction orchestration services for AEPS, MATM, and VATM platforms on \textbf{Django REST Framework}, sustaining \textbf{500,000+ daily transactions}.
-    \item Secured APIs with \textbf{JWT} authentication and role-based access control (\textbf{RBAC}) plus OTP verification, halving authentication latency.
-    \item Built an asynchronous task pipeline with \textbf{Celery} and \textbf{Redis}, clearing \textbf{35\%} of processing bottlenecks under peak traffic.
-    \item Tuned \textbf{PostgreSQL} and \textbf{MySQL} schemas with indexing and query partitioning, lowering transaction query latency by \textbf{45\%}.
-    \item Streamed live transaction status through \textbf{FastAPI WebSockets}, delivering updates to monitoring clients in under \textbf{500ms}.
+    \item Moved monolithic web services onto async \textbf{FastAPI} and \textbf{Django} microservices serving \textbf{2 million+ users}.
+    \item Scaled AEPS, MATM and VATM orchestration on \textbf{Django REST Framework} to \textbf{500,000+ daily transactions} at a \textbf{99\% success rate}.
+    \item Cut authentication latency \textbf{50\%} with \textbf{JWT}, \textbf{RBAC} and OTP verification.
+    \item Pushed slow work off the request path with \textbf{Celery} and \textbf{Redis}, clearing \textbf{35\%} of the backlog that showed up at peak traffic.
+    \item Partitioned and indexed the \textbf{PostgreSQL} and \textbf{MySQL} schemas, taking transaction query latency down \textbf{45\%}.
+    \item Streamed live transaction status over \textbf{FastAPI WebSockets} --- updates land in under \textbf{500ms}.
 \end{itemize}
 
 \vspace{4pt}
@@ -136,9 +136,9 @@ Software Development Engineer specializing in Python Full Stack development, bui
 {\textbf{\textcolor{primaryblue}{Workforce Telemetry \& Operations}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~06/2023 -- 11/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Remote, India}
 \begin{itemize}
-    \item Developed a real-time workforce telemetry and geofencing system on \textbf{FastAPI} and \textbf{SQLAlchemy} (asyncio), serving \textbf{1,000+ active field agents}.
-    \item Built a high-throughput asynchronous GPS ingestion API, sustaining \textbf{10,000+ concurrent location pings at 99.9\% uptime}.
-    \item Delivered the live telemetry dashboard in \textbf{React.js} against FastAPI WebSocket endpoints, cutting UI load times by \textbf{30\%}.
+    \item Built a workforce telemetry and geofencing system on \textbf{FastAPI} and async \textbf{SQLAlchemy} for \textbf{1,000+ field agents}.
+    \item Held \textbf{99.9\% uptime} on the GPS ingestion API while it absorbed \textbf{10,000+ concurrent} location pings.
+    \item Wired the telemetry dashboard in \textbf{React.js} to FastAPI WebSocket endpoints, \textbf{30\%} quicker to load.
 \end{itemize}
 
 \resumesection{Projects}

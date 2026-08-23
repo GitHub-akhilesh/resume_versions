@@ -2,7 +2,7 @@
 > Single-stack by design. This version mentions only the technologies relevant to the target role.
 
 ## 1. Professional Summary
-Software Development Engineer specializing in Java Full Stack development, delivering secure, high-volume enterprise FinTech systems. Deep expertise in Java, Spring Boot, Spring Security, Spring Data JPA, Hibernate, and microservice architecture over MySQL and PostgreSQL. Re-architected monoliths into Spring Boot microservices serving 2 million+ users, engineered wallet and ledger services settling over 10 billion INR daily, and hardened enterprise APIs with JWT, RBAC, and device binding. Holds latency down at peak load through SQL indexing, cache tuning, and Dockerized delivery.
+Java full stack developer building secure, high-volume enterprise FinTech systems. Core stack is Spring Boot, Spring Security, Spring Data JPA and Hibernate over MySQL and PostgreSQL, with Kafka for anything that shouldn't block a request. Owns wallet and ledger services settling over 10 billion INR a day, and transaction orchestration holding a 99% success rate across 500,000+ daily transactions. Strong on the unglamorous parts — transaction boundaries, indexing, cache tuning.
 
 ## 2. Technical Skills
 * **Core Java & Spring:** Java, Spring Boot, Spring MVC, Spring Security, Spring Data JPA, Hibernate, Spring Cloud, Microservices
@@ -14,19 +14,19 @@ Software Development Engineer specializing in Java Full Stack development, deliv
 ### Software Development Engineer
 **CSC e-Governance Services India Ltd. (MeitY, Government of India)**
 *12/2023 – Present | New Delhi, India*
-* Re-architected monolithic e-governance systems into **Java** and **Spring Boot** microservices, improving service reliability and deployment speed for **2 million+ active users**.
-* Architected transaction orchestration services for AEPS, MATM, and VATM platforms on **Spring Boot**, sustaining **500,000+ daily transactions** at a **99% success rate**.
-* Hardened enterprise APIs with **Spring Security**, **JWT** authentication, and role-based access control (**RBAC**), adding device binding and OTP retry policies.
-* Engineered wallet and ledger services with **Spring Data JPA** and **Hibernate**, settling over **10 billion INR** in daily transaction value with consistent balances.
-* Optimized **MySQL** and **PostgreSQL** transactions and search queries through indexing and cache tuning, cutting read/write latency by **45%**.
-* Established event-driven communication between microservices with **Apache Kafka**, lifting asynchronous processing throughput by **35%**.
+* Split monolithic e-governance systems into **Java** and **Spring Boot** microservices, improving release speed and fault isolation for **2 million+ users**.
+* Ran AEPS, MATM and VATM transaction orchestration on **Spring Boot** at a **99% success rate** across **500,000+ daily transactions**.
+* Cut unauthorized access attempts **99.9%** with **Spring Security**: **JWT**, **RBAC**, device binding and OTP retry limits.
+* Built the wallet and ledger services on **Spring Data JPA** and **Hibernate** — over **10 billion INR** settled daily, and balances that reconcile.
+* Dropped read/write latency **45%** across **MySQL** and **PostgreSQL** through indexing and cache tuning.
+* Moved inter-service communication onto **Apache Kafka**, lifting async throughput **35%**.
 
 ### Freelance Software Engineer
 **Workforce Telemetry & Operations**
 *06/2023 – 11/2023 | Remote, India*
-* Built a real-time workforce tracking platform on **Java**, **Spring Boot**, and **React.js**, serving **1,000+ active field agents**.
-* Delivered a responsive map-based dashboard in **React.js** with **Ant Design**, streaming live coordinates from Spring Boot WebSocket endpoints and cutting dashboard latency by **30%**.
-* Secured the operations API with **Spring Security** and **JWT**, enforcing Admin, Supervisor, and Employee role boundaries across **100+ client accounts**.
+* Built a workforce tracking platform on **Java**, **Spring Boot** and **React.js** for **1,000+ field agents**.
+* Streamed live coordinates from Spring Boot WebSocket endpoints into a **React.js** and **Ant Design** dashboard, **30%** quicker to load than the first cut.
+* Enforced Admin, Supervisor and Employee boundaries on the operations API with **Spring Security** and **JWT** across **100+ client accounts**.
 
 ## 4. Projects
 ### Enterprise Authentication & Authorization Service
@@ -116,19 +116,19 @@ Wallet and ledger service built on Spring Data JPA and Hibernate, using managed 
 \vspace{-10pt}
 
 \resumesection{Summary}
-Software Development Engineer specializing in Java Full Stack development, delivering secure, high-volume enterprise FinTech systems. Deep expertise in Java, Spring Boot, Spring Security, Spring Data JPA, Hibernate, and microservice architecture over MySQL and PostgreSQL. Re-architected monoliths into Spring Boot microservices serving 2 million+ users, engineered wallet and ledger services settling over 10 billion INR daily, and hardened enterprise APIs with JWT, RBAC, and device binding. Holds latency down at peak load through SQL indexing, cache tuning, and Dockerized delivery.
+Java full stack developer building secure, high-volume enterprise FinTech systems. Core stack is Spring Boot, Spring Security, Spring Data JPA and Hibernate over MySQL and PostgreSQL, with Kafka for anything that shouldn't block a request. Owns wallet and ledger services settling over 10 billion INR a day, and transaction orchestration holding a 99\% success rate across 500,000+ daily transactions. Strong on the unglamorous parts --- transaction boundaries, indexing, cache tuning.
 
 \resumesection{Experience}
 {\textbf{Software Development Engineer}} \\
 {\textbf{\textcolor{primaryblue}{CSC e-Governance Services India Ltd. (MeitY, Government of India)}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~12/2023 -- Present \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~New Delhi, India}
 \begin{itemize}
-    \item Re-architected monolithic e-governance systems into \textbf{Java} and \textbf{Spring Boot} microservices, improving service reliability and deployment speed for \textbf{2 million+ active users}.
-    \item Architected transaction orchestration services for AEPS, MATM, and VATM platforms on \textbf{Spring Boot}, sustaining \textbf{500,000+ daily transactions} at a \textbf{99\% success rate}.
-    \item Hardened enterprise APIs with \textbf{Spring Security}, \textbf{JWT} authentication, and role-based access control (\textbf{RBAC}), adding device binding and OTP retry policies.
-    \item Engineered wallet and ledger services with \textbf{Spring Data JPA} and \textbf{Hibernate}, settling over \textbf{10 billion INR} in daily transaction value with consistent balances.
-    \item Optimized \textbf{MySQL} and \textbf{PostgreSQL} transactions and search queries through indexing and cache tuning, cutting read/write latency by \textbf{45\%}.
-    \item Established event-driven communication between microservices with \textbf{Apache Kafka}, lifting asynchronous processing throughput by \textbf{35\%}.
+    \item Split monolithic e-governance systems into \textbf{Java} and \textbf{Spring Boot} microservices, improving release speed and fault isolation for \textbf{2 million+ users}.
+    \item Ran AEPS, MATM and VATM transaction orchestration on \textbf{Spring Boot} at a \textbf{99\% success rate} across \textbf{500,000+ daily transactions}.
+    \item Cut unauthorized access attempts \textbf{99.9\%} with \textbf{Spring Security}: \textbf{JWT}, \textbf{RBAC}, device binding and OTP retry limits.
+    \item Built the wallet and ledger services on \textbf{Spring Data JPA} and \textbf{Hibernate} --- over \textbf{10 billion INR} settled daily, and balances that reconcile.
+    \item Dropped read/write latency \textbf{45\%} across \textbf{MySQL} and \textbf{PostgreSQL} through indexing and cache tuning.
+    \item Moved inter-service communication onto \textbf{Apache Kafka}, lifting async throughput \textbf{35\%}.
 \end{itemize}
 
 \vspace{4pt}
@@ -136,9 +136,9 @@ Software Development Engineer specializing in Java Full Stack development, deliv
 {\textbf{\textcolor{primaryblue}{Workforce Telemetry \& Operations}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~06/2023 -- 11/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Remote, India}
 \begin{itemize}
-    \item Built a real-time workforce tracking platform on \textbf{Java}, \textbf{Spring Boot}, and \textbf{React.js}, serving \textbf{1,000+ active field agents}.
-    \item Delivered a responsive map-based dashboard in \textbf{React.js} with \textbf{Ant Design}, streaming live coordinates from Spring Boot WebSocket endpoints and cutting dashboard latency by \textbf{30\%}.
-    \item Secured the operations API with \textbf{Spring Security} and \textbf{JWT}, enforcing Admin, Supervisor, and Employee role boundaries across \textbf{100+ client accounts}.
+    \item Built a workforce tracking platform on \textbf{Java}, \textbf{Spring Boot} and \textbf{React.js} for \textbf{1,000+ field agents}.
+    \item Streamed live coordinates from Spring Boot WebSocket endpoints into a \textbf{React.js} and \textbf{Ant Design} dashboard, \textbf{30\%} quicker to load than the first cut.
+    \item Enforced Admin, Supervisor and Employee boundaries on the operations API with \textbf{Spring Security} and \textbf{JWT} across \textbf{100+ client accounts}.
 \end{itemize}
 
 \resumesection{Projects}

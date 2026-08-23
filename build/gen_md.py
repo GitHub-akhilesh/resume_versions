@@ -6,6 +6,11 @@ that no longer exist), so they contradicted the site. Generating them from the
 same dict keeps every artifact telling one story.
 """
 import io, os, re, sys
+try:
+    from html import unescape as html_unescape
+except ImportError:                     # Python 2 fallback
+    from HTMLParser import HTMLParser
+    html_unescape = HTMLParser().unescape
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from content import VERSIONS
@@ -47,8 +52,12 @@ GAPS = {
 
 
 def strip(s):
-    """Markdown wants literal characters, and bold as **...**."""
-    s = s.replace("&amp;", "&").replace("&middot;", u"·")
+    """Markdown wants literal characters, and bold as **...**.
+
+    Decoding every entity in one pass (rather than naming them individually)
+    means a newly introduced entity cannot leak through as literal text.
+    """
+    s = html_unescape(s)
     return s.replace("<strong>", "**").replace("</strong>", "**")
 
 
@@ -108,15 +117,8 @@ def main():
 
         o.append("\n## 10. Complete LaTeX Resume Code\n")
         o.append("```latex\n")
-        clean = dict(data)
-        clean["title"] = data["title"].replace("&amp;", "&").replace("&middot;", u"·")
-        clean["summary"] = data["summary"].replace("&amp;", "&")
-        clean["skills"] = [(a.replace("&amp;", "&"), b.replace("&amp;", "&"))
-                           for a, b in data["skills"]]
-        clean["projects"] = [tuple(x.replace("&amp;", "&") for x in p)
-                             for p in data["projects"]]
-        clean["exp"] = [[b.replace("&amp;", "&") for b in g] for g in data["exp"]]
-        o.append(build_latex(clean, "0c4f6b"))
+        # strip()/tex() decode entities, so no per-field prep is needed
+        o.append(build_latex(data, "0c4f6b"))
         o.append("```\n")
 
         path = os.path.join(REPO, fname)

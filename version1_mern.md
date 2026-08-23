@@ -2,7 +2,7 @@
 > Single-stack by design. This version mentions only the technologies relevant to the target role.
 
 ## 1. Professional Summary
-Software Development Engineer specializing in the MERN stack, building secure, high-throughput FinTech and transaction platforms. Deep expertise in React.js, Next.js, Redux Toolkit, Node.js, Express.js, and MongoDB. Scaled Node.js microservices to serve 2 million+ users and 500,000+ daily transactions, cut MongoDB response times by 40% through indexing and aggregation tuning, and delivered real-time monitoring dashboards over WebSockets. Ships containerized releases through Docker and GitHub Actions.
+MERN stack developer working on national-scale payment and e-governance platforms. React and Redux Toolkit on the front end, Node.js and Express services behind it, MongoDB underneath — currently serving 2 million+ users and 500,000+ transactions a day. Recent wins: MongoDB reads 40% faster after an indexing and aggregation overhaul, and a 99% settlement success rate across AEPS and MATM. Comfortable owning a feature end to end, schema through deployment.
 
 ## 2. Technical Skills
 * **Frontend:** React.js, Next.js, Redux Toolkit, React Query, JavaScript (ES6+), TypeScript, HTML5, CSS3, Tailwind CSS, Material UI
@@ -14,19 +14,19 @@ Software Development Engineer specializing in the MERN stack, building secure, h
 ### Software Development Engineer
 **CSC e-Governance Services India Ltd. (MeitY, Government of India)**
 *12/2023 – Present | New Delhi, India*
-* Re-architected monolithic e-governance portals into **Node.js** and **Express.js** microservices, improving fault isolation and deployment speed for **2 million+ active users**.
-* Built real-time transaction monitoring and location tracking dashboards with **React.js**, **Redux Toolkit**, and **WebSockets**, surfacing **500,000+ daily transactions** with sub-second updates.
-* Integrated third-party UPI and XML payment APIs through **Express.js** service controllers, adding retry and reconciliation handling that raised AEPS and MATM settlement reliability at peak load.
-* Hardened authentication with **JWT** and **Redis**-backed sessions, layering device binding and OTP throttling to shut down credential-stuffing and replay attempts.
-* Tuned **MongoDB** schemas with compound indexing, sharding, and **Mongoose** aggregation rewrites, cutting database response times by **40%**.
-* Automated build, test, and container delivery with **Docker**, **GitHub Actions**, and **Git**, removing manual release steps from every deployment.
+* Split a monolithic e-governance portal into **Node.js** and **Express.js** microservices, cutting deploy times and keeping one bad release from reaching all **2 million+ users**.
+* Built the real-time transaction and location dashboards in **React.js** and **Redux Toolkit**, pushing WebSocket updates across **500,000+ daily transactions**.
+* Took AEPS and MATM settlement to a **99% success rate** under peak load, adding retry and reconciliation handling to the UPI and XML payment integrations.
+* Locked down authentication with **JWT** and **Redis**-backed sessions, device binding and OTP throttling, cutting unauthorized access attempts **99.9%**.
+* Cut **MongoDB** response times **40%** — compound indexes, sharding, and a rewrite of the worst **Mongoose** aggregations.
+* Automated build, test and container delivery for all **3** payment platforms with **Docker** and **GitHub Actions**, retiring a manual release process.
 
 ### Freelance Software Engineer
 **Workforce Telemetry & Operations**
 *06/2023 – 11/2023 | Remote, India*
-* Designed and shipped a real-time workforce tracking platform on **React.js**, **Node.js**, **Express.js**, and **MongoDB**, serving **1,000+ active field agents**.
-* Built an interactive map tracking interface in **React.js** with **Ant Design**, streaming live coordinates over WebSockets and cutting UI load times by **30%**.
-* Managed client state and request caching with **Redux Toolkit** and **React Query**, eliminating **45%** of redundant API calls.
+* Shipped a workforce tracking app on **React.js**, **Node.js**, **Express.js** and **MongoDB** for **1,000+ field agents**.
+* Built the live map interface with **React.js** and **Ant Design**; WebSocket updates and render tuning brought load times down **30%**.
+* Cut redundant API calls **45%** by moving client state and caching onto **Redux Toolkit** and **React Query**.
 
 ## 4. Projects
 ### MERN FinTech & Commerce Suite
@@ -116,19 +116,19 @@ Reusable Express authentication service with password hashing, JWT access and re
 \vspace{-10pt}
 
 \resumesection{Summary}
-Software Development Engineer specializing in the MERN stack, building secure, high-throughput FinTech and transaction platforms. Deep expertise in React.js, Next.js, Redux Toolkit, Node.js, Express.js, and MongoDB. Scaled Node.js microservices to serve 2 million+ users and 500,000+ daily transactions, cut MongoDB response times by 40\% through indexing and aggregation tuning, and delivered real-time monitoring dashboards over WebSockets. Ships containerized releases through Docker and GitHub Actions.
+MERN stack developer working on national-scale payment and e-governance platforms. React and Redux Toolkit on the front end, Node.js and Express services behind it, MongoDB underneath --- currently serving 2 million+ users and 500,000+ transactions a day. Recent wins: MongoDB reads 40\% faster after an indexing and aggregation overhaul, and a 99\% settlement success rate across AEPS and MATM. Comfortable owning a feature end to end, schema through deployment.
 
 \resumesection{Experience}
 {\textbf{Software Development Engineer}} \\
 {\textbf{\textcolor{primaryblue}{CSC e-Governance Services India Ltd. (MeitY, Government of India)}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~12/2023 -- Present \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~New Delhi, India}
 \begin{itemize}
-    \item Re-architected monolithic e-governance portals into \textbf{Node.js} and \textbf{Express.js} microservices, improving fault isolation and deployment speed for \textbf{2 million+ active users}.
-    \item Built real-time transaction monitoring and location tracking dashboards with \textbf{React.js}, \textbf{Redux Toolkit}, and \textbf{WebSockets}, surfacing \textbf{500,000+ daily transactions} with sub-second updates.
-    \item Integrated third-party UPI and XML payment APIs through \textbf{Express.js} service controllers, adding retry and reconciliation handling that raised AEPS and MATM settlement reliability at peak load.
-    \item Hardened authentication with \textbf{JWT} and \textbf{Redis}-backed sessions, layering device binding and OTP throttling to shut down credential-stuffing and replay attempts.
-    \item Tuned \textbf{MongoDB} schemas with compound indexing, sharding, and \textbf{Mongoose} aggregation rewrites, cutting database response times by \textbf{40\%}.
-    \item Automated build, test, and container delivery with \textbf{Docker}, \textbf{GitHub Actions}, and \textbf{Git}, removing manual release steps from every deployment.
+    \item Split a monolithic e-governance portal into \textbf{Node.js} and \textbf{Express.js} microservices, cutting deploy times and keeping one bad release from reaching all \textbf{2 million+ users}.
+    \item Built the real-time transaction and location dashboards in \textbf{React.js} and \textbf{Redux Toolkit}, pushing WebSocket updates across \textbf{500,000+ daily transactions}.
+    \item Took AEPS and MATM settlement to a \textbf{99\% success rate} under peak load, adding retry and reconciliation handling to the UPI and XML payment integrations.
+    \item Locked down authentication with \textbf{JWT} and \textbf{Redis}-backed sessions, device binding and OTP throttling, cutting unauthorized access attempts \textbf{99.9\%}.
+    \item Cut \textbf{MongoDB} response times \textbf{40\%} --- compound indexes, sharding, and a rewrite of the worst \textbf{Mongoose} aggregations.
+    \item Automated build, test and container delivery for all \textbf{3} payment platforms with \textbf{Docker} and \textbf{GitHub Actions}, retiring a manual release process.
 \end{itemize}
 
 \vspace{4pt}
@@ -136,9 +136,9 @@ Software Development Engineer specializing in the MERN stack, building secure, h
 {\textbf{\textcolor{primaryblue}{Workforce Telemetry \& Operations}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~06/2023 -- 11/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Remote, India}
 \begin{itemize}
-    \item Designed and shipped a real-time workforce tracking platform on \textbf{React.js}, \textbf{Node.js}, \textbf{Express.js}, and \textbf{MongoDB}, serving \textbf{1,000+ active field agents}.
-    \item Built an interactive map tracking interface in \textbf{React.js} with \textbf{Ant Design}, streaming live coordinates over WebSockets and cutting UI load times by \textbf{30\%}.
-    \item Managed client state and request caching with \textbf{Redux Toolkit} and \textbf{React Query}, eliminating \textbf{45\%} of redundant API calls.
+    \item Shipped a workforce tracking app on \textbf{React.js}, \textbf{Node.js}, \textbf{Express.js} and \textbf{MongoDB} for \textbf{1,000+ field agents}.
+    \item Built the live map interface with \textbf{React.js} and \textbf{Ant Design}; WebSocket updates and render tuning brought load times down \textbf{30\%}.
+    \item Cut redundant API calls \textbf{45\%} by moving client state and caching onto \textbf{Redux Toolkit} and \textbf{React Query}.
 \end{itemize}
 
 \resumesection{Projects}

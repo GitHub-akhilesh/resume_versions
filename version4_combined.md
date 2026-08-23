@@ -2,7 +2,7 @@
 > Single-stack by design. This version mentions only the technologies relevant to the target role.
 
 ## 1. Professional Summary
-Software Development Engineer building secure, high-scale distributed systems for national e-governance and FinTech platforms. Designs microservice architectures, transaction-critical APIs, and event-driven pipelines serving 2 million+ users and 500,000+ daily transactions. Polyglot across Java/Spring Boot, Python/FastAPI, and Node.js, with strong system design, database engineering, and observability practice. Led hiring and onboarding for a four-engineer team while standardizing Docker-based CI/CD delivery.
+Software engineer building distributed systems for national e-governance and FinTech platforms — microservice architecture, transaction-critical APIs, event-driven pipelines. Currently 2 million+ users and 500,000+ transactions a day across Java/Spring Boot, Python/FastAPI and Node.js services. Hired and onboarded 4 engineers and moved the team onto Docker-based CI/CD. Most useful when a system is either growing faster than its design or falling over under load.
 
 ## 2. Technical Skills
 * **Languages:** Java, Python, JavaScript (ES6+), TypeScript, SQL, C++, HTML5, CSS3
@@ -14,20 +14,20 @@ Software Development Engineer building secure, high-scale distributed systems fo
 ### Software Development Engineer
 **CSC e-Governance Services India Ltd. (MeitY, Government of India)**
 *12/2023 – Present | New Delhi, India*
-* Re-architected monolithic backend services into distributed microservices on **Spring Boot**, **FastAPI**, and **Node.js**, improving reliability for **2 million+ users**.
-* Architected transaction-critical endpoints for AEPS, MATM, and UPI platforms, sustaining **500,000+ daily transactions** across payment rails.
-* Secured platform APIs with **JWT** authentication and **RBAC**, adding device binding and OTP controls to close off unauthorized access paths.
-* Designed and tuned **MySQL**, **PostgreSQL**, and **MongoDB** schemas using sharding, partitioning, and query optimization, cutting read/write latency by **45%**.
-* Established event-driven communication with **Apache Kafka**, **Celery**, and **Redis**, lifting message processing throughput by **35%**.
-* Instrumented services with **Prometheus** and **Grafana** and automated container delivery through **Docker** and **GitHub Actions**.
-* Led hiring and onboarding for **4 engineers**, lifting team onboarding efficiency by **40%**.
+* Split monolithic backends into distributed microservices across **Spring Boot**, **FastAPI** and **Node.js**, serving **2 million+ users**.
+* Built the transaction-critical endpoints for AEPS, MATM and UPI, sustaining **500,000+ daily transactions**.
+* Cut unauthorized access attempts **99.9%** with **JWT**, **RBAC**, device binding and OTP controls.
+* Reduced read/write latency **45%** across **MySQL**, **PostgreSQL** and **MongoDB** using sharding, partitioning and query tuning.
+* Lifted message throughput **35%** by moving inter-service work onto **Apache Kafka**, **Celery** and **Redis**.
+* Stood up **Prometheus** and **Grafana** dashboards and automated container delivery for all **3** payment platforms with **Docker** and **GitHub Actions**.
+* Hired and onboarded **4 engineers**, improving team onboarding efficiency **40%**.
 
 ### Freelance Software Engineer
 **Workforce Telemetry & Operations**
 *06/2023 – 11/2023 | Remote, India*
-* Engineered a real-time workforce telemetry platform with a **React.js** front end and **FastAPI** backend, serving **1,000+ active field agents**.
-* Built an asynchronous location ingestion pipeline on **FastAPI**, **Celery**, and **Redis**, processing **10,000+ concurrent GPS pings at 99.9% uptime**.
-* Delivered an interactive live map dashboard in **React.js** with Ant Design, cutting UI load times by **30%**.
+* Engineered a workforce telemetry platform — **React.js** front end, **FastAPI** backend — for **1,000+ field agents**.
+* Processed **10,000+ concurrent** GPS pings at **99.9% uptime** through a **FastAPI**, **Celery** and **Redis** ingestion pipeline.
+* Built the live map dashboard in **React.js** with **Ant Design**, **30%** quicker to load.
 
 ## 4. Projects
 ### Transaction Orchestration & Ledger Platform
@@ -117,20 +117,20 @@ Reusable auth service providing registration, password hashing, JWT issuance and
 \vspace{-10pt}
 
 \resumesection{Summary}
-Software Development Engineer building secure, high-scale distributed systems for national e-governance and FinTech platforms. Designs microservice architectures, transaction-critical APIs, and event-driven pipelines serving 2 million+ users and 500,000+ daily transactions. Polyglot across Java/Spring Boot, Python/FastAPI, and Node.js, with strong system design, database engineering, and observability practice. Led hiring and onboarding for a four-engineer team while standardizing Docker-based CI/CD delivery.
+Software engineer building distributed systems for national e-governance and FinTech platforms --- microservice architecture, transaction-critical APIs, event-driven pipelines. Currently 2 million+ users and 500,000+ transactions a day across Java/Spring Boot, Python/FastAPI and Node.js services. Hired and onboarded 4 engineers and moved the team onto Docker-based CI/CD. Most useful when a system is either growing faster than its design or falling over under load.
 
 \resumesection{Experience}
 {\textbf{Software Development Engineer}} \\
 {\textbf{\textcolor{primaryblue}{CSC e-Governance Services India Ltd. (MeitY, Government of India)}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~12/2023 -- Present \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~New Delhi, India}
 \begin{itemize}
-    \item Re-architected monolithic backend services into distributed microservices on \textbf{Spring Boot}, \textbf{FastAPI}, and \textbf{Node.js}, improving reliability for \textbf{2 million+ users}.
-    \item Architected transaction-critical endpoints for AEPS, MATM, and UPI platforms, sustaining \textbf{500,000+ daily transactions} across payment rails.
-    \item Secured platform APIs with \textbf{JWT} authentication and \textbf{RBAC}, adding device binding and OTP controls to close off unauthorized access paths.
-    \item Designed and tuned \textbf{MySQL}, \textbf{PostgreSQL}, and \textbf{MongoDB} schemas using sharding, partitioning, and query optimization, cutting read/write latency by \textbf{45\%}.
-    \item Established event-driven communication with \textbf{Apache Kafka}, \textbf{Celery}, and \textbf{Redis}, lifting message processing throughput by \textbf{35\%}.
-    \item Instrumented services with \textbf{Prometheus} and \textbf{Grafana} and automated container delivery through \textbf{Docker} and \textbf{GitHub Actions}.
-    \item Led hiring and onboarding for \textbf{4 engineers}, lifting team onboarding efficiency by \textbf{40\%}.
+    \item Split monolithic backends into distributed microservices across \textbf{Spring Boot}, \textbf{FastAPI} and \textbf{Node.js}, serving \textbf{2 million+ users}.
+    \item Built the transaction-critical endpoints for AEPS, MATM and UPI, sustaining \textbf{500,000+ daily transactions}.
+    \item Cut unauthorized access attempts \textbf{99.9\%} with \textbf{JWT}, \textbf{RBAC}, device binding and OTP controls.
+    \item Reduced read/write latency \textbf{45\%} across \textbf{MySQL}, \textbf{PostgreSQL} and \textbf{MongoDB} using sharding, partitioning and query tuning.
+    \item Lifted message throughput \textbf{35\%} by moving inter-service work onto \textbf{Apache Kafka}, \textbf{Celery} and \textbf{Redis}.
+    \item Stood up \textbf{Prometheus} and \textbf{Grafana} dashboards and automated container delivery for all \textbf{3} payment platforms with \textbf{Docker} and \textbf{GitHub Actions}.
+    \item Hired and onboarded \textbf{4 engineers}, improving team onboarding efficiency \textbf{40\%}.
 \end{itemize}
 
 \vspace{4pt}
@@ -138,9 +138,9 @@ Software Development Engineer building secure, high-scale distributed systems fo
 {\textbf{\textcolor{primaryblue}{Workforce Telemetry \& Operations}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~06/2023 -- 11/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Remote, India}
 \begin{itemize}
-    \item Engineered a real-time workforce telemetry platform with a \textbf{React.js} front end and \textbf{FastAPI} backend, serving \textbf{1,000+ active field agents}.
-    \item Built an asynchronous location ingestion pipeline on \textbf{FastAPI}, \textbf{Celery}, and \textbf{Redis}, processing \textbf{10,000+ concurrent GPS pings at 99.9\% uptime}.
-    \item Delivered an interactive live map dashboard in \textbf{React.js} with Ant Design, cutting UI load times by \textbf{30\%}.
+    \item Engineered a workforce telemetry platform --- \textbf{React.js} front end, \textbf{FastAPI} backend --- for \textbf{1,000+ field agents}.
+    \item Processed \textbf{10,000+ concurrent} GPS pings at \textbf{99.9\% uptime} through a \textbf{FastAPI}, \textbf{Celery} and \textbf{Redis} ingestion pipeline.
+    \item Built the live map dashboard in \textbf{React.js} with \textbf{Ant Design}, \textbf{30\%} quicker to load.
 \end{itemize}
 
 \resumesection{Projects}

@@ -7,6 +7,11 @@ would not compile). Generating them from the same dict that drives the HTML
 keeps all three download formats saying the same thing.
 """
 import io, os, re, sys
+try:
+    from html import unescape as html_unescape
+except ImportError:                     # Python 2 fallback
+    from HTMLParser import HTMLParser
+    html_unescape = HTMLParser().unescape
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from content import VERSIONS
@@ -41,10 +46,19 @@ ESCAPES = [("\\", r"\textbackslash{}"), ("&", r"\&"), ("%", r"\%"),
 
 
 def tex(s):
-    """Escape plain text for LaTeX."""
+    """Escape plain text for LaTeX.
+
+    Entities are decoded first: content.py stores HTML, so &amp; / &mdash; /
+    &middot; arrive spelled out and must become real characters before the
+    backslash escaping runs (otherwise the & in "&mdash;" gets escaped and the
+    entity name is printed verbatim).
+    """
+    s = html_unescape(s)
     for a, b in ESCAPES:
         s = s.replace(a, b)
-    return s.replace(u"\u00b7", r"$\cdot$").replace(u"\u2013", "--")
+    return (s.replace(u"\u00b7", r"$\cdot$")
+             .replace(u"\u2014", "---")
+             .replace(u"\u2013", "--"))
 
 
 def rich(s):
@@ -166,18 +180,11 @@ def main():
         os.makedirs(DOWNLOADS)
     n = 0
     for ver, data in sorted(VERSIONS.items()):
-        # content.py stores HTML entities; LaTeX wants the literal characters
-        clean = dict(data)
-        clean["title"] = data["title"].replace("&amp;", "&").replace("&middot;", u"\u00b7")
-        clean["summary"] = data["summary"].replace("&amp;", "&")
-        clean["skills"] = [(a.replace("&amp;", "&"), b.replace("&amp;", "&"))
-                           for a, b in data["skills"]]
-        clean["projects"] = [tuple(x.replace("&amp;", "&") for x in p)
-                             for p in data["projects"]]
-        clean["exp"] = [[b.replace("&amp;", "&") for b in g] for g in data["exp"]]
+        # No entity prep here: tex() decodes entities itself, so every field
+        # gets the same treatment and a new entity cannot be missed.
         for suffix, color in sorted(STYLE_COLORS.items()):
             path = os.path.join(DOWNLOADS, NAMES[ver] + suffix + ".tex")
-            io.open(path, "w", encoding="utf-8").write(build(clean, color))
+            io.open(path, "w", encoding="utf-8").write(build(data, color))
             n += 1
     print("Generated %d .tex files" % n)
 
