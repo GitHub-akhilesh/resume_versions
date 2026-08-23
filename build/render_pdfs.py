@@ -14,8 +14,13 @@ runtime, so launches run in parallel with isolated profiles and a hard timeout
 
 Usage:
     python build/render_pdfs.py            # all 20 variants -> downloads/*.pdf
-    python build/render_pdfs.py shot       # PNGs into build/.cache/shots
+    python build/render_pdfs.py shot       # PNGs at exact page size, for eyeballing
     python build/render_pdfs.py pdf version4-classic
+
+Single-page fit is checked with `shot`: the PNG is exactly one Letter page, so
+anything clipped off the bottom is visible. Printing an auto-height sheet and
+counting PDF pages does not work -- Chrome ignores the @page margin reset under
+--print-to-pdf, so a sheet that fits still spills onto a second page.
 """
 import io, os, re, shutil, subprocess, sys, tempfile, threading
 
@@ -60,16 +65,21 @@ FIXED = """<style id="flatten">%s
 </style>
 </head>""" % _COMMON
 
-# Auto height instead: any overflow past one page shows up as a second PDF page.
-MEASURE = """<style id="flatten">%s
-  @page { size: 8.5in 11in; margin: 0; }
-  .resume-sheet.active {
-      display:block !important; box-shadow:none !important; border-radius:0 !important;
-      width:8.5in !important; height:auto !important; padding:0.35in 0.4in !important;
-      box-sizing:border-box !important; margin:0 !important; overflow:visible !important;
-      transform:none !important; }
-</style>
-</head>""" % _COMMON
+
+
+def sheets_end(src):
+    """Where the last resume sheet stops.
+
+    The page used to end its sheets with four inline <script type="text/plain">
+    LaTeX payloads. Those were unreferenced and held pre-cleanup content, so
+    they were removed; the canvas close tag is the boundary now. The old marker
+    is still honoured so this works on an unmigrated page.
+    """
+    for marker in ("</div><!-- /canvas -->", '<script type="text/plain" id="latex-version1"'):
+        i = src.find(marker)
+        if i != -1:
+            return i
+    raise ValueError("cannot find the end of the resume sheets")
 
 
 def find_browser():
@@ -85,7 +95,7 @@ def flatten(src_path, stage, override):
     head = src[:src.index("</head>")]
     ids = [(m.start(), m.group(1)) for m in
            re.finditer(r'<div id="(version\d-\w+)" class="resume-sheet', src)]
-    end = src.index('<script type="text/plain" id="latex-version1"')
+    end = sheets_end(src)
     made = []
     for i, (s, name) in enumerate(ids):
         e = ids[i + 1][0] if i + 1 < len(ids) else end
@@ -144,7 +154,7 @@ def run(mode="pdf", only=None, repo=REPO):
     profiles = [tempfile.mkdtemp(prefix="resume_prof_") for _ in range(WORKERS)]
     print("Browser: %s | mode: %s" % (browser, mode))
     try:
-        variants = flatten(src, stage, MEASURE if mode == "measure" else FIXED)
+        variants = flatten(src, stage, FIXED)
         if only:
             variants = [v for v in variants if v[0] in only]
         print("Rendering %d variant(s) on %d workers" % (len(variants), WORKERS))
@@ -164,9 +174,7 @@ def run(mode="pdf", only=None, repo=REPO):
                                 ["--screenshot=" + png, "--window-size=816,1056", url])
                     info = (os.path.exists(png), 0, rc)
                 else:
-                    out = (os.path.join(downloads, outname(name) + ".pdf")
-                           if mode == "pdf"
-                           else os.path.join(stage, name + "_measure.pdf"))
+                    out = os.path.join(downloads, outname(name) + ".pdf")
                     rc = chrome(browser, profiles[wid],
                                 ["--print-to-pdf=" + out, "--no-pdf-header-footer", url])
                     ok = os.path.exists(out) and os.path.getsize(out) > 20000

@@ -12,6 +12,21 @@ from content import VERSIONS
 
 SRC = sys.argv[1] if len(sys.argv) > 1 else "index.html"
 
+def sheets_end(src):
+    """Where the last resume sheet stops.
+
+    The page used to end its sheets with four inline <script type="text/plain">
+    LaTeX payloads. Those were unreferenced and held pre-cleanup content, so
+    they were removed; the canvas close tag is the boundary now. The old marker
+    is still honoured so this works on an unmigrated page.
+    """
+    for marker in ("</div><!-- /canvas -->", '<script type="text/plain" id="latex-version1"'):
+        i = src.find(marker)
+        if i != -1:
+            return i
+    raise ValueError("cannot find the end of the resume sheets")
+
+
 def norm(s):
     return s.replace("&amp;", "&").replace("&middot;", u"·")
 
@@ -162,7 +177,7 @@ def main():
     src = io.open(SRC, encoding="utf-8").read()
     ids = [(m.start(), m.group(1)) for m in
            re.finditer(r'<div id="(version\d-\w+)" class="resume-sheet', src)]
-    end = src.index('<script type="text/plain" id="latex-version1"')
+    end = sheets_end(src)
 
     out, last = [], 0
     for i, (s, name) in enumerate(ids):

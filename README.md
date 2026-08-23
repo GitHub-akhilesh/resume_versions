@@ -77,9 +77,13 @@ single-sheet page first so the output is deterministic.
 ### Verifying single-page fit
 
 ```
-python build/render_pdfs.py measure   # >1 page for any variant means it overflows
 python build/render_pdfs.py shot      # PNGs at exact page size, into build/.cache/shots
 ```
+
+Each PNG is exactly one Letter page, so anything clipped off the bottom shows up
+immediately. (Printing an auto-height sheet and counting PDF pages looks like a
+neater check but does not work: Chrome ignores the `@page` margin reset under
+`--print-to-pdf`, so sheets that actually fit still report two pages.)
 
 `index.html` and `resume_preview.html` are kept identical — the Word generator
 reads the latter.
