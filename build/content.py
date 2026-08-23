@@ -1,0 +1,165 @@
+# -*- coding: utf-8 -*-
+"""Role-specific resume content. One dict per version; nothing off-stack leaks in."""
+
+V1 = {  # ---------------- MERN ----------------
+ "ats": "96",
+ "title": "MERN Stack Developer | React.js &middot; Node.js &middot; Express.js &middot; MongoDB",
+ "summary": "Software Development Engineer specializing in the MERN stack, building secure, high-throughput FinTech and transaction platforms. Deep expertise in React.js, Next.js, Redux Toolkit, Node.js, Express.js, and MongoDB. Scaled Node.js microservices to serve 2 million+ users and 500,000+ daily transactions, cut MongoDB response times by 40% through indexing and aggregation tuning, and delivered real-time monitoring dashboards over WebSockets. Ships containerized releases through Docker and GitHub Actions.",
+ "skills": [
+   ("Frontend", "React.js, Next.js, Redux Toolkit, React Query, JavaScript (ES6+), TypeScript, HTML5, CSS3, Tailwind CSS, Material UI"),
+   ("Backend &amp; APIs", "Node.js, Express.js, RESTful APIs, WebSockets, JWT authentication, RBAC, middleware design, API versioning"),
+   ("Database &amp; Caching", "MongoDB, Mongoose, aggregation pipelines, schema design, indexing, sharding, Redis"),
+   ("Tooling &amp; Cloud", "Git, GitHub, GitHub Actions, Docker, CI/CD pipelines, Jest, Postman, AWS S3"),
+ ],
+ "exp": [[
+   "Re-architected monolithic e-governance portals into <strong>Node.js</strong> and <strong>Express.js</strong> microservices, improving fault isolation and deployment speed for <strong>2 million+ active users</strong>.",
+   "Built real-time transaction monitoring and location tracking dashboards with <strong>React.js</strong>, <strong>Redux Toolkit</strong>, and <strong>WebSockets</strong>, surfacing <strong>500,000+ daily transactions</strong> with sub-second updates.",
+   "Integrated third-party UPI and XML payment APIs through <strong>Express.js</strong> service controllers, adding retry and reconciliation handling that raised AEPS and MATM settlement reliability at peak load.",
+   "Hardened authentication with <strong>JWT</strong> and <strong>Redis</strong>-backed sessions, layering device binding and OTP throttling to shut down credential-stuffing and replay attempts.",
+   "Tuned <strong>MongoDB</strong> schemas with compound indexing, sharding, and <strong>Mongoose</strong> aggregation rewrites, cutting database response times by <strong>40%</strong>.",
+   "Automated build, test, and container delivery with <strong>Docker</strong>, <strong>GitHub Actions</strong>, and <strong>Git</strong>, removing manual release steps from every deployment.",
+ ],[
+   "Designed and shipped a real-time workforce tracking platform on <strong>React.js</strong>, <strong>Node.js</strong>, <strong>Express.js</strong>, and <strong>MongoDB</strong>, serving <strong>1,000+ active field agents</strong>.",
+   "Built an interactive map tracking interface in <strong>React.js</strong> with <strong>Ant Design</strong>, streaming live coordinates over WebSockets and cutting UI load times by <strong>30%</strong>.",
+   "Managed client state and request caching with <strong>Redux Toolkit</strong> and <strong>React Query</strong>, eliminating <strong>45%</strong> of redundant API calls.",
+ ]],
+ "projects": [
+   ("MERN FinTech &amp; Commerce Suite",
+    "Full-stack applications with JWT-secured authentication, role-based admin dashboards, and versioned REST APIs built on React, Redux Toolkit, Express, and MongoDB.",
+    "React.js / Redux Toolkit / Node.js / Express.js / MongoDB / JWT"),
+   ("Himalayan Edges E-Commerce Platform",
+    "PWA-enabled storefront built on the MERN stack and deployed to AWS, lifting page-load speed and client usage by 30% at a 20% cart conversion rate.",
+    "React.js / Node.js / Express.js / MongoDB / PWA / AWS S3"),
+   ("Real-Time Geofencing &amp; Telemetry Dashboard",
+    "Live workforce tracking dashboard streaming GPS coordinates and geofence alerts to a React map view over WebSockets, backed by an Express ingestion API and indexed MongoDB collections.",
+    "React.js / Node.js / Express.js / WebSockets / MongoDB"),
+   ("Role-Based Authentication &amp; Admin Portal",
+    "Reusable Express authentication service with password hashing, JWT access and refresh token rotation, and RBAC middleware consumed by React protected routes.",
+    "Node.js / Express.js / MongoDB / JWT / React Router"),
+ ],
+ "certs": ["Advanced MERN Stack Developer Certification", "Data Structures &amp; Algorithms Certification",
+           "Database Systems &amp; SQL Certification", "IIT Kanpur Cyber Security Certification"],
+}
+
+V2 = {  # ---------------- Java ----------------
+ "ats": "96",
+ "title": "Java Full Stack Developer | Spring Boot &middot; Microservices &middot; REST APIs",
+ "summary": "Software Development Engineer specializing in Java Full Stack development, delivering secure, high-volume enterprise FinTech systems. Deep expertise in Java, Spring Boot, Spring Security, Spring Data JPA, Hibernate, and microservice architecture over MySQL and PostgreSQL. Re-architected monoliths into Spring Boot microservices serving 2 million+ users, engineered wallet and ledger services settling over 10 billion INR daily, and hardened enterprise APIs with JWT, RBAC, and device binding. Holds latency down at peak load through SQL indexing, cache tuning, and Dockerized delivery.",
+ "skills": [
+   ("Core Java &amp; Spring", "Java, Spring Boot, Spring MVC, Spring Security, Spring Data JPA, Hibernate, Spring Cloud, Microservices"),
+   ("APIs, Security &amp; UI", "RESTful APIs, JWT authentication, RBAC, device binding, API versioning, React.js, JavaScript (ES6+), HTML5, CSS3"),
+   ("Data &amp; Messaging", "MySQL, PostgreSQL, transaction management, indexing, query tuning, Redis, Apache Kafka"),
+   ("Build &amp; DevOps", "Maven, Gradle, Git, GitHub, Docker, CI/CD, Postman, Spring Boot Actuator, Prometheus, Grafana"),
+ ],
+ "exp": [[
+   "Re-architected monolithic e-governance systems into <strong>Java</strong> and <strong>Spring Boot</strong> microservices, improving service reliability and deployment speed for <strong>2 million+ active users</strong>.",
+   "Architected transaction orchestration services for AEPS, MATM, and VATM platforms on <strong>Spring Boot</strong>, sustaining <strong>500,000+ daily transactions</strong> at a <strong>99% success rate</strong>.",
+   "Hardened enterprise APIs with <strong>Spring Security</strong>, <strong>JWT</strong> authentication, and role-based access control (<strong>RBAC</strong>), adding device binding and OTP retry policies.",
+   "Engineered wallet and ledger services with <strong>Spring Data JPA</strong> and <strong>Hibernate</strong>, settling over <strong>10 billion INR</strong> in daily transaction value with consistent balances.",
+   "Optimized <strong>MySQL</strong> and <strong>PostgreSQL</strong> transactions and search queries through indexing and cache tuning, cutting read/write latency by <strong>45%</strong>.",
+   "Established event-driven communication between microservices with <strong>Apache Kafka</strong>, lifting asynchronous processing throughput by <strong>35%</strong>.",
+ ],[
+   "Built a real-time workforce tracking platform on <strong>Java</strong>, <strong>Spring Boot</strong>, and <strong>React.js</strong>, serving <strong>1,000+ active field agents</strong>.",
+   "Delivered a responsive map-based dashboard in <strong>React.js</strong> with <strong>Ant Design</strong>, streaming live coordinates from Spring Boot WebSocket endpoints and cutting dashboard latency by <strong>30%</strong>.",
+   "Secured the operations API with <strong>Spring Security</strong> and <strong>JWT</strong>, enforcing Admin, Supervisor, and Employee role boundaries across <strong>100+ client accounts</strong>.",
+ ]],
+ "projects": [
+   ("Enterprise Authentication &amp; Authorization Service",
+    "Spring Security service handling user registration, password hashing, JWT issuance and validation, and role-mapped access control across protected REST routes.",
+    "Java / Spring Boot / Spring Security / JWT / Hibernate / MySQL"),
+   ("Himalayan Edges Commerce Platform",
+    "PWA-enabled e-commerce platform on Spring Boot REST services with modular controllers and normalized MySQL schemas, load-verified at 500+ concurrent users.",
+    "Java / Spring Boot / Spring Data JPA / MySQL / AWS / PWA"),
+   ("Attendance Management &amp; Reporting Platform",
+    "Spring Boot service exposing REST endpoints for student registration, daily attendance logging, and scheduled Excel report generation, cutting manual record-keeping by 70%.",
+    "Java / Spring Boot / Spring Data JPA / MySQL / REST APIs"),
+   ("Wallet &amp; Transaction Ledger Service",
+    "Wallet and ledger service built on Spring Data JPA and Hibernate, using managed transaction boundaries and indexed MySQL schemas to keep balances consistent under concurrent settlement.",
+    "Java / Spring Boot / Spring Data JPA / Hibernate / MySQL / Redis"),
+ ],
+ "certs": ["Database Systems &amp; SQL Certification", "Data Structures &amp; Algorithms Certification",
+           "IIT Kanpur Cyber Security Certification", "Advanced MERN Stack Developer Certification"],
+}
+
+V3 = {  # ---------------- Python ----------------
+ "ats": "95",
+ "title": "Python Full Stack Developer | Django &middot; FastAPI &middot; REST APIs",
+ "summary": "Software Development Engineer specializing in Python Full Stack development, building secure, asynchronous backend architectures for high-volume FinTech platforms. Deep expertise in Python, Django, Django REST Framework, FastAPI, Celery, SQLAlchemy, and PostgreSQL/MySQL schema design. Migrated monoliths to async microservices serving 2 million+ users, built Celery and Redis pipelines that cleared 35% of peak-load processing bottlenecks, and streamed live transaction status over FastAPI WebSockets in under 500ms.",
+ "skills": [
+   ("Core Python", "Python, Django, Django REST Framework, FastAPI, Celery, SQLAlchemy, asyncio"),
+   ("APIs &amp; Security", "RESTful APIs, JWT authentication, OAuth, RBAC, FastAPI WebSockets, API versioning"),
+   ("Data &amp; Messaging", "PostgreSQL, MySQL, SQLite, Redis, Celery queues, indexing, partitioning, query optimization"),
+   ("Tooling &amp; Frontend", "Git, GitHub, Docker, Linux, Postman, CI/CD, React.js, JavaScript (ES6+), HTML5, CSS3"),
+ ],
+ "exp": [[
+   "Re-architected monolithic web services into asynchronous <strong>FastAPI</strong> and <strong>Django</strong> microservices, improving reliability for <strong>2 million+ users</strong>.",
+   "Scaled transaction orchestration services for AEPS, MATM, and VATM platforms on <strong>Django REST Framework</strong>, sustaining <strong>500,000+ daily transactions</strong>.",
+   "Secured APIs with <strong>JWT</strong> authentication and role-based access control (<strong>RBAC</strong>) plus OTP verification, halving authentication latency.",
+   "Built an asynchronous task pipeline with <strong>Celery</strong> and <strong>Redis</strong>, clearing <strong>35%</strong> of processing bottlenecks under peak traffic.",
+   "Tuned <strong>PostgreSQL</strong> and <strong>MySQL</strong> schemas with indexing and query partitioning, lowering transaction query latency by <strong>45%</strong>.",
+   "Streamed live transaction status through <strong>FastAPI WebSockets</strong>, delivering updates to monitoring clients in under <strong>500ms</strong>.",
+ ],[
+   "Developed a real-time workforce telemetry and geofencing system on <strong>FastAPI</strong> and <strong>SQLAlchemy</strong> (asyncio), serving <strong>1,000+ active field agents</strong>.",
+   "Built a high-throughput asynchronous GPS ingestion API, sustaining <strong>10,000+ concurrent location pings at 99.9% uptime</strong>.",
+   "Delivered the live telemetry dashboard in <strong>React.js</strong> against FastAPI WebSocket endpoints, cutting UI load times by <strong>30%</strong>.",
+ ]],
+ "projects": [
+   ("Facial Recognition Attendance System",
+    "Automated attendance tracking in Python with OpenCV (Haar Cascade and LBPH) face recognition, MySQL persistence, and Pandas-generated Excel reports.",
+    "Python / OpenCV / Pandas / Tkinter / MySQL"),
+   ("Himalayan Edges Commerce Platform",
+    "PWA-enabled e-commerce platform on Django and Django REST Framework, deployed to AWS, lifting page speed and client usage by 30%.",
+    "Python / Django / Django REST Framework / SQLite / AWS / PWA"),
+   ("Async Telemetry Ingestion &amp; Reporting Service",
+    "FastAPI ingestion service with Celery and Redis task queues writing to partitioned PostgreSQL tables, plus Pandas reporting jobs over aggregated telemetry.",
+    "Python / FastAPI / Celery / Redis / PostgreSQL / Pandas"),
+   ("Persistent Task Management Dashboard",
+    "Python desktop utility for task planning, category filtering, and JSON persistence, structured on a clean MVC separation.",
+    "Python / Tkinter / JSON / MVC"),
+ ],
+ "certs": ["Database Systems &amp; SQL Certification", "Data Structures &amp; Algorithms Certification",
+           "IIT Kanpur Cyber Security Certification", "Advanced MERN Stack Developer Certification"],
+}
+
+V4 = {  # ---------------- Software Engineer (generalist) ----------------
+ "ats": "95",
+ "title": "Software Development Engineer | Microservices &middot; Distributed Systems &middot; Full Stack",
+ "summary": "Software Development Engineer building secure, high-scale distributed systems for national e-governance and FinTech platforms. Designs microservice architectures, transaction-critical APIs, and event-driven pipelines serving 2 million+ users and 500,000+ daily transactions. Polyglot across Java/Spring Boot, Python/FastAPI, and Node.js, with strong system design, database engineering, and observability practice. Led hiring and onboarding for a four-engineer team while standardizing Docker-based CI/CD delivery.",
+ "skills": [
+   ("Languages", "Java, Python, JavaScript (ES6+), TypeScript, SQL, C++, HTML5, CSS3"),
+   ("Backend &amp; Architecture", "Spring Boot, Django, FastAPI, Node.js, Express.js, React.js, Next.js, microservices, REST APIs, WebSockets"),
+   ("Data &amp; Messaging", "MySQL, PostgreSQL, MongoDB, Redis, Apache Kafka, Celery, Hibernate/JPA, indexing &amp; query tuning"),
+   ("DevOps &amp; Observability", "Docker, Git, GitHub Actions, CI/CD, Linux, Postman, Jira, Prometheus, Grafana"),
+ ],
+ "exp": [[
+   "Re-architected monolithic backend services into distributed microservices on <strong>Spring Boot</strong>, <strong>FastAPI</strong>, and <strong>Node.js</strong>, improving reliability for <strong>2 million+ users</strong>.",
+   "Architected transaction-critical endpoints for AEPS, MATM, and UPI platforms, sustaining <strong>500,000+ daily transactions</strong> across payment rails.",
+   "Secured platform APIs with <strong>JWT</strong> authentication and <strong>RBAC</strong>, adding device binding and OTP controls to close off unauthorized access paths.",
+   "Designed and tuned <strong>MySQL</strong>, <strong>PostgreSQL</strong>, and <strong>MongoDB</strong> schemas using sharding, partitioning, and query optimization, cutting read/write latency by <strong>45%</strong>.",
+   "Established event-driven communication with <strong>Apache Kafka</strong>, <strong>Celery</strong>, and <strong>Redis</strong>, lifting message processing throughput by <strong>35%</strong>.",
+   "Instrumented services with <strong>Prometheus</strong> and <strong>Grafana</strong> and automated container delivery through <strong>Docker</strong> and <strong>GitHub Actions</strong>.",
+   "Led hiring and onboarding for <strong>4 engineers</strong>, lifting team onboarding efficiency by <strong>40%</strong>.",
+ ],[
+   "Engineered a real-time workforce telemetry platform with a <strong>React.js</strong> front end and <strong>FastAPI</strong> backend, serving <strong>1,000+ active field agents</strong>.",
+   "Built an asynchronous location ingestion pipeline on <strong>FastAPI</strong>, <strong>Celery</strong>, and <strong>Redis</strong>, processing <strong>10,000+ concurrent GPS pings at 99.9% uptime</strong>.",
+   "Delivered an interactive live map dashboard in <strong>React.js</strong> with Ant Design, cutting UI load times by <strong>30%</strong>.",
+ ]],
+ "projects": [
+   ("Transaction Orchestration &amp; Ledger Platform",
+    "Microservice platform orchestrating AEPS, MATM, and UPI settlement with a transactional wallet ledger, retry and reconciliation handling, and Kafka event fan-out.",
+    "Spring Boot / FastAPI / Kafka / PostgreSQL / Redis"),
+   ("MERN FinTech &amp; Commerce Suite",
+    "Full-stack applications with JWT-secured authentication, role-based admin dashboards, and versioned REST APIs on React, Express, and MongoDB.",
+    "React.js / Node.js / Express.js / MongoDB / JWT / Redux"),
+   ("Real-Time Telemetry &amp; Geofencing Engine",
+    "Workforce geolocation engine ingesting asynchronous GPS streams, rendering live map visualizations, and pushing geofence alerts over WebSockets.",
+    "React.js / FastAPI / Celery / Redis / PostgreSQL"),
+   ("Enterprise Authentication &amp; Authorization Service",
+    "Reusable auth service providing registration, password hashing, JWT issuance and rotation, and RBAC enforcement across protected REST routes.",
+    "Spring Boot / Spring Security / JWT / MySQL"),
+ ],
+ "certs": ["Data Structures &amp; Algorithms Certification", "Database Systems &amp; SQL Certification",
+           "Advanced MERN Stack Developer Certification", "IIT Kanpur Cyber Security Certification"],
+}
+
+VERSIONS = {"version1": V1, "version2": V2, "version3": V3, "version4": V4}

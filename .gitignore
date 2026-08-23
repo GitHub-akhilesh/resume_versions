@@ -12,3 +12,8 @@ $RECYCLE.BIN/
 *.njsproj
 *.sln
 *.swp
+
+# Python / build artifacts
+__pycache__/
+*.pyc
+build/.cache/

@@ -5,7 +5,15 @@ from docx import Document
 from docx.shared import Inches, Pt, RGBColor
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml import parse_xml
-from playwright.sync_api import sync_playwright
+
+# PDFs are rendered by build/render_pdfs.py using headless Chrome.
+# Playwright is not used: greenlet has no wheel for this Python/Windows
+# toolchain, so `pip install playwright` fails here.
+import sys
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'build'))
+import render_pdfs
+import gen_latex
+import gen_md
 
 # Define paths
 HTML_FILE = "resume_preview.html"
@@ -52,57 +60,15 @@ def setup_directories():
         print(f"Created directory: {DOWNLOADS_DIR}")
 
 def extract_latex():
-    """Extracts LaTeX source from markdown files and writes to .tex files."""
-    for ver, md_filename in MD_FILES.items():
-        if not os.path.exists(md_filename):
-            print(f"Warning: {md_filename} not found!")
-            continue
-            
-        with open(md_filename, "r", encoding="utf-8") as f:
-            content = f.read()
-            
-        # Search for ```latex ... ``` block
-        match = re.search(r"```latex\\s*(.*?)\\s*```", content, re.DOTALL)
-        if not match:
-            match = re.search(r"```latex\s*(.*?)\s*```", content, re.DOTALL)
-            
-        if match:
-            latex_source = match.group(1).strip()
-            
-            # 1. Modern tex
-            modern_path = os.path.join(DOWNLOADS_DIR, f"{VERSIONS[ver + '-modern']}.tex")
-            with open(modern_path, "w", encoding="utf-8") as out:
-                out.write(latex_source)
-            print(f"Generated LaTeX (Modern): {modern_path}")
-            
-            # 2. Classic tex (royal blue)
-            classic_source = latex_source.replace("{0c4f6b}", "{0056b3}")
-            classic_path = os.path.join(DOWNLOADS_DIR, f"{VERSIONS[ver + '-classic']}.tex")
-            with open(classic_path, "w", encoding="utf-8") as out:
-                out.write(classic_source)
-            print(f"Generated LaTeX (Classic): {classic_path}")
+    """Write downloads/*.tex from build/content.py.
 
-            # 3. Minimal tex (charcoal / dark gray)
-            minimal_source = latex_source.replace("{0c4f6b}", "{1a1a1a}")
-            # replace helvet with times / georgia style serif fonts if needed, or keep clean
-            minimal_path = os.path.join(DOWNLOADS_DIR, f"{VERSIONS[ver + '-minimal']}.tex")
-            with open(minimal_path, "w", encoding="utf-8") as out:
-                out.write(minimal_source)
-            print(f"Generated LaTeX (Minimal): {minimal_path}")
+    These used to be scraped out of the markdown files, which meant they drifted
+    from the page and were missing \begin{document} (so they would not compile).
+    Generating them from the same content dict that drives index.html keeps PDF,
+    Word and LaTeX saying the same thing.
+    """
+    gen_latex.main()
 
-            # 4. Executive tex (slate gray / navy)
-            exec_source = latex_source.replace("{0c4f6b}", "{1e293b}")
-            exec_path = os.path.join(DOWNLOADS_DIR, f"{VERSIONS[ver + '-executive']}.tex")
-            with open(exec_path, "w", encoding="utf-8") as out:
-                out.write(exec_source)
-            print(f"Generated LaTeX (Executive): {exec_path}")
-
-            # 5. Enhancv tex (blue accent)
-            enhancv_source = latex_source.replace("{0c4f6b}", "{007bb6}")
-            enhancv_path = os.path.join(DOWNLOADS_DIR, f"{VERSIONS[ver + '-enhancv']}.tex")
-            with open(enhancv_path, "w", encoding="utf-8") as out:
-                out.write(enhancv_source)
-            print(f"Generated LaTeX (Enhancv): {enhancv_path}")
 
 def add_p_border_bottom(paragraph, color_hex="0C4F6B", size="8"):
     pPr = paragraph._p.get_or_add_pPr()
@@ -1007,34 +973,17 @@ def generate_word_docs():
         print(f"Generated Word Docx: {output_path}")
 
 def generate_pdfs():
-    """Launches Playwright headless Chromium to open page and save PDF files."""
-    print("Launching Playwright for PDF generation...")
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        page = browser.new_page()
-        
-        abs_html_path = os.path.abspath(HTML_FILE)
-        page.goto(f"file:///{abs_html_path}")
-        
-        page.wait_for_selector(".sidebar-title")
-        
-        for ver_id, filename_prefix in VERSIONS.items():
-            version_tab_id, style_id = ver_id.split("-")
-            
-            page.click(f"#btn-{version_tab_id}")
-            page.click(f"#btn-style-{style_id}")
-            page.wait_for_timeout(500)
-            
-            output_path = os.path.join(DOWNLOADS_DIR, f"{filename_prefix}.pdf")
-            page.pdf(
-                path=output_path,
-                format="Letter",
-                print_background=True,
-                margin={"top": "0", "bottom": "0", "left": "0", "right": "0"}
-            )
-            print(f"Generated PDF: {output_path}")
-            
-        browser.close()
+    """Render all 20 single-page PDFs via headless Chrome."""
+    rc = render_pdfs.run("pdf")
+    if rc:
+        print("WARNING: some PDFs did not render as a single clean page")
+    return rc
+
+
+def generate_markdown():
+    """Refresh the version*.md source documents from build/content.py."""
+    gen_md.main()
+
 
 if __name__ == "__main__":
     print("=== Starting Resume Generation ===")
@@ -1046,7 +995,10 @@ if __name__ == "__main__":
     print("\n--- 2. Generating Word Documents ---")
     generate_word_docs()
     
-    print("\n--- 3. Generating PDFs via Playwright ---")
+    print("\n--- 3. Generating PDFs via headless Chrome ---")
     generate_pdfs()
+    
+    print("\n--- 4. Refreshing markdown sources ---")
+    generate_markdown()
     
     print("\n=== Generation Complete! ===")

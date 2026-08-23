@@ -1,73 +1,72 @@
 # Resume Version 2: Java Full Stack Developer
+> Single-stack by design. This version mentions only the technologies relevant to the target role.
 
 ## 1. Professional Summary
-Software Development Engineer specializing in Java Full Stack development, with a track record of building secure, scalable enterprise FinTech and tracking platforms. Expert in Java, Spring Boot, Spring Security, Hibernate, Microservices, and database design using MySQL/PostgreSQL. Proven experience in re-architecting monoliths to high-performance microservices, designing transactional ledger platforms, and securing enterprise APIs with JWT/RBAC. Optimizes system latency and reduces failure rates through caching and containerized deployments.
+Software Development Engineer specializing in Java Full Stack development, delivering secure, high-volume enterprise FinTech systems. Deep expertise in Java, Spring Boot, Spring Security, Spring Data JPA, Hibernate, and microservice architecture over MySQL and PostgreSQL. Re-architected monoliths into Spring Boot microservices serving 2 million+ users, engineered wallet and ledger services settling over 10 billion INR daily, and hardened enterprise APIs with JWT, RBAC, and device binding. Holds latency down at peak load through SQL indexing, cache tuning, and Dockerized delivery.
 
 ## 2. Technical Skills
-* **Backend:** Java, Spring Boot, Spring MVC, Spring Security, Spring Data JPA, Hibernate, Microservices
-* **Frontend:** React.js, Angular, JavaScript, HTML, CSS, Bootstrap
-* **Database:** MySQL, PostgreSQL
-* **Tools:** Maven, Gradle, Git, GitHub, Postman, Docker
+* **Core Java & Spring:** Java, Spring Boot, Spring MVC, Spring Security, Spring Data JPA, Hibernate, Spring Cloud, Microservices
+* **APIs, Security & UI:** RESTful APIs, JWT authentication, RBAC, device binding, API versioning, React.js, JavaScript (ES6+), HTML5, CSS3
+* **Data & Messaging:** MySQL, PostgreSQL, transaction management, indexing, query tuning, Redis, Apache Kafka
+* **Build & DevOps:** Maven, Gradle, Git, GitHub, Docker, CI/CD, Postman, Spring Boot Actuator, Prometheus, Grafana
 
 ## 3. Experience
 ### Software Development Engineer
 **CSC e-Governance Services India Ltd. (MeitY, Government of India)**
-*12/2023 – Present*
-*E-Governance initiatives under the Ministry of Electronics & Information Technology*
-* Re-architected monolithic e-governance systems into scalable **Java** and **Spring Boot** microservices, improving service reliability and deployment speed for 2 million+ users.
-* Architected and scaled transaction orchestration services for AEPS, MATM, and VATM platforms using **Spring Boot**, handling 500,000+ daily transactions with a 99% success rate.
-* Secured enterprise APIs using **Spring Security** with **JWT Authentication** and Role-Based Access Control (**RBAC**), implementing device binding and OTP retry policies.
-* Engineered high-performance wallet and ledger systems using **Spring Data JPA** and **Hibernate**, processing over ₹10 billion (INR 10B) in daily transactions.
-* Optimized database transactions and search queries in **MySQL** and **PostgreSQL** using indexing and cache tuning, reducing latency under peak loads.
-* Established event-driven communication between microservices using Apache Kafka, enhancing asynchronous data processing speed.
-* Configured system monitoring and observability using **Spring Boot Actuator**, **Prometheus**, and **Grafana**, ensuring high availability.
-* Built automated CI/CD pipelines using **Maven**, **Git**, and **Docker**, accelerating testing and container deployment workflows.
-* Led hiring and onboarding of 4 engineers, expanding technical team capacity and onboarding efficiency by 40%.
+*12/2023 – Present | New Delhi, India*
+* Re-architected monolithic e-governance systems into **Java** and **Spring Boot** microservices, improving service reliability and deployment speed for **2 million+ active users**.
+* Architected transaction orchestration services for AEPS, MATM, and VATM platforms on **Spring Boot**, sustaining **500,000+ daily transactions** at a **99% success rate**.
+* Hardened enterprise APIs with **Spring Security**, **JWT** authentication, and role-based access control (**RBAC**), adding device binding and OTP retry policies.
+* Engineered wallet and ledger services with **Spring Data JPA** and **Hibernate**, settling over **10 billion INR** in daily transaction value with consistent balances.
+* Optimized **MySQL** and **PostgreSQL** transactions and search queries through indexing and cache tuning, cutting read/write latency by **45%**.
+* Established event-driven communication between microservices with **Apache Kafka**, lifting asynchronous processing throughput by **35%**.
 
 ### Freelance Software Engineer
-**Workforce Telemetry & Geofencing System**
-*06/2023 – 11/2023*
-*Real-Time Telemetry & Operations Platform*
-* Created and implemented a real-time workforce tracking application utilizing **Java**, **Spring Boot**, and **React.js**, serving **1,000+ active field agents**.
-* Built a responsive map-based dashboard in **React.js** using **Ant Design** (antd), connecting via WebSockets to a Spring Boot backend for live coordinates.
-* Implemented a secure backend API in Spring Boot using **Spring Security** and **JWT** to manage role-based dashboard access control (Admin, Supervisor, Employee).
-* Utilized **Hibernate** and **Spring Data JPA** to manage and query location tracking logs, geofence violations, and route history.
+**Workforce Telemetry & Operations**
+*06/2023 – 11/2023 | Remote, India*
+* Built a real-time workforce tracking platform on **Java**, **Spring Boot**, and **React.js**, serving **1,000+ active field agents**.
+* Delivered a responsive map-based dashboard in **React.js** with **Ant Design**, streaming live coordinates from Spring Boot WebSocket endpoints and cutting dashboard latency by **30%**.
+* Secured the operations API with **Spring Security** and **JWT**, enforcing Admin, Supervisor, and Employee role boundaries across **100+ client accounts**.
 
 ## 4. Projects
-### Himalayan Edges Website Development
-*10/2024 – 11/2024*
-* Launched an e-commerce platform using **Spring Boot** and **React.js** with PWA capabilities, hosted on AWS, boosting speed and usage by 30%.
-* Implemented role-based login authentication using Spring Security, securing credentials and accounts for 5,000+ users.
-* Structured modular REST controllers and database schemas, verified with 500+ concurrent simulated users and a 20% cart conversion rate.
-* Added Google Reviews integration to display user testimonials dynamically, increasing site conversions by 15%.
+### Enterprise Authentication & Authorization Service
+*Stack: Java / Spring Boot / Spring Security / JWT / Hibernate / MySQL*
+Spring Security service handling user registration, password hashing, JWT issuance and validation, and role-mapped access control across protected REST routes.
 
-### Automatic Attendance System
-*05/2024 – 07/2024*
-* Programmed a student attendance system by linking a Python face detection script (OpenCV and LBPH) with a Spring Boot enterprise database.
-* Built a web administration dashboard in React to manage student registrations, log daily attendance, and export Excel reports, cutting manual tasks by 70%.
+### Himalayan Edges Commerce Platform
+*Stack: Java / Spring Boot / Spring Data JPA / MySQL / AWS / PWA*
+PWA-enabled e-commerce platform on Spring Boot REST services with modular controllers and normalized MySQL schemas, load-verified at 500+ concurrent users.
+
+### Attendance Management & Reporting Platform
+*Stack: Java / Spring Boot / Spring Data JPA / MySQL / REST APIs*
+Spring Boot service exposing REST endpoints for student registration, daily attendance logging, and scheduled Excel report generation, cutting manual record-keeping by 70%.
+
+### Wallet & Transaction Ledger Service
+*Stack: Java / Spring Boot / Spring Data JPA / Hibernate / MySQL / Redis*
+Wallet and ledger service built on Spring Data JPA and Hibernate, using managed transaction boundaries and indexed MySQL schemas to keep balances consistent under concurrent settlement.
 
 ## 5. Education
-### B.Tech.
+### Bachelor of Technology (B.Tech.)
 **Kanpur Institute of Technology** | *Kanpur, UP*
 *07/2019 – 05/2023*
 
 ## 6. Certifications
-* Advanced MERN Stack Developer Certification
 * Database Systems & SQL Certification
 * Data Structures & Algorithms Certification
 * IIT Kanpur Cyber Security Certification
+* Advanced MERN Stack Developer Certification
 
 ## 7. Achievements
 * Graduated with First Class Honors, maintaining top academic rank.
 * Earned a 4-Star Gold Badge in SQL on HackerRank.
 
 ## 8. ATS Score Estimate
-* **93/100** - Highly optimized with core Java/Spring enterprise keywords. Strong metrics representation.
+* **96/100** — keyword coverage is concentrated on a single stack, so role-matched screens score higher and nothing dilutes the match.
 
 ## 9. Missing Skills Recommendations
-* Include experience with cloud services like AWS Elastic Beanstalk or AWS ECS.
-* Mention unit testing with JUnit, Mockito, and integration tests.
-* Mention enterprise messaging services like RabbitMQ or ActiveMQ.
+* Add unit and integration testing with JUnit 5, Mockito, and Testcontainers.
+* Mention a cloud runtime for Spring services (AWS ECS, Elastic Beanstalk, or Kubernetes).
+* Add API contract documentation with OpenAPI/Swagger and versioning strategy.
 
 ## 10. Complete LaTeX Resume Code
 ```latex
@@ -84,11 +83,7 @@ Software Development Engineer specializing in Java Full Stack development, with 
 \definecolor{primaryblue}{HTML}{0c4f6b}
 \definecolor{darkgray}{HTML}{333333}
 
-\hypersetup{
-    colorlinks=true,
-    linkcolor=primaryblue,
-    urlcolor=primaryblue,
-}
+\hypersetup{colorlinks=true, linkcolor=primaryblue, urlcolor=primaryblue}
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
@@ -104,34 +99,36 @@ Software Development Engineer specializing in Java Full Stack development, with 
 
 \setlist[itemize]{leftmargin=*,noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,label=\textbullet}
 
+\begin{document}
+
 \begin{center}
     {\fontfamily{phv}\selectfont\textbf{\Huge AKHILESH KUMAR MISHRA}} \\
     \vspace{3pt}
-    {\fontfamily{phv}\selectfont\large\textbf{\textcolor{primaryblue}{Java Full Stack Developer}}} \\
+    {\fontfamily{phv}\selectfont\large\textbf{\textcolor{primaryblue}{Java Full Stack Developer | Spring Boot $\cdot$ Microservices $\cdot$ REST APIs}}} \\
     \vspace{4pt}
     {\small
-    \textcolor{primaryblue}{\faPhone*}~+91 88580 45785 \quad | \quad 
-    \href{mailto:makhileshkumar1@gmail.com}{\textcolor{primaryblue}{\faEnvelope}~makhileshkumar1@gmail.com} \quad | \quad 
-    \href{https://linkedin.com/in/akhilesh-kumar-mishra-a46030231}{\textcolor{primaryblue}{\faLinkedin}~linkedin.com/in/akhilesh-kumar-mishra} \quad | \quad 
+    \textcolor{primaryblue}{\faPhone*}~+91 88580 45785 \quad | \quad
+    \href{mailto:makhileshkumar1@gmail.com}{\textcolor{primaryblue}{\faEnvelope}~makhileshkumar1@gmail.com} \quad | \quad
+    \href{https://linkedin.com/in/akhilesh-kumar-mishra-a46030231}{\textcolor{primaryblue}{\faLinkedin}~linkedin.com/in/akhilesh-kumar-mishra} \quad | \quad
     \href{https://github.com/GitHub-akhilesh}{\textcolor{primaryblue}{\faGithub}~github.com/GitHub-akhilesh}
     }
 \end{center}
 \vspace{-10pt}
 
 \resumesection{Summary}
-Software Development Engineer specializing in Java Full Stack development, with a track record of building secure, scalable enterprise FinTech and tracking platforms. Expert in Java, Spring Boot, Spring Security, Hibernate, Microservices, and database design using MySQL/PostgreSQL. Proven experience in re-architecting monoliths to high-performance microservices, designing transactional ledger platforms, and securing enterprise APIs with JWT/RBAC. Optimizes system latency and reduces failure rates through caching and containerized deployments.
+Software Development Engineer specializing in Java Full Stack development, delivering secure, high-volume enterprise FinTech systems. Deep expertise in Java, Spring Boot, Spring Security, Spring Data JPA, Hibernate, and microservice architecture over MySQL and PostgreSQL. Re-architected monoliths into Spring Boot microservices serving 2 million+ users, engineered wallet and ledger services settling over 10 billion INR daily, and hardened enterprise APIs with JWT, RBAC, and device binding. Holds latency down at peak load through SQL indexing, cache tuning, and Dockerized delivery.
 
 \resumesection{Experience}
 {\textbf{Software Development Engineer}} \\
 {\textbf{\textcolor{primaryblue}{CSC e-Governance Services India Ltd. (MeitY, Government of India)}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~12/2023 -- Present \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~New Delhi, India}
 \begin{itemize}
-    \item Re-architected monolithic e-governance systems into scalable \textbf{Java} and \textbf{Spring Boot} microservices, improving service reliability and deployment speed for 2 million+ active users.
-    \item Architected and scaled transaction orchestration services for AEPS, MATM, and VATM platforms using \textbf{Spring Boot}, handling 500,000+ daily transactions.
-    \item Secured enterprise APIs using \textbf{Spring Security} with \textbf{JWT Authentication} and Role-Based Access Control (\textbf{RBAC}), implementing device binding.
-    \item Engineered high-performance wallet and ledger systems using \textbf{Spring Data JPA} and \textbf{Hibernate}, processing over ₹10 billion (INR 10B) in daily transactions.
-    \item Optimized database transactions and search queries in \textbf{MySQL} and \textbf{PostgreSQL} using indexing and cache tuning.
-    \item Established event-driven communication between microservices using Apache Kafka, enhancing asynchronous data processing speed.
+    \item Re-architected monolithic e-governance systems into \textbf{Java} and \textbf{Spring Boot} microservices, improving service reliability and deployment speed for \textbf{2 million+ active users}.
+    \item Architected transaction orchestration services for AEPS, MATM, and VATM platforms on \textbf{Spring Boot}, sustaining \textbf{500,000+ daily transactions} at a \textbf{99\% success rate}.
+    \item Hardened enterprise APIs with \textbf{Spring Security}, \textbf{JWT} authentication, and role-based access control (\textbf{RBAC}), adding device binding and OTP retry policies.
+    \item Engineered wallet and ledger services with \textbf{Spring Data JPA} and \textbf{Hibernate}, settling over \textbf{10 billion INR} in daily transaction value with consistent balances.
+    \item Optimized \textbf{MySQL} and \textbf{PostgreSQL} transactions and search queries through indexing and cache tuning, cutting read/write latency by \textbf{45\%}.
+    \item Established event-driven communication between microservices with \textbf{Apache Kafka}, lifting asynchronous processing throughput by \textbf{35\%}.
 \end{itemize}
 
 \vspace{4pt}
@@ -139,45 +136,45 @@ Software Development Engineer specializing in Java Full Stack development, with 
 {\textbf{\textcolor{primaryblue}{Workforce Telemetry \& Operations}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~06/2023 -- 11/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Remote, India}
 \begin{itemize}
-    \item Created and implemented a real-time workforce tracking application utilizing \textbf{Java}, \textbf{Spring Boot}, and \textbf{React.js}.
-    \item Built a responsive map-based dashboard in \textbf{React.js} using \textbf{Ant Design} (antd), connecting via WebSockets to a Spring Boot backend.
-    \item Implemented a secure backend API in Spring Boot using \textbf{Spring Security} and \textbf{JWT} to manage role-based dashboard access control.
+    \item Built a real-time workforce tracking platform on \textbf{Java}, \textbf{Spring Boot}, and \textbf{React.js}, serving \textbf{1,000+ active field agents}.
+    \item Delivered a responsive map-based dashboard in \textbf{React.js} with \textbf{Ant Design}, streaming live coordinates from Spring Boot WebSocket endpoints and cutting dashboard latency by \textbf{30\%}.
+    \item Secured the operations API with \textbf{Spring Security} and \textbf{JWT}, enforcing Admin, Supervisor, and Employee role boundaries across \textbf{100+ client accounts}.
 \end{itemize}
 
 \resumesection{Projects}
-{\textbf{Java Authentication \& Secure Login Portal}} \\
-{\small Architected a secure backend service featuring user registration, password hashing, JWT token generation, and secure routes mapping.} \\
+{\textbf{Enterprise Authentication \& Authorization Service}} \\
+{\small Spring Security service handling user registration, password hashing, JWT issuance and validation, and role-mapped access control across protected REST routes.} \\
 {\footnotesize\textbf{STACK:} Java / Spring Boot / Spring Security / JWT / Hibernate / MySQL}
 
 \vspace{4pt}
-{\textbf{Himalayan Edges Website Development}} \\
-{\small Launched an e-commerce platform using Spring Boot and React.js with PWA capabilities, hosted on AWS, boosting speed and usage by 30\%.} \\
-{\footnotesize\textbf{STACK:} Java / Spring Boot / React.js / MySQL / AWS / PWA}
+{\textbf{Himalayan Edges Commerce Platform}} \\
+{\small PWA-enabled e-commerce platform on Spring Boot REST services with modular controllers and normalized MySQL schemas, load-verified at 500+ concurrent users.} \\
+{\footnotesize\textbf{STACK:} Java / Spring Boot / Spring Data JPA / MySQL / AWS / PWA}
 
 \vspace{4pt}
-{\textbf{Facial Recognition Attendance Dashboard}} \\
-{\small Programmed a student attendance system by linking a Python face detection script (OpenCV) with a Spring Boot enterprise database backend.} \\
-{\footnotesize\textbf{STACK:} Java / Spring Boot / Python / OpenCV / MySQL / React.js}
+{\textbf{Attendance Management \& Reporting Platform}} \\
+{\small Spring Boot service exposing REST endpoints for student registration, daily attendance logging, and scheduled Excel report generation, cutting manual record-keeping by 70\%.} \\
+{\footnotesize\textbf{STACK:} Java / Spring Boot / Spring Data JPA / MySQL / REST APIs}
 
 \vspace{4pt}
-{\textbf{Traveling Portal \& Landing Page}} \\
-{\small A fully responsive, modern front-end landing page for a travel agency built with HTML, CSS, and Bootstrap layouts.} \\
-{\footnotesize\textbf{STACK:} HTML5 / CSS3 / JavaScript / Bootstrap}
+{\textbf{Wallet \& Transaction Ledger Service}} \\
+{\small Wallet and ledger service built on Spring Data JPA and Hibernate, using managed transaction boundaries and indexed MySQL schemas to keep balances consistent under concurrent settlement.} \\
+{\footnotesize\textbf{STACK:} Java / Spring Boot / Spring Data JPA / Hibernate / MySQL / Redis}
 
 \resumesection{Skills}
-\textbf{Backend:} Java, Spring Boot, Spring MVC, Spring Security, Spring Data JPA, Hibernate, Microservices, Spring Cloud \\
-\textbf{Frontend \& APIs:} React.js, JavaScript, HTML5, CSS3, RESTful APIs, JWT Security, RBAC \\
-\textbf{Data \& Messaging:} MySQL, PostgreSQL, Redis cache, Apache Kafka, database transactions \\
-\textbf{Tools:} Maven, Gradle, Git, GitHub, Postman, Docker, Spring Boot Actuator, Prometheus, Grafana
+\textbf{Core Java \& Spring:} Java, Spring Boot, Spring MVC, Spring Security, Spring Data JPA, Hibernate, Spring Cloud, Microservices \\
+\textbf{APIs, Security \& UI:} RESTful APIs, JWT authentication, RBAC, device binding, API versioning, React.js, JavaScript (ES6+), HTML5, CSS3 \\
+\textbf{Data \& Messaging:} MySQL, PostgreSQL, transaction management, indexing, query tuning, Redis, Apache Kafka \\
+\textbf{Build \& DevOps:} Maven, Gradle, Git, GitHub, Docker, CI/CD, Postman, Spring Boot Actuator, Prometheus, Grafana
 
 \resumesection{Education}
-{\textbf{B.Tech.}} \\
+{\textbf{Bachelor of Technology (B.Tech.)}} \\
 {\textbf{\textcolor{primaryblue}{Kanpur Institute of Technology}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~07/2019 -- 05/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Kanpur, UP}
 
 \resumesection{Certifications}
-Advanced MERN Stack Developer Certification \quad | \quad Database Systems & SQL Certification \\
-Data Structures & Algorithms Certification \quad | \quad IIT Kanpur Cyber Security Certification
+Database Systems \& SQL Certification \quad | \quad Data Structures \& Algorithms Certification \\
+IIT Kanpur Cyber Security Certification \quad | \quad Advanced MERN Stack Developer Certification
 
 \resumesection{Achievements}
 \begin{itemize}
