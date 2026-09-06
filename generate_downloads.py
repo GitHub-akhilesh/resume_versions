@@ -493,10 +493,10 @@ def generate_word_docs():
                 elif c_class == 'experience-container':
                     items = child.xpath('.//div[@class="experience-item"]')
                     for exp in items:
-                        role = exp.xpath('.//span[@class="role-title"]/text()')
-                        company = exp.xpath('.//span[@class="company-name"]/text()')
+                        role = exp.xpath('.//*[@class="role-title"]/text()')
+                        company = exp.xpath('.//*[@class="company-name"]/text()')
                         desc = exp.xpath('.//div[@class="company-desc"]/text()')
-                        meta = exp.xpath('.//div[@class="meta-line"]/text()')
+                        meta = exp.xpath('.//*[@class="meta-line"]/text()')
                         bullets = exp.xpath('.//ul/li | .//ul[@class="bullet-list"]/li')
                         
                         p_role = main_cell.add_paragraph()
@@ -691,8 +691,8 @@ def generate_word_docs():
                 elif el_class == 'experience-container':
                     items = el.xpath('.//div[@class="experience-item"]')
                     for item in items:
-                        role = item.xpath('.//span[@class="role-title"]/text()')
-                        company = item.xpath('.//span[@class="company-name"]/text()')
+                        role = item.xpath('.//*[@class="role-title"]/text()')
+                        company = item.xpath('.//*[@class="company-name"]/text()')
                         desc = item.xpath('.//div[@class="company-desc"]/text()')
                         left_text_nodes = item.xpath('.//div[@class="experience-left"]//text()')
                         bullets = item.xpath('.//ul[@class="bullet-list"]/li | .//ul/li')
