@@ -12,7 +12,7 @@
 
 ## 3. Experience
 ### Software Development Engineer
-**CSC e-Governance Services India Ltd. (MeitY, Government of India)**
+**CSC e-Governance Services India Ltd. --- India's national digital services platform, 2M+ users**
 *12/2023 – Present | New Delhi, India*
 * Scaled AEPS, MATM and VATM orchestration to **500,000+ daily transactions** at a **99% success rate**, by making the **Django REST Framework** payment path idempotent with request keys, backoff retries and nightly reconciliation.
 * Took transaction query p95 down **45%** across **PostgreSQL** and **MySQL**, by partitioning the hot tables and adding covering indexes chosen from the query plan.
@@ -21,8 +21,8 @@
 * Contained a bad release to one service instead of the whole portal for **2 million+ users**, by moving monolithic web services onto async **FastAPI** and **Django** microservices behind a versioned REST gateway.
 * Cut authentication latency **50%**, by issuing **JWT** access/refresh pairs with **RBAC** claims and caching OTP verification state in **Redis**.
 
-### Software Engineer (Contract)
-**Independent Client Engagement**
+### Software Engineer
+**Contract engagement --- field-workforce logistics, 1,000+ agents**
 *06/2023 – 11/2023 | Remote, India*
 * Built a workforce telemetry and geofencing system for **1,000+ field agents** end to end, on **FastAPI** and async **SQLAlchemy** with **Alembic** migrations.
 * Held **99.9% uptime** while absorbing **10,000+ concurrent** location pings, by batching writes through a **Celery** and **Redis** ingestion pipeline.
@@ -51,13 +51,9 @@ FastAPI ingestion service with Celery and Redis task queues writing to partition
 *07/2019 – 05/2023*
 
 ## 6. Certifications
-* Database Systems & SQL Certification
-* Data Structures & Algorithms Certification
 * IIT Kanpur Cyber Security Certification
-* Advanced MERN Stack Developer Certification
 
 ## 7. Achievements
-* First Class Honors, B.Tech. --- top academic rank in cohort.
 * HackerRank 4-Star Gold badge in SQL.
 
 ## 8. ATS Score Estimate
@@ -120,7 +116,7 @@ FastAPI ingestion service with Celery and Redis task queues writing to partition
 
 \resumesection{Experience}
 {\textbf{Software Development Engineer}} \\
-{\textbf{\textcolor{primaryblue}{CSC e-Governance Services India Ltd. (MeitY, Government of India)}}} \\
+{\textbf{\textcolor{primaryblue}{CSC e-Governance Services India Ltd. --- India's national digital services platform, 2M+ users}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~12/2023 -- Present \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~New Delhi, India}
 \begin{itemize}
     \item Scaled AEPS, MATM and VATM orchestration to \textbf{500,000+ daily transactions} at a \textbf{99\% success rate}, by making the \textbf{Django REST Framework} payment path idempotent with request keys, backoff retries and nightly reconciliation.
@@ -132,8 +128,8 @@ FastAPI ingestion service with Celery and Redis task queues writing to partition
 \end{itemize}
 
 \vspace{4pt}
-{\textbf{Software Engineer (Contract)}} \\
-{\textbf{\textcolor{primaryblue}{Independent Client Engagement}}} \\
+{\textbf{Software Engineer}} \\
+{\textbf{\textcolor{primaryblue}{Contract engagement --- field-workforce logistics, 1,000+ agents}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~06/2023 -- 11/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Remote, India}
 \begin{itemize}
     \item Built a workforce telemetry and geofencing system for \textbf{1,000+ field agents} end to end, on \textbf{FastAPI} and async \textbf{SQLAlchemy} with \textbf{Alembic} migrations.
@@ -173,12 +169,11 @@ FastAPI ingestion service with Celery and Redis task queues writing to partition
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~07/2019 -- 05/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Kanpur, UP}
 
 \resumesection{Certifications}
-Database Systems \& SQL Certification \quad | \quad Data Structures \& Algorithms Certification \\
-IIT Kanpur Cyber Security Certification \quad | \quad Advanced MERN Stack Developer Certification
+IIT Kanpur Cyber Security Certification \\
+
 
 \resumesection{Achievements}
 \begin{itemize}
-    \item First Class Honors, B.Tech. --- top academic rank in cohort.
     \item HackerRank 4-Star Gold badge in SQL.
 \end{itemize}
 

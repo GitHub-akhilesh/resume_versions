@@ -12,7 +12,7 @@
 
 ## 3. Experience
 ### Software Development Engineer
-**CSC e-Governance Services India Ltd. (MeitY, Government of India)**
+**CSC e-Governance Services India Ltd. --- India's national digital services platform, 2M+ users**
 *12/2023 – Present | New Delhi, India*
 * Held AEPS and MATM settlement at a **99% success rate** through peak load, by making the UPI and XML payment path idempotent — request keys, exponential-backoff retries and an automated end-of-day reconciliation job.
 * Cut **p95 read latency 40%** on the transaction APIs serving **2 million+ users**, by collapsing N+1 **Mongoose** queries into a single **MongoDB** aggregation pipeline and compound-indexing the hot collections.
@@ -21,8 +21,8 @@
 * Blocked **99.9%** of unauthorized access attempts on the payments API, by adding **JWT** access/refresh rotation, **Redis**-backed sessions, device binding, RBAC middleware and per-device OTP rate limiting.
 * Retired manual releases across all **3** payment platforms, by containerising the services with **Docker** and gating every merge on **GitHub Actions** running **Jest** unit and **Supertest** integration suites.
 
-### Software Engineer (Contract)
-**Independent Client Engagement**
+### Software Engineer
+**Contract engagement --- field-workforce logistics, 1,000+ agents**
 *06/2023 – 11/2023 | Remote, India*
 * Shipped a field-workforce platform used by **1,000+ agents** end to end — schema design through AWS deployment — on **React.js**, **Node.js**, **Express.js** and **MongoDB**.
 * Brought dashboard load time down **30%**, by route-level code splitting of the **React.js** map view, virtualising marker rendering and streaming positions over **WebSockets** instead of polling.
@@ -51,13 +51,9 @@ Delivers live GPS positions and geofence alerts to 1,000+ field agents with no p
 *07/2019 – 05/2023*
 
 ## 6. Certifications
-* IIT Kanpur — Cyber Security Certification
-* Advanced MERN Stack Developer Certification
-* Data Structures & Algorithms Certification
-* Database Systems & SQL Certification
+* IIT Kanpur Cyber Security Certification
 
 ## 7. Achievements
-* First Class Honors, B.Tech. --- top academic rank in cohort.
 * HackerRank 4-Star Gold badge in SQL.
 
 ## 8. ATS Score Estimate
@@ -120,7 +116,7 @@ Delivers live GPS positions and geofence alerts to 1,000+ field agents with no p
 
 \resumesection{Experience}
 {\textbf{Software Development Engineer}} \\
-{\textbf{\textcolor{primaryblue}{CSC e-Governance Services India Ltd. (MeitY, Government of India)}}} \\
+{\textbf{\textcolor{primaryblue}{CSC e-Governance Services India Ltd. --- India's national digital services platform, 2M+ users}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~12/2023 -- Present \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~New Delhi, India}
 \begin{itemize}
     \item Held AEPS and MATM settlement at a \textbf{99\% success rate} through peak load, by making the UPI and XML payment path idempotent --- request keys, exponential-backoff retries and an automated end-of-day reconciliation job.
@@ -132,8 +128,8 @@ Delivers live GPS positions and geofence alerts to 1,000+ field agents with no p
 \end{itemize}
 
 \vspace{4pt}
-{\textbf{Software Engineer (Contract)}} \\
-{\textbf{\textcolor{primaryblue}{Independent Client Engagement}}} \\
+{\textbf{Software Engineer}} \\
+{\textbf{\textcolor{primaryblue}{Contract engagement --- field-workforce logistics, 1,000+ agents}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~06/2023 -- 11/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Remote, India}
 \begin{itemize}
     \item Shipped a field-workforce platform used by \textbf{1,000+ agents} end to end --- schema design through AWS deployment --- on \textbf{React.js}, \textbf{Node.js}, \textbf{Express.js} and \textbf{MongoDB}.
@@ -173,12 +169,11 @@ Delivers live GPS positions and geofence alerts to 1,000+ field agents with no p
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~07/2019 -- 05/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Kanpur, UP}
 
 \resumesection{Certifications}
-IIT Kanpur --- Cyber Security Certification \quad | \quad Advanced MERN Stack Developer Certification \\
-Data Structures \& Algorithms Certification \quad | \quad Database Systems \& SQL Certification
+IIT Kanpur Cyber Security Certification \\
+
 
 \resumesection{Achievements}
 \begin{itemize}
-    \item First Class Honors, B.Tech. --- top academic rank in cohort.
     \item HackerRank 4-Star Gold badge in SQL.
 \end{itemize}
 

@@ -2,17 +2,17 @@
 > Single-stack by design. This version mentions only the technologies relevant to the target role.
 
 ## 1. Professional Summary
-Over 10 billion INR settled daily across wallet and ledger services built on Spring Boot, Spring Data JPA and Hibernate. Held AEPS, MATM and VATM orchestration at a 99% success rate over 500,000+ daily transactions by making the payment path idempotent and self-reconciling, and cut p95 database latency 45% through covering indexes and Redis caching. Strong on the unglamorous parts — transaction boundaries, Kafka messaging, JUnit coverage.
+Backend engineer running payment infrastructure that clears 500,000+ transactions a day for 2M+ users. Java/Spring Boot, Kafka, microservices. Wallet and ledger services settle over 10 billion INR daily with balances that reconcile, and AEPS, MATM and VATM orchestration holds a 99% success rate at peak through idempotent request handling and automated reconciliation. Cut p95 database latency 45% with covering indexes and Redis caching.
 
 ## 2. Technical Skills
-* **Core Java & Spring:** Java, Spring Boot, Spring MVC, Spring Security, Spring Data JPA, Hibernate, Spring Cloud, microservices
-* **APIs, Security & UI:** RESTful APIs, OpenAPI/Swagger, JWT, RBAC, device binding, rate limiting, idempotency keys, API versioning, React.js
-* **Data & Messaging:** MySQL, PostgreSQL, transaction boundaries, covering indexes, query tuning, Redis, Apache Kafka, dead-letter topics
-* **Testing & DevOps:** JUnit 5, Mockito, Testcontainers, Maven, Gradle, Docker, Kubernetes, GitHub Actions CI/CD, Actuator, Prometheus, Grafana
+* **Core:** Java, Spring Boot, Spring Security, Spring Data JPA, Hibernate, microservices, REST APIs
+* **Data & Messaging:** Apache Kafka, MySQL, PostgreSQL, MongoDB, Redis, transaction boundaries, covering indexes, query tuning
+* **Platform & Delivery:** Docker, Kubernetes, GitHub Actions CI/CD, Maven, Gradle, JUnit 5, Mockito, Testcontainers, Prometheus, Grafana
+* **Also:** Python, React.js, JavaScript (ES6+), JWT, RBAC, OpenAPI/Swagger, idempotency keys
 
 ## 3. Experience
 ### Software Development Engineer
-**CSC e-Governance Services India Ltd. (MeitY, Government of India)**
+**CSC e-Governance Services India Ltd. --- India's national digital services platform, 2M+ users**
 *12/2023 – Present | New Delhi, India*
 * Held AEPS, MATM and VATM orchestration at a **99% success rate** across **500,000+ daily transactions**, by making the **Spring Boot** payment path idempotent with request keys, backoff retries and automated end-of-day reconciliation.
 * Settled over **10 billion INR** a day with balances that reconcile, by building the wallet and ledger services on **Spring Data JPA** and **Hibernate** with explicit transaction boundaries and optimistic locking.
@@ -21,8 +21,8 @@ Over 10 billion INR settled daily across wallet and ledger services built on Spr
 * Blocked **99.9%** of unauthorized access attempts, by adding **Spring Security** with **JWT**, method-level **RBAC**, device binding and OTP retry limits.
 * Lifted async throughput **35%**, by moving inter-service calls onto **Apache Kafka** with dead-letter topics, and surfacing consumer lag in **Prometheus** and **Grafana**.
 
-### Software Engineer (Contract)
-**Independent Client Engagement**
+### Software Engineer
+**Contract engagement --- field-workforce logistics, 1,000+ agents**
 *06/2023 – 11/2023 | Remote, India*
 * Shipped a workforce tracking platform for **1,000+ field agents** end to end on **Java**, **Spring Boot** and **React.js** — schema design through AWS deployment.
 * Brought dashboard load time down **30%**, by streaming live coordinates from Spring Boot **WebSocket** endpoints into a **React.js** and **Ant Design** map view instead of polling.
@@ -51,13 +51,9 @@ Wallet and ledger service built on Spring Data JPA and Hibernate, using managed 
 *07/2019 – 05/2023*
 
 ## 6. Certifications
-* Database Systems & SQL Certification
-* Data Structures & Algorithms Certification
 * IIT Kanpur Cyber Security Certification
-* Advanced MERN Stack Developer Certification
 
 ## 7. Achievements
-* First Class Honors, B.Tech. --- top academic rank in cohort.
 * HackerRank 4-Star Gold badge in SQL.
 
 ## 8. ATS Score Estimate
@@ -116,11 +112,11 @@ Wallet and ledger service built on Spring Data JPA and Hibernate, using managed 
 \vspace{-10pt}
 
 \resumesection{Summary}
-Over 10 billion INR settled daily across wallet and ledger services built on Spring Boot, Spring Data JPA and Hibernate. Held AEPS, MATM and VATM orchestration at a 99\% success rate over 500,000+ daily transactions by making the payment path idempotent and self-reconciling, and cut p95 database latency 45\% through covering indexes and Redis caching. Strong on the unglamorous parts --- transaction boundaries, Kafka messaging, JUnit coverage.
+Backend engineer running payment infrastructure that clears 500,000+ transactions a day for 2M+ users. Java/Spring Boot, Kafka, microservices. Wallet and ledger services settle over 10 billion INR daily with balances that reconcile, and AEPS, MATM and VATM orchestration holds a 99\% success rate at peak through idempotent request handling and automated reconciliation. Cut p95 database latency 45\% with covering indexes and Redis caching.
 
 \resumesection{Experience}
 {\textbf{Software Development Engineer}} \\
-{\textbf{\textcolor{primaryblue}{CSC e-Governance Services India Ltd. (MeitY, Government of India)}}} \\
+{\textbf{\textcolor{primaryblue}{CSC e-Governance Services India Ltd. --- India's national digital services platform, 2M+ users}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~12/2023 -- Present \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~New Delhi, India}
 \begin{itemize}
     \item Held AEPS, MATM and VATM orchestration at a \textbf{99\% success rate} across \textbf{500,000+ daily transactions}, by making the \textbf{Spring Boot} payment path idempotent with request keys, backoff retries and automated end-of-day reconciliation.
@@ -132,8 +128,8 @@ Over 10 billion INR settled daily across wallet and ledger services built on Spr
 \end{itemize}
 
 \vspace{4pt}
-{\textbf{Software Engineer (Contract)}} \\
-{\textbf{\textcolor{primaryblue}{Independent Client Engagement}}} \\
+{\textbf{Software Engineer}} \\
+{\textbf{\textcolor{primaryblue}{Contract engagement --- field-workforce logistics, 1,000+ agents}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~06/2023 -- 11/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Remote, India}
 \begin{itemize}
     \item Shipped a workforce tracking platform for \textbf{1,000+ field agents} end to end on \textbf{Java}, \textbf{Spring Boot} and \textbf{React.js} --- schema design through AWS deployment.
@@ -162,10 +158,10 @@ Over 10 billion INR settled daily across wallet and ledger services built on Spr
 {\footnotesize\textbf{STACK:} Java / Spring Boot / Spring Data JPA / Hibernate / MySQL / Redis}
 
 \resumesection{Skills}
-\textbf{Core Java \& Spring:} Java, Spring Boot, Spring MVC, Spring Security, Spring Data JPA, Hibernate, Spring Cloud, microservices \\
-\textbf{APIs, Security \& UI:} RESTful APIs, OpenAPI/Swagger, JWT, RBAC, device binding, rate limiting, idempotency keys, API versioning, React.js \\
-\textbf{Data \& Messaging:} MySQL, PostgreSQL, transaction boundaries, covering indexes, query tuning, Redis, Apache Kafka, dead-letter topics \\
-\textbf{Testing \& DevOps:} JUnit 5, Mockito, Testcontainers, Maven, Gradle, Docker, Kubernetes, GitHub Actions CI/CD, Actuator, Prometheus, Grafana
+\textbf{Core:} Java, Spring Boot, Spring Security, Spring Data JPA, Hibernate, microservices, REST APIs \\
+\textbf{Data \& Messaging:} Apache Kafka, MySQL, PostgreSQL, MongoDB, Redis, transaction boundaries, covering indexes, query tuning \\
+\textbf{Platform \& Delivery:} Docker, Kubernetes, GitHub Actions CI/CD, Maven, Gradle, JUnit 5, Mockito, Testcontainers, Prometheus, Grafana \\
+\textbf{Also:} Python, React.js, JavaScript (ES6+), JWT, RBAC, OpenAPI/Swagger, idempotency keys
 
 \resumesection{Education}
 {\textbf{Bachelor of Technology (B.Tech.)}} \\
@@ -173,12 +169,11 @@ Over 10 billion INR settled daily across wallet and ledger services built on Spr
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~07/2019 -- 05/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Kanpur, UP}
 
 \resumesection{Certifications}
-Database Systems \& SQL Certification \quad | \quad Data Structures \& Algorithms Certification \\
-IIT Kanpur Cyber Security Certification \quad | \quad Advanced MERN Stack Developer Certification
+IIT Kanpur Cyber Security Certification \\
+
 
 \resumesection{Achievements}
 \begin{itemize}
-    \item First Class Honors, B.Tech. --- top academic rank in cohort.
     \item HackerRank 4-Star Gold badge in SQL.
 \end{itemize}
 

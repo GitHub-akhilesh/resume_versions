@@ -12,7 +12,7 @@ Distributed systems for national e-governance and FinTech — 2 million+ users a
 
 ## 3. Experience
 ### Software Development Engineer
-**CSC e-Governance Services India Ltd. (MeitY, Government of India)**
+**CSC e-Governance Services India Ltd. --- India's national digital services platform, 2M+ users**
 *12/2023 – Present | New Delhi, India*
 * Sustained **500,000+ daily transactions** at a **99% success rate** across AEPS, MATM and UPI, by making the settlement path idempotent with request keys, backoff retries and automated reconciliation.
 * Cut p95 read/write latency **45%** across **MySQL**, **PostgreSQL** and **MongoDB**, by sharding and partitioning the hot tables and tuning the slowest queries against their plans.
@@ -22,8 +22,8 @@ Distributed systems for national e-governance and FinTech — 2 million+ users a
 * Replaced a manual release process across all **3** payment platforms, by containerising every service with **Docker**, shipping through **GitHub Actions** and putting each one on **Prometheus** and **Grafana** dashboards.
 * Improved team onboarding efficiency **40%**, by hiring and onboarding **4 engineers** and writing the runbooks and service documentation they start from.
 
-### Software Engineer (Contract)
-**Independent Client Engagement**
+### Software Engineer
+**Contract engagement --- field-workforce logistics, 1,000+ agents**
 *06/2023 – 11/2023 | Remote, India*
 * Engineered a workforce telemetry platform for **1,000+ field agents** end to end — **React.js** front end, **FastAPI** backend, AWS deployment.
 * Held **99.9% uptime** while processing **10,000+ concurrent** GPS pings, through a **FastAPI**, **Celery** and **Redis** ingestion pipeline.
@@ -52,13 +52,9 @@ Industrial data and visual automation project documented end to end — business
 *07/2019 – 05/2023*
 
 ## 6. Certifications
-* Data Structures & Algorithms Certification
-* Database Systems & SQL Certification
-* Advanced MERN Stack Developer Certification
 * IIT Kanpur Cyber Security Certification
 
 ## 7. Achievements
-* First Class Honors, B.Tech. --- top academic rank in cohort.
 * HackerRank 4-Star Gold badge in SQL.
 
 ## 8. ATS Score Estimate
@@ -121,7 +117,7 @@ Distributed systems for national e-governance and FinTech --- 2 million+ users a
 
 \resumesection{Experience}
 {\textbf{Software Development Engineer}} \\
-{\textbf{\textcolor{primaryblue}{CSC e-Governance Services India Ltd. (MeitY, Government of India)}}} \\
+{\textbf{\textcolor{primaryblue}{CSC e-Governance Services India Ltd. --- India's national digital services platform, 2M+ users}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~12/2023 -- Present \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~New Delhi, India}
 \begin{itemize}
     \item Sustained \textbf{500,000+ daily transactions} at a \textbf{99\% success rate} across AEPS, MATM and UPI, by making the settlement path idempotent with request keys, backoff retries and automated reconciliation.
@@ -134,8 +130,8 @@ Distributed systems for national e-governance and FinTech --- 2 million+ users a
 \end{itemize}
 
 \vspace{4pt}
-{\textbf{Software Engineer (Contract)}} \\
-{\textbf{\textcolor{primaryblue}{Independent Client Engagement}}} \\
+{\textbf{Software Engineer}} \\
+{\textbf{\textcolor{primaryblue}{Contract engagement --- field-workforce logistics, 1,000+ agents}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~06/2023 -- 11/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Remote, India}
 \begin{itemize}
     \item Engineered a workforce telemetry platform for \textbf{1,000+ field agents} end to end --- \textbf{React.js} front end, \textbf{FastAPI} backend, AWS deployment.
@@ -175,12 +171,11 @@ Distributed systems for national e-governance and FinTech --- 2 million+ users a
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~07/2019 -- 05/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Kanpur, UP}
 
 \resumesection{Certifications}
-Data Structures \& Algorithms Certification \quad | \quad Database Systems \& SQL Certification \\
-Advanced MERN Stack Developer Certification \quad | \quad IIT Kanpur Cyber Security Certification
+IIT Kanpur Cyber Security Certification \\
+
 
 \resumesection{Achievements}
 \begin{itemize}
-    \item First Class Honors, B.Tech. --- top academic rank in cohort.
     \item HackerRank 4-Star Gold badge in SQL.
 \end{itemize}
 

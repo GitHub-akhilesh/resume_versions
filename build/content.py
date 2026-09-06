@@ -37,19 +37,18 @@ V1 = {  # ---------------- MERN ----------------
     "Delivers live GPS positions and geofence alerts to 1,000+ field agents with no polling anywhere in the path, by streaming over WebSockets from an Express ingestion API into time-indexed MongoDB collections.",
     "React.js / Node.js / Express.js / WebSockets / MongoDB / Redis"),
  ],
- "certs": ["IIT Kanpur &mdash; Cyber Security Certification", "Advanced MERN Stack Developer Certification",
-           "Data Structures &amp; Algorithms Certification", "Database Systems &amp; SQL Certification"],
+ "certs": ["IIT Kanpur Cyber Security Certification"],
 }
 
 V2 = {  # ---------------- Java ----------------
  "ats": "96",
  "title": "Java Full Stack Developer | Spring Boot &middot; Microservices &middot; REST APIs",
- "summary": "Over 10 billion INR settled daily across wallet and ledger services built on Spring Boot, Spring Data JPA and Hibernate. Held AEPS, MATM and VATM orchestration at a 99% success rate over 500,000+ daily transactions by making the payment path idempotent and self-reconciling, and cut p95 database latency 45% through covering indexes and Redis caching. Strong on the unglamorous parts &mdash; transaction boundaries, Kafka messaging, JUnit coverage.",
+ "summary": "Backend engineer running payment infrastructure that clears 500,000+ transactions a day for 2M+ users. Java/Spring Boot, Kafka, microservices. Wallet and ledger services settle over 10 billion INR daily with balances that reconcile, and AEPS, MATM and VATM orchestration holds a 99% success rate at peak through idempotent request handling and automated reconciliation. Cut p95 database latency 45% with covering indexes and Redis caching.",
  "skills": [
-   ("Core Java &amp; Spring", "Java, Spring Boot, Spring MVC, Spring Security, Spring Data JPA, Hibernate, Spring Cloud, microservices"),
-   ("APIs, Security &amp; UI", "RESTful APIs, OpenAPI/Swagger, JWT, RBAC, device binding, rate limiting, idempotency keys, API versioning, React.js"),
-   ("Data &amp; Messaging", "MySQL, PostgreSQL, transaction boundaries, covering indexes, query tuning, Redis, Apache Kafka, dead-letter topics"),
-   ("Testing &amp; DevOps", "JUnit 5, Mockito, Testcontainers, Maven, Gradle, Docker, Kubernetes, GitHub Actions CI/CD, Actuator, Prometheus, Grafana"),
+   ("Core", "Java, Spring Boot, Spring Security, Spring Data JPA, Hibernate, microservices, REST APIs"),
+   ("Data &amp; Messaging", "Apache Kafka, MySQL, PostgreSQL, MongoDB, Redis, transaction boundaries, covering indexes, query tuning"),
+   ("Platform &amp; Delivery", "Docker, Kubernetes, GitHub Actions CI/CD, Maven, Gradle, JUnit 5, Mockito, Testcontainers, Prometheus, Grafana"),
+   ("Also", "Python, React.js, JavaScript (ES6+), JWT, RBAC, OpenAPI/Swagger, idempotency keys"),
  ],
  "exp": [[
    "Held AEPS, MATM and VATM orchestration at a <strong>99% success rate</strong> across <strong>500,000+ daily transactions</strong>, by making the <strong>Spring Boot</strong> payment path idempotent with request keys, backoff retries and automated end-of-day reconciliation.",
@@ -77,8 +76,7 @@ V2 = {  # ---------------- Java ----------------
     "Wallet and ledger service built on Spring Data JPA and Hibernate, using managed transaction boundaries and indexed MySQL schemas to keep balances consistent under concurrent settlement.",
     "Java / Spring Boot / Spring Data JPA / Hibernate / MySQL / Redis"),
  ],
- "certs": ["Database Systems &amp; SQL Certification", "Data Structures &amp; Algorithms Certification",
-           "IIT Kanpur Cyber Security Certification", "Advanced MERN Stack Developer Certification"],
+ "certs": ["IIT Kanpur Cyber Security Certification"],
 }
 
 V3 = {  # ---------------- Python ----------------
@@ -117,8 +115,7 @@ V3 = {  # ---------------- Python ----------------
     "FastAPI ingestion service with Celery and Redis task queues writing to partitioned PostgreSQL tables, plus Pandas reporting jobs over aggregated telemetry.",
     "Python / FastAPI / Celery / Redis / PostgreSQL / Pandas"),
  ],
- "certs": ["Database Systems &amp; SQL Certification", "Data Structures &amp; Algorithms Certification",
-           "IIT Kanpur Cyber Security Certification", "Advanced MERN Stack Developer Certification"],
+ "certs": ["IIT Kanpur Cyber Security Certification"],
 }
 
 V4 = {  # ---------------- Software Engineer (generalist) ----------------
@@ -158,8 +155,7 @@ V4 = {  # ---------------- Software Engineer (generalist) ----------------
     "Industrial data and visual automation project documented end to end &mdash; business case, HLD, LLD, data-flow and database design &mdash; and published as a live site. github.com/GitHub-akhilesh/labx-design",
     "Python / System Design / Technical Documentation / GitHub Pages"),
  ],
- "certs": ["Data Structures &amp; Algorithms Certification", "Database Systems &amp; SQL Certification",
-           "Advanced MERN Stack Developer Certification", "IIT Kanpur Cyber Security Certification"],
+ "certs": ["IIT Kanpur Cyber Security Certification"],
 }
 
 VERSIONS = {"version1": V1, "version2": V2, "version3": V3, "version4": V4}

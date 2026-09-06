@@ -29,15 +29,14 @@ STYLE_COLORS = {"": "0c4f6b", "_Classic": "0056b3", "_Minimal": "1a1a1a",
 
 JOBS = [
     {"role": "Software Development Engineer",
-     "company": "CSC e-Governance Services India Ltd. (MeitY, Government of India)",
+     "company": "CSC e-Governance Services India Ltd. --- India's national digital services platform, 2M+ users",
      "dates": "12/2023 -- Present", "place": "New Delhi, India"},
-    {"role": "Software Engineer (Contract)",
-     "company": "Independent Client Engagement",
+    {"role": "Software Engineer",
+     "company": "Contract engagement --- field-workforce logistics, 1,000+ agents",
      "dates": "06/2023 -- 11/2023", "place": "Remote, India"},
 ]
 
-ACHIEVEMENTS = ["First Class Honors, B.Tech. --- top academic rank in cohort.",
-                "HackerRank 4-Star Gold badge in SQL."]
+ACHIEVEMENTS = ["HackerRank 4-Star Gold badge in SQL."]
 
 ESCAPES = [("\\", r"\textbackslash{}"), ("&", r"\&"), ("%", r"\%"),
            ("$", r"\$"), ("#", r"\#"), ("_", r"\_"),
