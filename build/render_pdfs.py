@@ -26,7 +26,10 @@ import io, os, re, shutil, subprocess, sys, tempfile, threading
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.abspath(os.path.join(HERE, os.pardir))
-WORKERS = 4
+# Each headless Chrome needs a few hundred MB. Four at once starves a
+# memory-tight machine, every render then blows LAUNCH_TIMEOUT, and the
+# orphaned browsers pile up. Override with RESUME_PDF_WORKERS.
+WORKERS = max(1, int(os.environ.get("RESUME_PDF_WORKERS", "2")))
 LAUNCH_TIMEOUT = 120
 
 CHROME_CANDIDATES = [
@@ -117,13 +120,21 @@ def chrome(browser, profile, args):
            "--no-default-browser-check", "--disable-sync", "--disable-extensions",
            "--disable-component-update", "--disable-default-apps",
            "--metrics-recording-only", "--hide-scrollbars"] + args
-    p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    # Chrome's helper processes inherit the parent's stdout/stderr. Piping them
+    # meant communicate() waited for EOF on pipes a surviving helper still held,
+    # so the post-kill communicate() -- which had no timeout -- could block
+    # forever and the 120s LAUNCH_TIMEOUT never took effect. Discard the output
+    # instead and wait on the process itself.
+    p = subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     try:
-        p.communicate(timeout=LAUNCH_TIMEOUT)
+        p.wait(timeout=LAUNCH_TIMEOUT)
         return p.returncode
     except subprocess.TimeoutExpired:
         p.kill()
-        p.communicate()
+        try:
+            p.wait(timeout=15)
+        except subprocess.TimeoutExpired:
+            pass
         return -1
 
 
