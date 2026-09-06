@@ -121,7 +121,7 @@ V3 = {  # ---------------- Python ----------------
 V4 = {  # ---------------- Software Engineer (generalist) ----------------
  "ats": "95",
  "title": "Software Development Engineer | Microservices &middot; Distributed Systems &middot; Full Stack",
- "summary": "Software engineer, 3+ years building distributed systems for national e-governance and FinTech &mdash; 2 million+ users and 500,000+ transactions a day across Spring Boot, FastAPI and Node.js services. Cut p95 latency 45% across MySQL, PostgreSQL and MongoDB, lifted message throughput 35% on Kafka, and put every service behind Prometheus and Grafana. Hired and onboarded 4 engineers and moved the team onto Docker-based CI/CD.",
+ "summary": "Software engineer, 3+ years building distributed systems for national e-governance and FinTech &mdash; 2 million+ users and 500,000+ transactions a day across Spring Boot, FastAPI and Node.js services. Cut p95 latency 45% across MySQL and PostgreSQL and 40% on MongoDB, lifted message throughput 35% on Kafka, and put every service behind Prometheus and Grafana. Onboarded 4 engineers and moved the team onto Docker-based CI/CD.",
  "skills": [
    ("Languages", "Java, Python, JavaScript (ES6+), TypeScript, SQL, C++, HTML5, CSS3"),
    ("Backend &amp; Architecture", "Spring Boot, Django, FastAPI, Node.js, Express.js, React.js, Next.js, microservices, REST APIs, idempotency, rate limiting, WebSockets"),
@@ -130,12 +130,12 @@ V4 = {  # ---------------- Software Engineer (generalist) ----------------
  ],
  "exp": [[
    "Sustained <strong>500,000+ daily transactions</strong> at a <strong>99% success rate</strong> across AEPS, MATM and UPI, by making the settlement path idempotent with request keys, backoff retries and automated reconciliation.",
-   "Cut p95 read/write latency <strong>45%</strong> across <strong>MySQL</strong>, <strong>PostgreSQL</strong> and <strong>MongoDB</strong>, by sharding and partitioning the hot tables and tuning the slowest queries against their plans.",
+   "Cut p95 read/write latency <strong>45%</strong> across <strong>MySQL</strong> and <strong>PostgreSQL</strong> and <strong>40%</strong> on <strong>MongoDB</strong>, by sharding and partitioning the hot tables and tuning the slowest queries against their plans.",
    "Contained a bad release to one service instead of the whole platform for <strong>2 million+ users</strong>, by splitting monolithic backends into <strong>Spring Boot</strong>, <strong>FastAPI</strong> and <strong>Node.js</strong> microservices behind a versioned gateway.",
    "Lifted message throughput <strong>35%</strong>, by moving inter-service work onto <strong>Apache Kafka</strong>, <strong>Celery</strong> and <strong>Redis</strong> with dead-letter handling for poison messages.",
    "Blocked <strong>99.9%</strong> of unauthorized access attempts, by adding <strong>JWT</strong> rotation, <strong>RBAC</strong>, device binding and OTP rate limiting across every payment entry point.",
    "Replaced a manual release process across all <strong>3</strong> payment platforms, by containerising every service with <strong>Docker</strong>, shipping through <strong>GitHub Actions</strong> and putting each one on <strong>Prometheus</strong> and <strong>Grafana</strong> dashboards.",
-   "Improved team onboarding efficiency <strong>40%</strong>, by hiring and onboarding <strong>4 engineers</strong> and writing the runbooks and service documentation they start from.",
+   "Improved team onboarding efficiency <strong>40%</strong>, by onboarding <strong>4 engineers</strong> and writing the runbooks and service documentation they start from.",
  ],[
    "Engineered a workforce telemetry platform for <strong>1,000+ field agents</strong> end to end &mdash; <strong>React.js</strong> front end, <strong>FastAPI</strong> backend, AWS deployment.",
    "Held <strong>99.9% uptime</strong> while processing <strong>10,000+ concurrent</strong> GPS pings, through a <strong>FastAPI</strong>, <strong>Celery</strong> and <strong>Redis</strong> ingestion pipeline.",

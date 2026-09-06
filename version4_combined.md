@@ -2,7 +2,7 @@
 > Single-stack by design. This version mentions only the technologies relevant to the target role.
 
 ## 1. Professional Summary
-Software engineer, 3+ years building distributed systems for national e-governance and FinTech — 2 million+ users and 500,000+ transactions a day across Spring Boot, FastAPI and Node.js services. Cut p95 latency 45% across MySQL, PostgreSQL and MongoDB, lifted message throughput 35% on Kafka, and put every service behind Prometheus and Grafana. Hired and onboarded 4 engineers and moved the team onto Docker-based CI/CD.
+Software engineer, 3+ years building distributed systems for national e-governance and FinTech — 2 million+ users and 500,000+ transactions a day across Spring Boot, FastAPI and Node.js services. Cut p95 latency 45% across MySQL and PostgreSQL and 40% on MongoDB, lifted message throughput 35% on Kafka, and put every service behind Prometheus and Grafana. Onboarded 4 engineers and moved the team onto Docker-based CI/CD.
 
 ## 2. Technical Skills
 * **Languages:** Java, Python, JavaScript (ES6+), TypeScript, SQL, C++, HTML5, CSS3
@@ -15,12 +15,12 @@ Software engineer, 3+ years building distributed systems for national e-governan
 **CSC e-Governance Services India Ltd. --- India's national digital services platform, 2M+ users**
 *12/2023 – Present | New Delhi, India*
 * Sustained **500,000+ daily transactions** at a **99% success rate** across AEPS, MATM and UPI, by making the settlement path idempotent with request keys, backoff retries and automated reconciliation.
-* Cut p95 read/write latency **45%** across **MySQL**, **PostgreSQL** and **MongoDB**, by sharding and partitioning the hot tables and tuning the slowest queries against their plans.
+* Cut p95 read/write latency **45%** across **MySQL** and **PostgreSQL** and **40%** on **MongoDB**, by sharding and partitioning the hot tables and tuning the slowest queries against their plans.
 * Contained a bad release to one service instead of the whole platform for **2 million+ users**, by splitting monolithic backends into **Spring Boot**, **FastAPI** and **Node.js** microservices behind a versioned gateway.
 * Lifted message throughput **35%**, by moving inter-service work onto **Apache Kafka**, **Celery** and **Redis** with dead-letter handling for poison messages.
 * Blocked **99.9%** of unauthorized access attempts, by adding **JWT** rotation, **RBAC**, device binding and OTP rate limiting across every payment entry point.
 * Replaced a manual release process across all **3** payment platforms, by containerising every service with **Docker**, shipping through **GitHub Actions** and putting each one on **Prometheus** and **Grafana** dashboards.
-* Improved team onboarding efficiency **40%**, by hiring and onboarding **4 engineers** and writing the runbooks and service documentation they start from.
+* Improved team onboarding efficiency **40%**, by onboarding **4 engineers** and writing the runbooks and service documentation they start from.
 
 ### Software Engineer
 **Contract engagement --- field-workforce logistics, 1,000+ agents**
@@ -113,7 +113,7 @@ Industrial data and visual automation project documented end to end — business
 \vspace{-10pt}
 
 \resumesection{Summary}
-Software engineer, 3+ years building distributed systems for national e-governance and FinTech --- 2 million+ users and 500,000+ transactions a day across Spring Boot, FastAPI and Node.js services. Cut p95 latency 45\% across MySQL, PostgreSQL and MongoDB, lifted message throughput 35\% on Kafka, and put every service behind Prometheus and Grafana. Hired and onboarded 4 engineers and moved the team onto Docker-based CI/CD.
+Software engineer, 3+ years building distributed systems for national e-governance and FinTech --- 2 million+ users and 500,000+ transactions a day across Spring Boot, FastAPI and Node.js services. Cut p95 latency 45\% across MySQL and PostgreSQL and 40\% on MongoDB, lifted message throughput 35\% on Kafka, and put every service behind Prometheus and Grafana. Onboarded 4 engineers and moved the team onto Docker-based CI/CD.
 
 \resumesection{Experience}
 {\textbf{Software Development Engineer}} \\
@@ -121,12 +121,12 @@ Software engineer, 3+ years building distributed systems for national e-governan
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~12/2023 -- Present \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~New Delhi, India}
 \begin{itemize}
     \item Sustained \textbf{500,000+ daily transactions} at a \textbf{99\% success rate} across AEPS, MATM and UPI, by making the settlement path idempotent with request keys, backoff retries and automated reconciliation.
-    \item Cut p95 read/write latency \textbf{45\%} across \textbf{MySQL}, \textbf{PostgreSQL} and \textbf{MongoDB}, by sharding and partitioning the hot tables and tuning the slowest queries against their plans.
+    \item Cut p95 read/write latency \textbf{45\%} across \textbf{MySQL} and \textbf{PostgreSQL} and \textbf{40\%} on \textbf{MongoDB}, by sharding and partitioning the hot tables and tuning the slowest queries against their plans.
     \item Contained a bad release to one service instead of the whole platform for \textbf{2 million+ users}, by splitting monolithic backends into \textbf{Spring Boot}, \textbf{FastAPI} and \textbf{Node.js} microservices behind a versioned gateway.
     \item Lifted message throughput \textbf{35\%}, by moving inter-service work onto \textbf{Apache Kafka}, \textbf{Celery} and \textbf{Redis} with dead-letter handling for poison messages.
     \item Blocked \textbf{99.9\%} of unauthorized access attempts, by adding \textbf{JWT} rotation, \textbf{RBAC}, device binding and OTP rate limiting across every payment entry point.
     \item Replaced a manual release process across all \textbf{3} payment platforms, by containerising every service with \textbf{Docker}, shipping through \textbf{GitHub Actions} and putting each one on \textbf{Prometheus} and \textbf{Grafana} dashboards.
-    \item Improved team onboarding efficiency \textbf{40\%}, by hiring and onboarding \textbf{4 engineers} and writing the runbooks and service documentation they start from.
+    \item Improved team onboarding efficiency \textbf{40\%}, by onboarding \textbf{4 engineers} and writing the runbooks and service documentation they start from.
 \end{itemize}
 
 \vspace{4pt}
