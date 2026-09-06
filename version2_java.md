@@ -2,31 +2,31 @@
 > Single-stack by design. This version mentions only the technologies relevant to the target role.
 
 ## 1. Professional Summary
-Java full stack developer building secure, high-volume enterprise FinTech systems. Core stack is Spring Boot, Spring Security, Spring Data JPA and Hibernate over MySQL and PostgreSQL, with Kafka for anything that shouldn't block a request. Owns wallet and ledger services settling over 10 billion INR a day, and transaction orchestration holding a 99% success rate across 500,000+ daily transactions. Strong on the unglamorous parts — transaction boundaries, indexing, cache tuning.
+Over 10 billion INR settled daily across wallet and ledger services built on Spring Boot, Spring Data JPA and Hibernate. Held AEPS, MATM and VATM orchestration at a 99% success rate over 500,000+ daily transactions by making the payment path idempotent and self-reconciling, and cut p95 database latency 45% through covering indexes and Redis caching. Strong on the unglamorous parts — transaction boundaries, Kafka messaging, JUnit coverage.
 
 ## 2. Technical Skills
-* **Core Java & Spring:** Java, Spring Boot, Spring MVC, Spring Security, Spring Data JPA, Hibernate, Spring Cloud, Microservices
-* **APIs, Security & UI:** RESTful APIs, JWT authentication, RBAC, device binding, API versioning, React.js, JavaScript (ES6+), HTML5, CSS3
-* **Data & Messaging:** MySQL, PostgreSQL, transaction management, indexing, query tuning, Redis, Apache Kafka
-* **Build & DevOps:** Maven, Gradle, Git, GitHub, Docker, CI/CD, Postman, Spring Boot Actuator, Prometheus, Grafana
+* **Core Java & Spring:** Java, Spring Boot, Spring MVC, Spring Security, Spring Data JPA, Hibernate, Spring Cloud, microservices
+* **APIs, Security & UI:** RESTful APIs, OpenAPI/Swagger, JWT, RBAC, device binding, rate limiting, idempotency keys, API versioning, React.js
+* **Data & Messaging:** MySQL, PostgreSQL, transaction boundaries, covering indexes, query tuning, Redis, Apache Kafka, dead-letter topics
+* **Testing & DevOps:** JUnit 5, Mockito, Testcontainers, Maven, Gradle, Docker, Kubernetes, GitHub Actions CI/CD, Actuator, Prometheus, Grafana
 
 ## 3. Experience
 ### Software Development Engineer
 **CSC e-Governance Services India Ltd. (MeitY, Government of India)**
 *12/2023 – Present | New Delhi, India*
-* Split monolithic e-governance systems into **Java** and **Spring Boot** microservices, improving release speed and fault isolation for **2 million+ users**.
-* Ran AEPS, MATM and VATM transaction orchestration on **Spring Boot** at a **99% success rate** across **500,000+ daily transactions**.
-* Cut unauthorized access attempts **99.9%** with **Spring Security**: **JWT**, **RBAC**, device binding and OTP retry limits.
-* Built the wallet and ledger services on **Spring Data JPA** and **Hibernate** — over **10 billion INR** settled daily, and balances that reconcile.
-* Dropped read/write latency **45%** across **MySQL** and **PostgreSQL** through indexing and cache tuning.
-* Moved inter-service communication onto **Apache Kafka**, lifting async throughput **35%**.
+* Held AEPS, MATM and VATM orchestration at a **99% success rate** across **500,000+ daily transactions**, by making the **Spring Boot** payment path idempotent with request keys, backoff retries and automated end-of-day reconciliation.
+* Settled over **10 billion INR** a day with balances that reconcile, by building the wallet and ledger services on **Spring Data JPA** and **Hibernate** with explicit transaction boundaries and optimistic locking.
+* Cut p95 read/write latency **45%** across **MySQL** and **PostgreSQL**, by adding covering indexes, tuning the JPA fetch strategy to kill N+1 queries and caching hot lookups in **Redis**.
+* Contained a bad release to one service instead of the whole portal for **2 million+ users**, by splitting monolithic e-governance systems into **Spring Boot** microservices behind a versioned REST gateway.
+* Blocked **99.9%** of unauthorized access attempts, by adding **Spring Security** with **JWT**, method-level **RBAC**, device binding and OTP retry limits.
+* Lifted async throughput **35%**, by moving inter-service calls onto **Apache Kafka** with dead-letter topics, and surfacing consumer lag in **Prometheus** and **Grafana**.
 
-### Freelance Software Engineer
-**Workforce Telemetry & Operations**
+### Software Engineer (Contract)
+**Independent Client Engagement**
 *06/2023 – 11/2023 | Remote, India*
-* Built a workforce tracking platform on **Java**, **Spring Boot** and **React.js** for **1,000+ field agents**.
-* Streamed live coordinates from Spring Boot WebSocket endpoints into a **React.js** and **Ant Design** dashboard, **30%** quicker to load than the first cut.
-* Enforced Admin, Supervisor and Employee boundaries on the operations API with **Spring Security** and **JWT** across **100+ client accounts**.
+* Shipped a workforce tracking platform for **1,000+ field agents** end to end on **Java**, **Spring Boot** and **React.js** — schema design through AWS deployment.
+* Brought dashboard load time down **30%**, by streaming live coordinates from Spring Boot **WebSocket** endpoints into a **React.js** and **Ant Design** map view instead of polling.
+* Enforced Admin, Supervisor and Employee boundaries across **100+ client accounts**, by adding **Spring Security** method-level authorization and **JWT** claims to the operations API.
 
 ## 4. Projects
 ### Enterprise Authentication & Authorization Service
@@ -57,8 +57,8 @@ Wallet and ledger service built on Spring Data JPA and Hibernate, using managed 
 * Advanced MERN Stack Developer Certification
 
 ## 7. Achievements
-* Graduated with First Class Honors, maintaining top academic rank.
-* Earned a 4-Star Gold Badge in SQL on HackerRank.
+* First Class Honors, B.Tech. --- top academic rank in cohort.
+* HackerRank 4-Star Gold badge in SQL.
 
 ## 8. ATS Score Estimate
 * **96/100** — keyword coverage is concentrated on a single stack, so role-matched screens score higher and nothing dilutes the match.
@@ -116,29 +116,29 @@ Wallet and ledger service built on Spring Data JPA and Hibernate, using managed 
 \vspace{-10pt}
 
 \resumesection{Summary}
-Java full stack developer building secure, high-volume enterprise FinTech systems. Core stack is Spring Boot, Spring Security, Spring Data JPA and Hibernate over MySQL and PostgreSQL, with Kafka for anything that shouldn't block a request. Owns wallet and ledger services settling over 10 billion INR a day, and transaction orchestration holding a 99\% success rate across 500,000+ daily transactions. Strong on the unglamorous parts --- transaction boundaries, indexing, cache tuning.
+Over 10 billion INR settled daily across wallet and ledger services built on Spring Boot, Spring Data JPA and Hibernate. Held AEPS, MATM and VATM orchestration at a 99\% success rate over 500,000+ daily transactions by making the payment path idempotent and self-reconciling, and cut p95 database latency 45\% through covering indexes and Redis caching. Strong on the unglamorous parts --- transaction boundaries, Kafka messaging, JUnit coverage.
 
 \resumesection{Experience}
 {\textbf{Software Development Engineer}} \\
 {\textbf{\textcolor{primaryblue}{CSC e-Governance Services India Ltd. (MeitY, Government of India)}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~12/2023 -- Present \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~New Delhi, India}
 \begin{itemize}
-    \item Split monolithic e-governance systems into \textbf{Java} and \textbf{Spring Boot} microservices, improving release speed and fault isolation for \textbf{2 million+ users}.
-    \item Ran AEPS, MATM and VATM transaction orchestration on \textbf{Spring Boot} at a \textbf{99\% success rate} across \textbf{500,000+ daily transactions}.
-    \item Cut unauthorized access attempts \textbf{99.9\%} with \textbf{Spring Security}: \textbf{JWT}, \textbf{RBAC}, device binding and OTP retry limits.
-    \item Built the wallet and ledger services on \textbf{Spring Data JPA} and \textbf{Hibernate} --- over \textbf{10 billion INR} settled daily, and balances that reconcile.
-    \item Dropped read/write latency \textbf{45\%} across \textbf{MySQL} and \textbf{PostgreSQL} through indexing and cache tuning.
-    \item Moved inter-service communication onto \textbf{Apache Kafka}, lifting async throughput \textbf{35\%}.
+    \item Held AEPS, MATM and VATM orchestration at a \textbf{99\% success rate} across \textbf{500,000+ daily transactions}, by making the \textbf{Spring Boot} payment path idempotent with request keys, backoff retries and automated end-of-day reconciliation.
+    \item Settled over \textbf{10 billion INR} a day with balances that reconcile, by building the wallet and ledger services on \textbf{Spring Data JPA} and \textbf{Hibernate} with explicit transaction boundaries and optimistic locking.
+    \item Cut p95 read/write latency \textbf{45\%} across \textbf{MySQL} and \textbf{PostgreSQL}, by adding covering indexes, tuning the JPA fetch strategy to kill N+1 queries and caching hot lookups in \textbf{Redis}.
+    \item Contained a bad release to one service instead of the whole portal for \textbf{2 million+ users}, by splitting monolithic e-governance systems into \textbf{Spring Boot} microservices behind a versioned REST gateway.
+    \item Blocked \textbf{99.9\%} of unauthorized access attempts, by adding \textbf{Spring Security} with \textbf{JWT}, method-level \textbf{RBAC}, device binding and OTP retry limits.
+    \item Lifted async throughput \textbf{35\%}, by moving inter-service calls onto \textbf{Apache Kafka} with dead-letter topics, and surfacing consumer lag in \textbf{Prometheus} and \textbf{Grafana}.
 \end{itemize}
 
 \vspace{4pt}
-{\textbf{Freelance Software Engineer}} \\
-{\textbf{\textcolor{primaryblue}{Workforce Telemetry \& Operations}}} \\
+{\textbf{Software Engineer (Contract)}} \\
+{\textbf{\textcolor{primaryblue}{Independent Client Engagement}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~06/2023 -- 11/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Remote, India}
 \begin{itemize}
-    \item Built a workforce tracking platform on \textbf{Java}, \textbf{Spring Boot} and \textbf{React.js} for \textbf{1,000+ field agents}.
-    \item Streamed live coordinates from Spring Boot WebSocket endpoints into a \textbf{React.js} and \textbf{Ant Design} dashboard, \textbf{30\%} quicker to load than the first cut.
-    \item Enforced Admin, Supervisor and Employee boundaries on the operations API with \textbf{Spring Security} and \textbf{JWT} across \textbf{100+ client accounts}.
+    \item Shipped a workforce tracking platform for \textbf{1,000+ field agents} end to end on \textbf{Java}, \textbf{Spring Boot} and \textbf{React.js} --- schema design through AWS deployment.
+    \item Brought dashboard load time down \textbf{30\%}, by streaming live coordinates from Spring Boot \textbf{WebSocket} endpoints into a \textbf{React.js} and \textbf{Ant Design} map view instead of polling.
+    \item Enforced Admin, Supervisor and Employee boundaries across \textbf{100+ client accounts}, by adding \textbf{Spring Security} method-level authorization and \textbf{JWT} claims to the operations API.
 \end{itemize}
 
 \resumesection{Projects}
@@ -162,10 +162,10 @@ Java full stack developer building secure, high-volume enterprise FinTech system
 {\footnotesize\textbf{STACK:} Java / Spring Boot / Spring Data JPA / Hibernate / MySQL / Redis}
 
 \resumesection{Skills}
-\textbf{Core Java \& Spring:} Java, Spring Boot, Spring MVC, Spring Security, Spring Data JPA, Hibernate, Spring Cloud, Microservices \\
-\textbf{APIs, Security \& UI:} RESTful APIs, JWT authentication, RBAC, device binding, API versioning, React.js, JavaScript (ES6+), HTML5, CSS3 \\
-\textbf{Data \& Messaging:} MySQL, PostgreSQL, transaction management, indexing, query tuning, Redis, Apache Kafka \\
-\textbf{Build \& DevOps:} Maven, Gradle, Git, GitHub, Docker, CI/CD, Postman, Spring Boot Actuator, Prometheus, Grafana
+\textbf{Core Java \& Spring:} Java, Spring Boot, Spring MVC, Spring Security, Spring Data JPA, Hibernate, Spring Cloud, microservices \\
+\textbf{APIs, Security \& UI:} RESTful APIs, OpenAPI/Swagger, JWT, RBAC, device binding, rate limiting, idempotency keys, API versioning, React.js \\
+\textbf{Data \& Messaging:} MySQL, PostgreSQL, transaction boundaries, covering indexes, query tuning, Redis, Apache Kafka, dead-letter topics \\
+\textbf{Testing \& DevOps:} JUnit 5, Mockito, Testcontainers, Maven, Gradle, Docker, Kubernetes, GitHub Actions CI/CD, Actuator, Prometheus, Grafana
 
 \resumesection{Education}
 {\textbf{Bachelor of Technology (B.Tech.)}} \\
@@ -178,8 +178,8 @@ IIT Kanpur Cyber Security Certification \quad | \quad Advanced MERN Stack Develo
 
 \resumesection{Achievements}
 \begin{itemize}
-    \item Graduated with First Class Honors, maintaining top academic rank.
-    \item Earned a 4-Star Gold Badge in SQL on HackerRank.
+    \item First Class Honors, B.Tech. --- top academic rank in cohort.
+    \item HackerRank 4-Star Gold badge in SQL.
 \end{itemize}
 
 \end{document}

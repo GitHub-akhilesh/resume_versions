@@ -2,49 +2,49 @@
 > Single-stack by design. This version mentions only the technologies relevant to the target role.
 
 ## 1. Professional Summary
-Software engineer building distributed systems for national e-governance and FinTech platforms — microservice architecture, transaction-critical APIs, event-driven pipelines. Currently 2 million+ users and 500,000+ transactions a day across Java/Spring Boot, Python/FastAPI and Node.js services. Hired and onboarded 4 engineers and moved the team onto Docker-based CI/CD. Most useful when a system is either growing faster than its design or falling over under load.
+Distributed systems for national e-governance and FinTech — 2 million+ users and 500,000+ transactions a day across Spring Boot, FastAPI and Node.js services. Cut p95 latency 45% across MySQL, PostgreSQL and MongoDB, lifted message throughput 35% on Kafka, and put every service behind Prometheus and Grafana. Hired and onboarded 4 engineers and moved the team onto Docker-based CI/CD.
 
 ## 2. Technical Skills
 * **Languages:** Java, Python, JavaScript (ES6+), TypeScript, SQL, C++, HTML5, CSS3
-* **Backend & Architecture:** Spring Boot, Django, FastAPI, Node.js, Express.js, React.js, Next.js, microservices, REST APIs, WebSockets
-* **Data & Messaging:** MySQL, PostgreSQL, MongoDB, Redis, Apache Kafka, Celery, Hibernate/JPA, indexing & query tuning
-* **DevOps & Observability:** Docker, Git, GitHub Actions, CI/CD, Linux, Postman, Jira, Prometheus, Grafana
+* **Backend & Architecture:** Spring Boot, Django, FastAPI, Node.js, Express.js, React.js, Next.js, microservices, REST APIs, idempotency, rate limiting, WebSockets
+* **Data & Messaging:** MySQL, PostgreSQL, MongoDB, Redis, Apache Kafka, Celery, Hibernate/JPA, sharding, partitioning, query tuning
+* **Testing, DevOps & Observability:** pytest, JUnit, Jest, Docker, Kubernetes, GitHub Actions CI/CD, Linux, Jira, Prometheus, Grafana
 
 ## 3. Experience
 ### Software Development Engineer
 **CSC e-Governance Services India Ltd. (MeitY, Government of India)**
 *12/2023 – Present | New Delhi, India*
-* Split monolithic backends into distributed microservices across **Spring Boot**, **FastAPI** and **Node.js**, serving **2 million+ users**.
-* Built the transaction-critical endpoints for AEPS, MATM and UPI, sustaining **500,000+ daily transactions**.
-* Cut unauthorized access attempts **99.9%** with **JWT**, **RBAC**, device binding and OTP controls.
-* Reduced read/write latency **45%** across **MySQL**, **PostgreSQL** and **MongoDB** using sharding, partitioning and query tuning.
-* Lifted message throughput **35%** by moving inter-service work onto **Apache Kafka**, **Celery** and **Redis**.
-* Stood up **Prometheus** and **Grafana** dashboards and automated container delivery for all **3** payment platforms with **Docker** and **GitHub Actions**.
-* Hired and onboarded **4 engineers**, improving team onboarding efficiency **40%**.
+* Sustained **500,000+ daily transactions** at a **99% success rate** across AEPS, MATM and UPI, by making the settlement path idempotent with request keys, backoff retries and automated reconciliation.
+* Cut p95 read/write latency **45%** across **MySQL**, **PostgreSQL** and **MongoDB**, by sharding and partitioning the hot tables and tuning the slowest queries against their plans.
+* Contained a bad release to one service instead of the whole platform for **2 million+ users**, by splitting monolithic backends into **Spring Boot**, **FastAPI** and **Node.js** microservices behind a versioned gateway.
+* Lifted message throughput **35%**, by moving inter-service work onto **Apache Kafka**, **Celery** and **Redis** with dead-letter handling for poison messages.
+* Blocked **99.9%** of unauthorized access attempts, by adding **JWT** rotation, **RBAC**, device binding and OTP rate limiting across every payment entry point.
+* Replaced a manual release process across all **3** payment platforms, by containerising every service with **Docker**, shipping through **GitHub Actions** and putting each one on **Prometheus** and **Grafana** dashboards.
+* Improved team onboarding efficiency **40%**, by hiring and onboarding **4 engineers** and writing the runbooks and service documentation they start from.
 
-### Freelance Software Engineer
-**Workforce Telemetry & Operations**
+### Software Engineer (Contract)
+**Independent Client Engagement**
 *06/2023 – 11/2023 | Remote, India*
-* Engineered a workforce telemetry platform — **React.js** front end, **FastAPI** backend — for **1,000+ field agents**.
-* Processed **10,000+ concurrent** GPS pings at **99.9% uptime** through a **FastAPI**, **Celery** and **Redis** ingestion pipeline.
-* Built the live map dashboard in **React.js** with **Ant Design**, **30%** quicker to load.
+* Engineered a workforce telemetry platform for **1,000+ field agents** end to end — **React.js** front end, **FastAPI** backend, AWS deployment.
+* Held **99.9% uptime** while processing **10,000+ concurrent** GPS pings, through a **FastAPI**, **Celery** and **Redis** ingestion pipeline.
+* Brought dashboard load time down **30%**, by building the live map in **React.js** with **Ant Design** over a WebSocket feed instead of polling.
 
 ## 4. Projects
+### DigiPay Developer Platform
+*Stack: FastAPI / React / TypeScript / Docker / npm workspaces*
+Monorepo platform pairing a FastAPI service — versioned routers, correlation-ID tracing, auth and rate-limit middleware — with published SDK packages and embeddable React widgets. github.com/GitHub-akhilesh/Django_apis_digipay
+
+### Polyglot Microservices Task Platform
+*Stack: Django / Flask / FastAPI / React / React Native / Kubernetes*
+Django, Flask and FastAPI services orchestrated under Docker Compose with Kubernetes manifests, fronted by a React web client and a React Native mobile app. github.com/GitHub-akhilesh/To-do-list-app
+
 ### Transaction Orchestration & Ledger Platform
 *Stack: Spring Boot / FastAPI / Kafka / PostgreSQL / Redis*
-Microservice platform orchestrating AEPS, MATM, and UPI settlement with a transactional wallet ledger, retry and reconciliation handling, and Kafka event fan-out.
+Microservice platform orchestrating AEPS, MATM and UPI settlement with a transactional wallet ledger, idempotent retries, automated reconciliation and Kafka event fan-out.
 
-### MERN FinTech & Commerce Suite
-*Stack: React.js / Node.js / Express.js / MongoDB / JWT / Redux*
-Full-stack applications with JWT-secured authentication, role-based admin dashboards, and versioned REST APIs on React, Express, and MongoDB.
-
-### Real-Time Telemetry & Geofencing Engine
-*Stack: React.js / FastAPI / Celery / Redis / PostgreSQL*
-Workforce geolocation engine ingesting asynchronous GPS streams, rendering live map visualizations, and pushing geofence alerts over WebSockets.
-
-### Enterprise Authentication & Authorization Service
-*Stack: Spring Boot / Spring Security / JWT / MySQL*
-Reusable auth service providing registration, password hashing, JWT issuance and rotation, and RBAC enforcement across protected REST routes.
+### LabX Design System
+*Stack: Python / System Design / Technical Documentation / GitHub Pages*
+Industrial data and visual automation project documented end to end — business case, HLD, LLD, data-flow and database design — and published as a live site. github.com/GitHub-akhilesh/labx-design
 
 ## 5. Education
 ### Bachelor of Technology (B.Tech.)
@@ -58,8 +58,8 @@ Reusable auth service providing registration, password hashing, JWT issuance and
 * IIT Kanpur Cyber Security Certification
 
 ## 7. Achievements
-* Graduated with First Class Honors, maintaining top academic rank.
-* Earned a 4-Star Gold Badge in SQL on HackerRank.
+* First Class Honors, B.Tech. --- top academic rank in cohort.
+* HackerRank 4-Star Gold badge in SQL.
 
 ## 8. ATS Score Estimate
 * **95/100** — keyword coverage is concentrated on a single stack, so role-matched screens score higher and nothing dilutes the match.
@@ -117,57 +117,57 @@ Reusable auth service providing registration, password hashing, JWT issuance and
 \vspace{-10pt}
 
 \resumesection{Summary}
-Software engineer building distributed systems for national e-governance and FinTech platforms --- microservice architecture, transaction-critical APIs, event-driven pipelines. Currently 2 million+ users and 500,000+ transactions a day across Java/Spring Boot, Python/FastAPI and Node.js services. Hired and onboarded 4 engineers and moved the team onto Docker-based CI/CD. Most useful when a system is either growing faster than its design or falling over under load.
+Distributed systems for national e-governance and FinTech --- 2 million+ users and 500,000+ transactions a day across Spring Boot, FastAPI and Node.js services. Cut p95 latency 45\% across MySQL, PostgreSQL and MongoDB, lifted message throughput 35\% on Kafka, and put every service behind Prometheus and Grafana. Hired and onboarded 4 engineers and moved the team onto Docker-based CI/CD.
 
 \resumesection{Experience}
 {\textbf{Software Development Engineer}} \\
 {\textbf{\textcolor{primaryblue}{CSC e-Governance Services India Ltd. (MeitY, Government of India)}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~12/2023 -- Present \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~New Delhi, India}
 \begin{itemize}
-    \item Split monolithic backends into distributed microservices across \textbf{Spring Boot}, \textbf{FastAPI} and \textbf{Node.js}, serving \textbf{2 million+ users}.
-    \item Built the transaction-critical endpoints for AEPS, MATM and UPI, sustaining \textbf{500,000+ daily transactions}.
-    \item Cut unauthorized access attempts \textbf{99.9\%} with \textbf{JWT}, \textbf{RBAC}, device binding and OTP controls.
-    \item Reduced read/write latency \textbf{45\%} across \textbf{MySQL}, \textbf{PostgreSQL} and \textbf{MongoDB} using sharding, partitioning and query tuning.
-    \item Lifted message throughput \textbf{35\%} by moving inter-service work onto \textbf{Apache Kafka}, \textbf{Celery} and \textbf{Redis}.
-    \item Stood up \textbf{Prometheus} and \textbf{Grafana} dashboards and automated container delivery for all \textbf{3} payment platforms with \textbf{Docker} and \textbf{GitHub Actions}.
-    \item Hired and onboarded \textbf{4 engineers}, improving team onboarding efficiency \textbf{40\%}.
+    \item Sustained \textbf{500,000+ daily transactions} at a \textbf{99\% success rate} across AEPS, MATM and UPI, by making the settlement path idempotent with request keys, backoff retries and automated reconciliation.
+    \item Cut p95 read/write latency \textbf{45\%} across \textbf{MySQL}, \textbf{PostgreSQL} and \textbf{MongoDB}, by sharding and partitioning the hot tables and tuning the slowest queries against their plans.
+    \item Contained a bad release to one service instead of the whole platform for \textbf{2 million+ users}, by splitting monolithic backends into \textbf{Spring Boot}, \textbf{FastAPI} and \textbf{Node.js} microservices behind a versioned gateway.
+    \item Lifted message throughput \textbf{35\%}, by moving inter-service work onto \textbf{Apache Kafka}, \textbf{Celery} and \textbf{Redis} with dead-letter handling for poison messages.
+    \item Blocked \textbf{99.9\%} of unauthorized access attempts, by adding \textbf{JWT} rotation, \textbf{RBAC}, device binding and OTP rate limiting across every payment entry point.
+    \item Replaced a manual release process across all \textbf{3} payment platforms, by containerising every service with \textbf{Docker}, shipping through \textbf{GitHub Actions} and putting each one on \textbf{Prometheus} and \textbf{Grafana} dashboards.
+    \item Improved team onboarding efficiency \textbf{40\%}, by hiring and onboarding \textbf{4 engineers} and writing the runbooks and service documentation they start from.
 \end{itemize}
 
 \vspace{4pt}
-{\textbf{Freelance Software Engineer}} \\
-{\textbf{\textcolor{primaryblue}{Workforce Telemetry \& Operations}}} \\
+{\textbf{Software Engineer (Contract)}} \\
+{\textbf{\textcolor{primaryblue}{Independent Client Engagement}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~06/2023 -- 11/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Remote, India}
 \begin{itemize}
-    \item Engineered a workforce telemetry platform --- \textbf{React.js} front end, \textbf{FastAPI} backend --- for \textbf{1,000+ field agents}.
-    \item Processed \textbf{10,000+ concurrent} GPS pings at \textbf{99.9\% uptime} through a \textbf{FastAPI}, \textbf{Celery} and \textbf{Redis} ingestion pipeline.
-    \item Built the live map dashboard in \textbf{React.js} with \textbf{Ant Design}, \textbf{30\%} quicker to load.
+    \item Engineered a workforce telemetry platform for \textbf{1,000+ field agents} end to end --- \textbf{React.js} front end, \textbf{FastAPI} backend, AWS deployment.
+    \item Held \textbf{99.9\% uptime} while processing \textbf{10,000+ concurrent} GPS pings, through a \textbf{FastAPI}, \textbf{Celery} and \textbf{Redis} ingestion pipeline.
+    \item Brought dashboard load time down \textbf{30\%}, by building the live map in \textbf{React.js} with \textbf{Ant Design} over a WebSocket feed instead of polling.
 \end{itemize}
 
 \resumesection{Projects}
+{\textbf{DigiPay Developer Platform}} \\
+{\small Monorepo platform pairing a FastAPI service --- versioned routers, correlation-ID tracing, auth and rate-limit middleware --- with published SDK packages and embeddable React widgets. github.com/GitHub-akhilesh/Django\_apis\_digipay} \\
+{\footnotesize\textbf{STACK:} FastAPI / React / TypeScript / Docker / npm workspaces}
+
+\vspace{4pt}
+{\textbf{Polyglot Microservices Task Platform}} \\
+{\small Django, Flask and FastAPI services orchestrated under Docker Compose with Kubernetes manifests, fronted by a React web client and a React Native mobile app. github.com/GitHub-akhilesh/To-do-list-app} \\
+{\footnotesize\textbf{STACK:} Django / Flask / FastAPI / React / React Native / Kubernetes}
+
+\vspace{4pt}
 {\textbf{Transaction Orchestration \& Ledger Platform}} \\
-{\small Microservice platform orchestrating AEPS, MATM, and UPI settlement with a transactional wallet ledger, retry and reconciliation handling, and Kafka event fan-out.} \\
+{\small Microservice platform orchestrating AEPS, MATM and UPI settlement with a transactional wallet ledger, idempotent retries, automated reconciliation and Kafka event fan-out.} \\
 {\footnotesize\textbf{STACK:} Spring Boot / FastAPI / Kafka / PostgreSQL / Redis}
 
 \vspace{4pt}
-{\textbf{MERN FinTech \& Commerce Suite}} \\
-{\small Full-stack applications with JWT-secured authentication, role-based admin dashboards, and versioned REST APIs on React, Express, and MongoDB.} \\
-{\footnotesize\textbf{STACK:} React.js / Node.js / Express.js / MongoDB / JWT / Redux}
-
-\vspace{4pt}
-{\textbf{Real-Time Telemetry \& Geofencing Engine}} \\
-{\small Workforce geolocation engine ingesting asynchronous GPS streams, rendering live map visualizations, and pushing geofence alerts over WebSockets.} \\
-{\footnotesize\textbf{STACK:} React.js / FastAPI / Celery / Redis / PostgreSQL}
-
-\vspace{4pt}
-{\textbf{Enterprise Authentication \& Authorization Service}} \\
-{\small Reusable auth service providing registration, password hashing, JWT issuance and rotation, and RBAC enforcement across protected REST routes.} \\
-{\footnotesize\textbf{STACK:} Spring Boot / Spring Security / JWT / MySQL}
+{\textbf{LabX Design System}} \\
+{\small Industrial data and visual automation project documented end to end --- business case, HLD, LLD, data-flow and database design --- and published as a live site. github.com/GitHub-akhilesh/labx-design} \\
+{\footnotesize\textbf{STACK:} Python / System Design / Technical Documentation / GitHub Pages}
 
 \resumesection{Skills}
 \textbf{Languages:} Java, Python, JavaScript (ES6+), TypeScript, SQL, C++, HTML5, CSS3 \\
-\textbf{Backend \& Architecture:} Spring Boot, Django, FastAPI, Node.js, Express.js, React.js, Next.js, microservices, REST APIs, WebSockets \\
-\textbf{Data \& Messaging:} MySQL, PostgreSQL, MongoDB, Redis, Apache Kafka, Celery, Hibernate/JPA, indexing \& query tuning \\
-\textbf{DevOps \& Observability:} Docker, Git, GitHub Actions, CI/CD, Linux, Postman, Jira, Prometheus, Grafana
+\textbf{Backend \& Architecture:} Spring Boot, Django, FastAPI, Node.js, Express.js, React.js, Next.js, microservices, REST APIs, idempotency, rate limiting, WebSockets \\
+\textbf{Data \& Messaging:} MySQL, PostgreSQL, MongoDB, Redis, Apache Kafka, Celery, Hibernate/JPA, sharding, partitioning, query tuning \\
+\textbf{Testing, DevOps \& Observability:} pytest, JUnit, Jest, Docker, Kubernetes, GitHub Actions CI/CD, Linux, Jira, Prometheus, Grafana
 
 \resumesection{Education}
 {\textbf{Bachelor of Technology (B.Tech.)}} \\
@@ -180,8 +180,8 @@ Advanced MERN Stack Developer Certification \quad | \quad IIT Kanpur Cyber Secur
 
 \resumesection{Achievements}
 \begin{itemize}
-    \item Graduated with First Class Honors, maintaining top academic rank.
-    \item Earned a 4-Star Gold Badge in SQL on HackerRank.
+    \item First Class Honors, B.Tech. --- top academic rank in cohort.
+    \item HackerRank 4-Star Gold badge in SQL.
 \end{itemize}
 
 \end{document}

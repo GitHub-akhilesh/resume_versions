@@ -2,48 +2,48 @@
 > Single-stack by design. This version mentions only the technologies relevant to the target role.
 
 ## 1. Professional Summary
-MERN stack developer working on national-scale payment and e-governance platforms. React and Redux Toolkit on the front end, Node.js and Express services behind it, MongoDB underneath — currently serving 2 million+ users and 500,000+ transactions a day. Recent wins: MongoDB reads 40% faster after an indexing and aggregation overhaul, and a 99% settlement success rate across AEPS and MATM. Comfortable owning a feature end to end, schema through deployment.
+500,000+ payment transactions a day for 2 million+ users on India's national e-governance platform. Cut p95 read latency 40% by rewriting the MongoDB aggregation pipelines behind it, and held AEPS and MATM settlement at a 99% success rate by making the payment path idempotent and self-reconciling. React, TypeScript and Node.js end to end — schema design through Dockerised CI/CD.
 
 ## 2. Technical Skills
-* **Frontend:** React.js, Next.js, Redux Toolkit, React Query, JavaScript (ES6+), TypeScript, HTML5, CSS3, Tailwind CSS, Material UI
-* **Backend & APIs:** Node.js, Express.js, RESTful APIs, WebSockets, JWT authentication, RBAC, middleware design, API versioning
-* **Database & Caching:** MongoDB, Mongoose, aggregation pipelines, schema design, indexing, sharding, Redis
-* **Tooling & Cloud:** Git, GitHub, GitHub Actions, Docker, CI/CD pipelines, Jest, Postman, AWS S3
+* **Frontend:** React.js, Next.js SSR/ISR, TypeScript, JavaScript (ES6+), Redux Toolkit, React Query, Tailwind CSS, Material UI, code splitting, Core Web Vitals
+* **Backend & APIs:** Node.js, Express.js, REST API design, OpenAPI/Swagger, WebSockets, JWT, OAuth 2.0, RBAC, rate limiting, idempotency keys, API versioning
+* **Data & Caching:** MongoDB, aggregation pipelines, compound indexing, sharding, Mongoose, Redis, PostgreSQL, query profiling, schema design
+* **Testing, Cloud & Practice:** Jest, React Testing Library, Supertest, Docker, GitHub Actions CI/CD, AWS EC2/S3/CloudFront, Nginx, Grafana, Sentry, Agile/Scrum, code review
 
 ## 3. Experience
 ### Software Development Engineer
 **CSC e-Governance Services India Ltd. (MeitY, Government of India)**
 *12/2023 – Present | New Delhi, India*
-* Split a monolithic e-governance portal into **Node.js** and **Express.js** microservices, cutting deploy times and keeping one bad release from reaching all **2 million+ users**.
-* Built the real-time transaction and location dashboards in **React.js** and **Redux Toolkit**, pushing WebSocket updates across **500,000+ daily transactions**.
-* Took AEPS and MATM settlement to a **99% success rate** under peak load, adding retry and reconciliation handling to the UPI and XML payment integrations.
-* Locked down authentication with **JWT** and **Redis**-backed sessions, device binding and OTP throttling, cutting unauthorized access attempts **99.9%**.
-* Cut **MongoDB** response times **40%** — compound indexes, sharding, and a rewrite of the worst **Mongoose** aggregations.
-* Automated build, test and container delivery for all **3** payment platforms with **Docker** and **GitHub Actions**, retiring a manual release process.
+* Held AEPS and MATM settlement at a **99% success rate** through peak load, by making the UPI and XML payment path idempotent — request keys, exponential-backoff retries and an automated end-of-day reconciliation job.
+* Cut **p95 read latency 40%** on the transaction APIs serving **2 million+ users**, by collapsing N+1 **Mongoose** queries into a single **MongoDB** aggregation pipeline and compound-indexing the hot collections.
+* Streamed **500,000+ daily transactions** to operations in real time, by building the transaction and geolocation dashboards in **React.js** and **Redux Toolkit** over a **WebSocket** feed with memoised selectors.
+* Contained a bad release to one service instead of the whole portal for **2 million+ users**, by decomposing a monolithic e-governance system into **Node.js** and **Express.js** microservices behind a versioned REST gateway.
+* Blocked **99.9%** of unauthorized access attempts on the payments API, by adding **JWT** access/refresh rotation, **Redis**-backed sessions, device binding, RBAC middleware and per-device OTP rate limiting.
+* Retired manual releases across all **3** payment platforms, by containerising the services with **Docker** and gating every merge on **GitHub Actions** running **Jest** unit and **Supertest** integration suites.
 
-### Freelance Software Engineer
-**Workforce Telemetry & Operations**
+### Software Engineer (Contract)
+**Independent Client Engagement**
 *06/2023 – 11/2023 | Remote, India*
-* Shipped a workforce tracking app on **React.js**, **Node.js**, **Express.js** and **MongoDB** for **1,000+ field agents**.
-* Built the live map interface with **React.js** and **Ant Design**; WebSocket updates and render tuning brought load times down **30%**.
-* Cut redundant API calls **45%** by moving client state and caching onto **Redux Toolkit** and **React Query**.
+* Shipped a field-workforce platform used by **1,000+ agents** end to end — schema design through AWS deployment — on **React.js**, **Node.js**, **Express.js** and **MongoDB**.
+* Brought dashboard load time down **30%**, by route-level code splitting of the **React.js** map view, virtualising marker rendering and streaming positions over **WebSockets** instead of polling.
+* Removed **45%** of redundant API calls, by moving server state onto **React Query** with stale-while-revalidate caching and consolidating client state in **Redux Toolkit**.
 
 ## 4. Projects
-### MERN FinTech & Commerce Suite
-*Stack: React.js / Redux Toolkit / Node.js / Express.js / MongoDB / JWT*
-Full-stack applications with JWT-secured authentication, role-based admin dashboards, and versioned REST APIs built on React, Redux Toolkit, Express, and MongoDB.
-
-### Himalayan Edges E-Commerce Platform
+### Himalayan Edges — MERN Commerce PWA
 *Stack: React.js / Node.js / Express.js / MongoDB / PWA / AWS S3*
-PWA-enabled storefront built on the MERN stack and deployed to AWS, lifting page-load speed and client usage by 30% at a 20% cart conversion rate.
+Lifted page-load speed and client usage 30% at a 20% cart conversion rate, by shipping a service-worker offline cache, route-level code splitting and S3-backed asset delivery on a React, Express and MongoDB storefront.
+
+### DigiPay Web SDK & React Widgets
+*Stack: React.js / TypeScript / npm workspaces / Webpack / REST*
+Embeddable React component library and browser SDK published from an npm workspaces monorepo, giving merchant sites a drop-in payment UI over a versioned REST API. github.com/GitHub-akhilesh/Django_apis_digipay
+
+### Task Platform — React Web and React Native
+*Stack: React.js / React Native / Node.js / Docker / Webpack*
+React web client and React Native mobile app over a containerised REST backend, built as a workspace monorepo with Webpack builds and Docker Compose orchestration. github.com/GitHub-akhilesh/To-do-list-app
 
 ### Real-Time Geofencing & Telemetry Dashboard
-*Stack: React.js / Node.js / Express.js / WebSockets / MongoDB*
-Live workforce tracking dashboard streaming GPS coordinates and geofence alerts to a React map view over WebSockets, backed by an Express ingestion API and indexed MongoDB collections.
-
-### Role-Based Authentication & Admin Portal
-*Stack: Node.js / Express.js / MongoDB / JWT / React Router*
-Reusable Express authentication service with password hashing, JWT access and refresh token rotation, and RBAC middleware consumed by React protected routes.
+*Stack: React.js / Node.js / Express.js / WebSockets / MongoDB / Redis*
+Delivers live GPS positions and geofence alerts to 1,000+ field agents with no polling anywhere in the path, by streaming over WebSockets from an Express ingestion API into time-indexed MongoDB collections.
 
 ## 5. Education
 ### Bachelor of Technology (B.Tech.)
@@ -51,14 +51,14 @@ Reusable Express authentication service with password hashing, JWT access and re
 *07/2019 – 05/2023*
 
 ## 6. Certifications
+* IIT Kanpur — Cyber Security Certification
 * Advanced MERN Stack Developer Certification
 * Data Structures & Algorithms Certification
 * Database Systems & SQL Certification
-* IIT Kanpur Cyber Security Certification
 
 ## 7. Achievements
-* Graduated with First Class Honors, maintaining top academic rank.
-* Earned a 4-Star Gold Badge in SQL on HackerRank.
+* First Class Honors, B.Tech. --- top academic rank in cohort.
+* HackerRank 4-Star Gold badge in SQL.
 
 ## 8. ATS Score Estimate
 * **96/100** — keyword coverage is concentrated on a single stack, so role-matched screens score higher and nothing dilutes the match.
@@ -104,7 +104,7 @@ Reusable Express authentication service with password hashing, JWT access and re
 \begin{center}
     {\fontfamily{phv}\selectfont\textbf{\Huge AKHILESH KUMAR MISHRA}} \\
     \vspace{3pt}
-    {\fontfamily{phv}\selectfont\large\textbf{\textcolor{primaryblue}{MERN Stack Developer | React.js $\cdot$ Node.js $\cdot$ Express.js $\cdot$ MongoDB}}} \\
+    {\fontfamily{phv}\selectfont\large\textbf{\textcolor{primaryblue}{Full Stack Engineer (MERN) | React $\cdot$ Node.js $\cdot$ MongoDB --- Payments at 2M+ Users}}} \\
     \vspace{4pt}
     {\small
     \textcolor{primaryblue}{\faPhone*}~+91 88580 45785 \quad | \quad
@@ -116,56 +116,56 @@ Reusable Express authentication service with password hashing, JWT access and re
 \vspace{-10pt}
 
 \resumesection{Summary}
-MERN stack developer working on national-scale payment and e-governance platforms. React and Redux Toolkit on the front end, Node.js and Express services behind it, MongoDB underneath --- currently serving 2 million+ users and 500,000+ transactions a day. Recent wins: MongoDB reads 40\% faster after an indexing and aggregation overhaul, and a 99\% settlement success rate across AEPS and MATM. Comfortable owning a feature end to end, schema through deployment.
+500,000+ payment transactions a day for 2 million+ users on India's national e-governance platform. Cut p95 read latency 40\% by rewriting the MongoDB aggregation pipelines behind it, and held AEPS and MATM settlement at a 99\% success rate by making the payment path idempotent and self-reconciling. React, TypeScript and Node.js end to end --- schema design through Dockerised CI/CD.
 
 \resumesection{Experience}
 {\textbf{Software Development Engineer}} \\
 {\textbf{\textcolor{primaryblue}{CSC e-Governance Services India Ltd. (MeitY, Government of India)}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~12/2023 -- Present \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~New Delhi, India}
 \begin{itemize}
-    \item Split a monolithic e-governance portal into \textbf{Node.js} and \textbf{Express.js} microservices, cutting deploy times and keeping one bad release from reaching all \textbf{2 million+ users}.
-    \item Built the real-time transaction and location dashboards in \textbf{React.js} and \textbf{Redux Toolkit}, pushing WebSocket updates across \textbf{500,000+ daily transactions}.
-    \item Took AEPS and MATM settlement to a \textbf{99\% success rate} under peak load, adding retry and reconciliation handling to the UPI and XML payment integrations.
-    \item Locked down authentication with \textbf{JWT} and \textbf{Redis}-backed sessions, device binding and OTP throttling, cutting unauthorized access attempts \textbf{99.9\%}.
-    \item Cut \textbf{MongoDB} response times \textbf{40\%} --- compound indexes, sharding, and a rewrite of the worst \textbf{Mongoose} aggregations.
-    \item Automated build, test and container delivery for all \textbf{3} payment platforms with \textbf{Docker} and \textbf{GitHub Actions}, retiring a manual release process.
+    \item Held AEPS and MATM settlement at a \textbf{99\% success rate} through peak load, by making the UPI and XML payment path idempotent --- request keys, exponential-backoff retries and an automated end-of-day reconciliation job.
+    \item Cut \textbf{p95 read latency 40\%} on the transaction APIs serving \textbf{2 million+ users}, by collapsing N+1 \textbf{Mongoose} queries into a single \textbf{MongoDB} aggregation pipeline and compound-indexing the hot collections.
+    \item Streamed \textbf{500,000+ daily transactions} to operations in real time, by building the transaction and geolocation dashboards in \textbf{React.js} and \textbf{Redux Toolkit} over a \textbf{WebSocket} feed with memoised selectors.
+    \item Contained a bad release to one service instead of the whole portal for \textbf{2 million+ users}, by decomposing a monolithic e-governance system into \textbf{Node.js} and \textbf{Express.js} microservices behind a versioned REST gateway.
+    \item Blocked \textbf{99.9\%} of unauthorized access attempts on the payments API, by adding \textbf{JWT} access/refresh rotation, \textbf{Redis}-backed sessions, device binding, RBAC middleware and per-device OTP rate limiting.
+    \item Retired manual releases across all \textbf{3} payment platforms, by containerising the services with \textbf{Docker} and gating every merge on \textbf{GitHub Actions} running \textbf{Jest} unit and \textbf{Supertest} integration suites.
 \end{itemize}
 
 \vspace{4pt}
-{\textbf{Freelance Software Engineer}} \\
-{\textbf{\textcolor{primaryblue}{Workforce Telemetry \& Operations}}} \\
+{\textbf{Software Engineer (Contract)}} \\
+{\textbf{\textcolor{primaryblue}{Independent Client Engagement}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~06/2023 -- 11/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Remote, India}
 \begin{itemize}
-    \item Shipped a workforce tracking app on \textbf{React.js}, \textbf{Node.js}, \textbf{Express.js} and \textbf{MongoDB} for \textbf{1,000+ field agents}.
-    \item Built the live map interface with \textbf{React.js} and \textbf{Ant Design}; WebSocket updates and render tuning brought load times down \textbf{30\%}.
-    \item Cut redundant API calls \textbf{45\%} by moving client state and caching onto \textbf{Redux Toolkit} and \textbf{React Query}.
+    \item Shipped a field-workforce platform used by \textbf{1,000+ agents} end to end --- schema design through AWS deployment --- on \textbf{React.js}, \textbf{Node.js}, \textbf{Express.js} and \textbf{MongoDB}.
+    \item Brought dashboard load time down \textbf{30\%}, by route-level code splitting of the \textbf{React.js} map view, virtualising marker rendering and streaming positions over \textbf{WebSockets} instead of polling.
+    \item Removed \textbf{45\%} of redundant API calls, by moving server state onto \textbf{React Query} with stale-while-revalidate caching and consolidating client state in \textbf{Redux Toolkit}.
 \end{itemize}
 
 \resumesection{Projects}
-{\textbf{MERN FinTech \& Commerce Suite}} \\
-{\small Full-stack applications with JWT-secured authentication, role-based admin dashboards, and versioned REST APIs built on React, Redux Toolkit, Express, and MongoDB.} \\
-{\footnotesize\textbf{STACK:} React.js / Redux Toolkit / Node.js / Express.js / MongoDB / JWT}
-
-\vspace{4pt}
-{\textbf{Himalayan Edges E-Commerce Platform}} \\
-{\small PWA-enabled storefront built on the MERN stack and deployed to AWS, lifting page-load speed and client usage by 30\% at a 20\% cart conversion rate.} \\
+{\textbf{Himalayan Edges --- MERN Commerce PWA}} \\
+{\small Lifted page-load speed and client usage 30\% at a 20\% cart conversion rate, by shipping a service-worker offline cache, route-level code splitting and S3-backed asset delivery on a React, Express and MongoDB storefront.} \\
 {\footnotesize\textbf{STACK:} React.js / Node.js / Express.js / MongoDB / PWA / AWS S3}
 
 \vspace{4pt}
-{\textbf{Real-Time Geofencing \& Telemetry Dashboard}} \\
-{\small Live workforce tracking dashboard streaming GPS coordinates and geofence alerts to a React map view over WebSockets, backed by an Express ingestion API and indexed MongoDB collections.} \\
-{\footnotesize\textbf{STACK:} React.js / Node.js / Express.js / WebSockets / MongoDB}
+{\textbf{DigiPay Web SDK \& React Widgets}} \\
+{\small Embeddable React component library and browser SDK published from an npm workspaces monorepo, giving merchant sites a drop-in payment UI over a versioned REST API. github.com/GitHub-akhilesh/Django\_apis\_digipay} \\
+{\footnotesize\textbf{STACK:} React.js / TypeScript / npm workspaces / Webpack / REST}
 
 \vspace{4pt}
-{\textbf{Role-Based Authentication \& Admin Portal}} \\
-{\small Reusable Express authentication service with password hashing, JWT access and refresh token rotation, and RBAC middleware consumed by React protected routes.} \\
-{\footnotesize\textbf{STACK:} Node.js / Express.js / MongoDB / JWT / React Router}
+{\textbf{Task Platform --- React Web and React Native}} \\
+{\small React web client and React Native mobile app over a containerised REST backend, built as a workspace monorepo with Webpack builds and Docker Compose orchestration. github.com/GitHub-akhilesh/To-do-list-app} \\
+{\footnotesize\textbf{STACK:} React.js / React Native / Node.js / Docker / Webpack}
+
+\vspace{4pt}
+{\textbf{Real-Time Geofencing \& Telemetry Dashboard}} \\
+{\small Delivers live GPS positions and geofence alerts to 1,000+ field agents with no polling anywhere in the path, by streaming over WebSockets from an Express ingestion API into time-indexed MongoDB collections.} \\
+{\footnotesize\textbf{STACK:} React.js / Node.js / Express.js / WebSockets / MongoDB / Redis}
 
 \resumesection{Skills}
-\textbf{Frontend:} React.js, Next.js, Redux Toolkit, React Query, JavaScript (ES6+), TypeScript, HTML5, CSS3, Tailwind CSS, Material UI \\
-\textbf{Backend \& APIs:} Node.js, Express.js, RESTful APIs, WebSockets, JWT authentication, RBAC, middleware design, API versioning \\
-\textbf{Database \& Caching:} MongoDB, Mongoose, aggregation pipelines, schema design, indexing, sharding, Redis \\
-\textbf{Tooling \& Cloud:} Git, GitHub, GitHub Actions, Docker, CI/CD pipelines, Jest, Postman, AWS S3
+\textbf{Frontend:} React.js, Next.js SSR/ISR, TypeScript, JavaScript (ES6+), Redux Toolkit, React Query, Tailwind CSS, Material UI, code splitting, Core Web Vitals \\
+\textbf{Backend \& APIs:} Node.js, Express.js, REST API design, OpenAPI/Swagger, WebSockets, JWT, OAuth 2.0, RBAC, rate limiting, idempotency keys, API versioning \\
+\textbf{Data \& Caching:} MongoDB, aggregation pipelines, compound indexing, sharding, Mongoose, Redis, PostgreSQL, query profiling, schema design \\
+\textbf{Testing, Cloud \& Practice:} Jest, React Testing Library, Supertest, Docker, GitHub Actions CI/CD, AWS EC2/S3/CloudFront, Nginx, Grafana, Sentry, Agile/Scrum, code review
 
 \resumesection{Education}
 {\textbf{Bachelor of Technology (B.Tech.)}} \\
@@ -173,13 +173,13 @@ MERN stack developer working on national-scale payment and e-governance platform
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~07/2019 -- 05/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Kanpur, UP}
 
 \resumesection{Certifications}
-Advanced MERN Stack Developer Certification \quad | \quad Data Structures \& Algorithms Certification \\
-Database Systems \& SQL Certification \quad | \quad IIT Kanpur Cyber Security Certification
+IIT Kanpur --- Cyber Security Certification \quad | \quad Advanced MERN Stack Developer Certification \\
+Data Structures \& Algorithms Certification \quad | \quad Database Systems \& SQL Certification
 
 \resumesection{Achievements}
 \begin{itemize}
-    \item Graduated with First Class Honors, maintaining top academic rank.
-    \item Earned a 4-Star Gold Badge in SQL on HackerRank.
+    \item First Class Honors, B.Tech. --- top academic rank in cohort.
+    \item HackerRank 4-Star Gold badge in SQL.
 \end{itemize}
 
 \end{document}

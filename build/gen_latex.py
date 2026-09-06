@@ -31,13 +31,13 @@ JOBS = [
     {"role": "Software Development Engineer",
      "company": "CSC e-Governance Services India Ltd. (MeitY, Government of India)",
      "dates": "12/2023 -- Present", "place": "New Delhi, India"},
-    {"role": "Freelance Software Engineer",
-     "company": "Workforce Telemetry \\& Operations",
+    {"role": "Software Engineer (Contract)",
+     "company": "Independent Client Engagement",
      "dates": "06/2023 -- 11/2023", "place": "Remote, India"},
 ]
 
-ACHIEVEMENTS = ["Graduated with First Class Honors, maintaining top academic rank.",
-                "Earned a 4-Star Gold Badge in SQL on HackerRank."]
+ACHIEVEMENTS = ["First Class Honors, B.Tech. --- top academic rank in cohort.",
+                "HackerRank 4-Star Gold badge in SQL."]
 
 ESCAPES = [("\\", r"\textbackslash{}"), ("&", r"\&"), ("%", r"\%"),
            ("$", r"\$"), ("#", r"\#"), ("_", r"\_"),

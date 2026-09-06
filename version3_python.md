@@ -2,48 +2,48 @@
 > Single-stack by design. This version mentions only the technologies relevant to the target role.
 
 ## 1. Professional Summary
-Python full stack developer focused on asynchronous backends for high-volume FinTech. Django and Django REST Framework where the domain is CRUD-heavy, FastAPI where latency matters, Celery and Redis for whatever belongs off the request path. Currently on services clearing 500,000+ transactions a day for 2 million+ users, streaming live status over WebSockets in under 500ms. Reads the query plan before adding the index.
+500,000+ transactions a day for 2 million+ users on India national e-governance platforms, served by Django REST Framework and async FastAPI services. Took transaction query p95 down 45% by partitioning and indexing PostgreSQL, cleared 35% of the peak backlog onto Celery and Redis workers, and streams live status over WebSockets in under 500ms. Reads the query plan before adding the index.
 
 ## 2. Technical Skills
-* **Core Python:** Python, Django, Django REST Framework, FastAPI, Celery, SQLAlchemy, asyncio
-* **APIs & Security:** RESTful APIs, JWT authentication, OAuth, RBAC, FastAPI WebSockets, API versioning
-* **Data & Messaging:** PostgreSQL, MySQL, SQLite, Redis, Celery queues, indexing, partitioning, query optimization
-* **Tooling & Frontend:** Git, GitHub, Docker, Linux, Postman, CI/CD, React.js, JavaScript (ES6+), HTML5, CSS3
+* **Core Python:** Python, Django, Django REST Framework, FastAPI, Flask, Celery, SQLAlchemy, Alembic, asyncio
+* **APIs & Security:** RESTful APIs, OpenAPI/Swagger, JWT, OAuth 2.0, RBAC, rate limiting, idempotency keys, FastAPI WebSockets, API versioning
+* **Data & Messaging:** PostgreSQL, MySQL, Redis, Celery queues, covering indexes, partitioning, query plan analysis
+* **Testing & DevOps:** pytest, Docker, Kubernetes, GitHub Actions CI/CD, Linux, Postman, Prometheus, Grafana, React.js, JavaScript (ES6+)
 
 ## 3. Experience
 ### Software Development Engineer
 **CSC e-Governance Services India Ltd. (MeitY, Government of India)**
 *12/2023 – Present | New Delhi, India*
-* Moved monolithic web services onto async **FastAPI** and **Django** microservices serving **2 million+ users**.
-* Scaled AEPS, MATM and VATM orchestration on **Django REST Framework** to **500,000+ daily transactions** at a **99% success rate**.
-* Cut authentication latency **50%** with **JWT**, **RBAC** and OTP verification.
-* Pushed slow work off the request path with **Celery** and **Redis**, clearing **35%** of the backlog that showed up at peak traffic.
-* Partitioned and indexed the **PostgreSQL** and **MySQL** schemas, taking transaction query latency down **45%**.
-* Streamed live transaction status over **FastAPI WebSockets** — updates land in under **500ms**.
+* Scaled AEPS, MATM and VATM orchestration to **500,000+ daily transactions** at a **99% success rate**, by making the **Django REST Framework** payment path idempotent with request keys, backoff retries and nightly reconciliation.
+* Took transaction query p95 down **45%** across **PostgreSQL** and **MySQL**, by partitioning the hot tables and adding covering indexes chosen from the query plan.
+* Cleared **35%** of the peak-traffic backlog, by moving slow work off the request path onto **Celery** workers with **Redis** broking and idempotent task retries.
+* Delivered live transaction status in under **500ms**, by streaming updates over **FastAPI WebSockets** instead of client polling.
+* Contained a bad release to one service instead of the whole portal for **2 million+ users**, by moving monolithic web services onto async **FastAPI** and **Django** microservices behind a versioned REST gateway.
+* Cut authentication latency **50%**, by issuing **JWT** access/refresh pairs with **RBAC** claims and caching OTP verification state in **Redis**.
 
-### Freelance Software Engineer
-**Workforce Telemetry & Operations**
+### Software Engineer (Contract)
+**Independent Client Engagement**
 *06/2023 – 11/2023 | Remote, India*
-* Built a workforce telemetry and geofencing system on **FastAPI** and async **SQLAlchemy** for **1,000+ field agents**.
-* Held **99.9% uptime** on the GPS ingestion API while it absorbed **10,000+ concurrent** location pings.
-* Wired the telemetry dashboard in **React.js** to FastAPI WebSocket endpoints, **30%** quicker to load.
+* Built a workforce telemetry and geofencing system for **1,000+ field agents** end to end, on **FastAPI** and async **SQLAlchemy** with **Alembic** migrations.
+* Held **99.9% uptime** while absorbing **10,000+ concurrent** location pings, by batching writes through a **Celery** and **Redis** ingestion pipeline.
+* Brought dashboard load time down **30%**, by wiring the **React.js** telemetry view to **FastAPI WebSocket** endpoints instead of polling.
 
 ## 4. Projects
+### DigiPay API Platform
+*Stack: Python / FastAPI / PostgreSQL / Docker / GitHub Actions*
+FastAPI service with versioned routers, correlation-ID request tracing, auth and rate-limit middleware and a documented deprecation policy, packaged with Docker and a CI pipeline. github.com/GitHub-akhilesh/Django_apis_digipay
+
+### Polyglot Task Microservices
+*Stack: Python / Django / Flask / FastAPI / Docker / Kubernetes*
+Django REST API, Flask utility service and FastAPI notification service running side by side under Docker Compose with Kubernetes manifests, fronted by a React web client. github.com/GitHub-akhilesh/To-do-list-app
+
 ### Facial Recognition Attendance System
 *Stack: Python / OpenCV / Pandas / Tkinter / MySQL*
-Automated attendance tracking in Python with OpenCV (Haar Cascade and LBPH) face recognition, MySQL persistence, and Pandas-generated Excel reports.
-
-### Himalayan Edges Commerce Platform
-*Stack: Python / Django / Django REST Framework / SQLite / AWS / PWA*
-PWA-enabled e-commerce platform on Django and Django REST Framework, deployed to AWS, lifting page speed and client usage by 30%.
+Automated attendance capture in Python using OpenCV Haar Cascade and LBPH recognition, with MySQL persistence and Pandas-generated Excel reports. github.com/GitHub-akhilesh/automatic-attendance-through-face-detection
 
 ### Async Telemetry Ingestion & Reporting Service
 *Stack: Python / FastAPI / Celery / Redis / PostgreSQL / Pandas*
 FastAPI ingestion service with Celery and Redis task queues writing to partitioned PostgreSQL tables, plus Pandas reporting jobs over aggregated telemetry.
-
-### Persistent Task Management Dashboard
-*Stack: Python / Tkinter / JSON / MVC*
-Python desktop utility for task planning, category filtering, and JSON persistence, structured on a clean MVC separation.
 
 ## 5. Education
 ### Bachelor of Technology (B.Tech.)
@@ -57,8 +57,8 @@ Python desktop utility for task planning, category filtering, and JSON persisten
 * Advanced MERN Stack Developer Certification
 
 ## 7. Achievements
-* Graduated with First Class Honors, maintaining top academic rank.
-* Earned a 4-Star Gold Badge in SQL on HackerRank.
+* First Class Honors, B.Tech. --- top academic rank in cohort.
+* HackerRank 4-Star Gold badge in SQL.
 
 ## 8. ATS Score Estimate
 * **95/100** — keyword coverage is concentrated on a single stack, so role-matched screens score higher and nothing dilutes the match.
@@ -116,56 +116,56 @@ Python desktop utility for task planning, category filtering, and JSON persisten
 \vspace{-10pt}
 
 \resumesection{Summary}
-Python full stack developer focused on asynchronous backends for high-volume FinTech. Django and Django REST Framework where the domain is CRUD-heavy, FastAPI where latency matters, Celery and Redis for whatever belongs off the request path. Currently on services clearing 500,000+ transactions a day for 2 million+ users, streaming live status over WebSockets in under 500ms. Reads the query plan before adding the index.
+500,000+ transactions a day for 2 million+ users on India national e-governance platforms, served by Django REST Framework and async FastAPI services. Took transaction query p95 down 45\% by partitioning and indexing PostgreSQL, cleared 35\% of the peak backlog onto Celery and Redis workers, and streams live status over WebSockets in under 500ms. Reads the query plan before adding the index.
 
 \resumesection{Experience}
 {\textbf{Software Development Engineer}} \\
 {\textbf{\textcolor{primaryblue}{CSC e-Governance Services India Ltd. (MeitY, Government of India)}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~12/2023 -- Present \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~New Delhi, India}
 \begin{itemize}
-    \item Moved monolithic web services onto async \textbf{FastAPI} and \textbf{Django} microservices serving \textbf{2 million+ users}.
-    \item Scaled AEPS, MATM and VATM orchestration on \textbf{Django REST Framework} to \textbf{500,000+ daily transactions} at a \textbf{99\% success rate}.
-    \item Cut authentication latency \textbf{50\%} with \textbf{JWT}, \textbf{RBAC} and OTP verification.
-    \item Pushed slow work off the request path with \textbf{Celery} and \textbf{Redis}, clearing \textbf{35\%} of the backlog that showed up at peak traffic.
-    \item Partitioned and indexed the \textbf{PostgreSQL} and \textbf{MySQL} schemas, taking transaction query latency down \textbf{45\%}.
-    \item Streamed live transaction status over \textbf{FastAPI WebSockets} --- updates land in under \textbf{500ms}.
+    \item Scaled AEPS, MATM and VATM orchestration to \textbf{500,000+ daily transactions} at a \textbf{99\% success rate}, by making the \textbf{Django REST Framework} payment path idempotent with request keys, backoff retries and nightly reconciliation.
+    \item Took transaction query p95 down \textbf{45\%} across \textbf{PostgreSQL} and \textbf{MySQL}, by partitioning the hot tables and adding covering indexes chosen from the query plan.
+    \item Cleared \textbf{35\%} of the peak-traffic backlog, by moving slow work off the request path onto \textbf{Celery} workers with \textbf{Redis} broking and idempotent task retries.
+    \item Delivered live transaction status in under \textbf{500ms}, by streaming updates over \textbf{FastAPI WebSockets} instead of client polling.
+    \item Contained a bad release to one service instead of the whole portal for \textbf{2 million+ users}, by moving monolithic web services onto async \textbf{FastAPI} and \textbf{Django} microservices behind a versioned REST gateway.
+    \item Cut authentication latency \textbf{50\%}, by issuing \textbf{JWT} access/refresh pairs with \textbf{RBAC} claims and caching OTP verification state in \textbf{Redis}.
 \end{itemize}
 
 \vspace{4pt}
-{\textbf{Freelance Software Engineer}} \\
-{\textbf{\textcolor{primaryblue}{Workforce Telemetry \& Operations}}} \\
+{\textbf{Software Engineer (Contract)}} \\
+{\textbf{\textcolor{primaryblue}{Independent Client Engagement}}} \\
 {\footnotesize\textcolor{primaryblue}{\faCalendar*}~06/2023 -- 11/2023 \quad | \quad \textcolor{primaryblue}{\faMapMarker*}~Remote, India}
 \begin{itemize}
-    \item Built a workforce telemetry and geofencing system on \textbf{FastAPI} and async \textbf{SQLAlchemy} for \textbf{1,000+ field agents}.
-    \item Held \textbf{99.9\% uptime} on the GPS ingestion API while it absorbed \textbf{10,000+ concurrent} location pings.
-    \item Wired the telemetry dashboard in \textbf{React.js} to FastAPI WebSocket endpoints, \textbf{30\%} quicker to load.
+    \item Built a workforce telemetry and geofencing system for \textbf{1,000+ field agents} end to end, on \textbf{FastAPI} and async \textbf{SQLAlchemy} with \textbf{Alembic} migrations.
+    \item Held \textbf{99.9\% uptime} while absorbing \textbf{10,000+ concurrent} location pings, by batching writes through a \textbf{Celery} and \textbf{Redis} ingestion pipeline.
+    \item Brought dashboard load time down \textbf{30\%}, by wiring the \textbf{React.js} telemetry view to \textbf{FastAPI WebSocket} endpoints instead of polling.
 \end{itemize}
 
 \resumesection{Projects}
-{\textbf{Facial Recognition Attendance System}} \\
-{\small Automated attendance tracking in Python with OpenCV (Haar Cascade and LBPH) face recognition, MySQL persistence, and Pandas-generated Excel reports.} \\
-{\footnotesize\textbf{STACK:} Python / OpenCV / Pandas / Tkinter / MySQL}
+{\textbf{DigiPay API Platform}} \\
+{\small FastAPI service with versioned routers, correlation-ID request tracing, auth and rate-limit middleware and a documented deprecation policy, packaged with Docker and a CI pipeline. github.com/GitHub-akhilesh/Django\_apis\_digipay} \\
+{\footnotesize\textbf{STACK:} Python / FastAPI / PostgreSQL / Docker / GitHub Actions}
 
 \vspace{4pt}
-{\textbf{Himalayan Edges Commerce Platform}} \\
-{\small PWA-enabled e-commerce platform on Django and Django REST Framework, deployed to AWS, lifting page speed and client usage by 30\%.} \\
-{\footnotesize\textbf{STACK:} Python / Django / Django REST Framework / SQLite / AWS / PWA}
+{\textbf{Polyglot Task Microservices}} \\
+{\small Django REST API, Flask utility service and FastAPI notification service running side by side under Docker Compose with Kubernetes manifests, fronted by a React web client. github.com/GitHub-akhilesh/To-do-list-app} \\
+{\footnotesize\textbf{STACK:} Python / Django / Flask / FastAPI / Docker / Kubernetes}
+
+\vspace{4pt}
+{\textbf{Facial Recognition Attendance System}} \\
+{\small Automated attendance capture in Python using OpenCV Haar Cascade and LBPH recognition, with MySQL persistence and Pandas-generated Excel reports. github.com/GitHub-akhilesh/automatic-attendance-through-face-detection} \\
+{\footnotesize\textbf{STACK:} Python / OpenCV / Pandas / Tkinter / MySQL}
 
 \vspace{4pt}
 {\textbf{Async Telemetry Ingestion \& Reporting Service}} \\
 {\small FastAPI ingestion service with Celery and Redis task queues writing to partitioned PostgreSQL tables, plus Pandas reporting jobs over aggregated telemetry.} \\
 {\footnotesize\textbf{STACK:} Python / FastAPI / Celery / Redis / PostgreSQL / Pandas}
 
-\vspace{4pt}
-{\textbf{Persistent Task Management Dashboard}} \\
-{\small Python desktop utility for task planning, category filtering, and JSON persistence, structured on a clean MVC separation.} \\
-{\footnotesize\textbf{STACK:} Python / Tkinter / JSON / MVC}
-
 \resumesection{Skills}
-\textbf{Core Python:} Python, Django, Django REST Framework, FastAPI, Celery, SQLAlchemy, asyncio \\
-\textbf{APIs \& Security:} RESTful APIs, JWT authentication, OAuth, RBAC, FastAPI WebSockets, API versioning \\
-\textbf{Data \& Messaging:} PostgreSQL, MySQL, SQLite, Redis, Celery queues, indexing, partitioning, query optimization \\
-\textbf{Tooling \& Frontend:} Git, GitHub, Docker, Linux, Postman, CI/CD, React.js, JavaScript (ES6+), HTML5, CSS3
+\textbf{Core Python:} Python, Django, Django REST Framework, FastAPI, Flask, Celery, SQLAlchemy, Alembic, asyncio \\
+\textbf{APIs \& Security:} RESTful APIs, OpenAPI/Swagger, JWT, OAuth 2.0, RBAC, rate limiting, idempotency keys, FastAPI WebSockets, API versioning \\
+\textbf{Data \& Messaging:} PostgreSQL, MySQL, Redis, Celery queues, covering indexes, partitioning, query plan analysis \\
+\textbf{Testing \& DevOps:} pytest, Docker, Kubernetes, GitHub Actions CI/CD, Linux, Postman, Prometheus, Grafana, React.js, JavaScript (ES6+)
 
 \resumesection{Education}
 {\textbf{Bachelor of Technology (B.Tech.)}} \\
@@ -178,8 +178,8 @@ IIT Kanpur Cyber Security Certification \quad | \quad Advanced MERN Stack Develo
 
 \resumesection{Achievements}
 \begin{itemize}
-    \item Graduated with First Class Honors, maintaining top academic rank.
-    \item Earned a 4-Star Gold Badge in SQL on HackerRank.
+    \item First Class Honors, B.Tech. --- top academic rank in cohort.
+    \item HackerRank 4-Star Gold badge in SQL.
 \end{itemize}
 
 \end{document}
