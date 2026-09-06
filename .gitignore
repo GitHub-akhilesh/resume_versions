@@ -17,3 +17,6 @@ $RECYCLE.BIN/
 __pycache__/
 *.pyc
 build/.cache/
+
+# GitHub Desktop clone of this same repo, nested by accident
+resume_versions/
