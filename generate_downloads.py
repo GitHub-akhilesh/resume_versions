@@ -70,6 +70,38 @@ def extract_latex():
     gen_latex.main()
 
 
+def _grid_projects(el):
+    """(title, desc, stack) for either projects dialect.
+
+    modern/executive/enhancv use .project-card with .project-title/.project-desc
+    /.project-stack. classic/minimal use .experience-item with .role-title
+    (title), .meta-line (stack) and .project-desc. Returning a uniform tuple
+    lets one renderer serve both.
+    """
+    cards = el.xpath('.//div[@class="project-card"]')
+    if cards:
+        out = []
+        for c in cards:
+            t = c.xpath('.//div[@class="project-title"]/text()')
+            d = c.xpath('.//div[@class="project-desc"]/text()')
+            k = c.xpath('.//div[@class="project-stack"]//text()')
+            out.append((t[0].strip() if t else "",
+                        d[0].strip() if d else "",
+                        "".join(k).strip()))
+        return out
+    out = []
+    for it in el.xpath('.//div[@class="experience-item"]'):
+        t = it.xpath('./div[@class="role-title"]/text()')
+        k = it.xpath('./div[@class="meta-line"]/text()')
+        d = it.xpath('./div[@class="project-desc"]/text()')
+        if not d:
+            continue
+        out.append((t[0].strip() if t else "",
+                    d[0].strip(),
+                    k[0].strip() if k else ""))
+    return out
+
+
 def add_p_border_bottom(paragraph, color_hex="0C4F6B", size="8"):
     pPr = paragraph._p.get_or_add_pPr()
     pBdr = parse_xml(r'<w:pBdr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">'
@@ -283,7 +315,7 @@ def generate_word_docs():
                         run_strong.font.size = Pt(8.5)
                         run_strong.font.color.rgb = primary_color_rgb
                         
-                        rest_text = sk.text_content()[len(strong_tag.text_content()):].strip()
+                        rest_text = (strong_tag.tail or "").strip()
                         run_rest = p.add_run(rest_text)
                         run_rest.font.name = font_name
                         run_rest.font.size = Pt(8)
@@ -526,17 +558,13 @@ def generate_word_docs():
                                         run.bold = True
 
                 elif c_class == 'projects-grid':
-                    projs = child.xpath('.//div[@class="project-card"]')
-                    for proj in projs:
-                        title = proj.xpath('.//div[@class="project-title"]/text()')
-                        desc = proj.xpath('.//div[@class="project-desc"]/text()')
-                        stack = proj.xpath('.//div[@class="project-stack"]//text()')
+                    for title, desc, stack in _grid_projects(child):
                         
                         p_title = main_cell.add_paragraph()
                         p_title.paragraph_format.space_before = Pt(4)
                         p_title.paragraph_format.space_after = Pt(1)
                         if title:
-                            run = p_title.add_run(title[0].strip())
+                            run = p_title.add_run(title)
                             run.bold = True
                             run.font.name = font_name
                             run.font.size = Pt(10)
@@ -546,7 +574,7 @@ def generate_word_docs():
                             p_desc = main_cell.add_paragraph()
                             p_desc.paragraph_format.space_before = Pt(0)
                             p_desc.paragraph_format.space_after = Pt(1)
-                            run = p_desc.add_run(desc[0].strip())
+                            run = p_desc.add_run(desc)
                             run.font.name = font_name
                             run.font.size = Pt(9.5)
                             run.font.color.rgb = RGBColor(0x33, 0x41, 0x55)
@@ -555,7 +583,7 @@ def generate_word_docs():
                             p_stack = main_cell.add_paragraph()
                             p_stack.paragraph_format.space_before = Pt(0)
                             p_stack.paragraph_format.space_after = Pt(4)
-                            run = p_stack.add_run("".join(stack).strip())
+                            run = p_stack.add_run(stack)
                             run.font.name = font_name
                             run.font.size = Pt(8.5)
                             run.font.color.rgb = RGBColor(0x64, 0x74, 0x8b)
@@ -827,7 +855,7 @@ def generate_word_docs():
                             run_bold.font.size = Pt(10)
                             run_bold.font.color.rgb = primary_color_rgb
                             
-                            rest_text = line.text_content()[len(strong_el.text_content()):].strip()
+                            rest_text = (strong_el.tail or "").strip()
                             run_norm = p.add_run(rest_text)
                             run_norm.font.name = font_name
                             run_norm.font.size = Pt(10)
@@ -839,7 +867,7 @@ def generate_word_docs():
                             run_norm.font.color.rgb = RGBColor(0x33, 0x33, 0x33)
 
                 elif el_class == 'projects-grid':
-                    cards = el.xpath('.//div[@class="project-card"]')
+                    cards = _grid_projects(el)
                     if cards:
                         table = doc.add_table(rows=(len(cards) + 1) // 2, cols=2)
                         table.autofit = False
@@ -849,7 +877,7 @@ def generate_word_docs():
                             for idx, width in enumerate(widths):
                                 row.cells[idx].width = width
                         
-                        for idx, card in enumerate(cards):
+                        for idx, (title_el, desc_el, stack_el) in enumerate(cards):
                             row_idx = idx // 2
                             col_idx = idx % 2
                             cell = table.cell(row_idx, col_idx)
@@ -861,26 +889,23 @@ def generate_word_docs():
                             card_inner.paragraph_format.space_before = Pt(6)
                             card_inner.paragraph_format.space_after = Pt(6)
                             
-                            title_el = card.xpath('.//div[@class="project-title"]/text()')
-                            desc_el = card.xpath('.//div[@class="project-desc"]/text()')
-                            stack_el = card.xpath('.//div[@class="project-stack"]')
-                            
                             if title_el:
-                                run_title = card_inner.add_run(title_el[0].strip() + "\\n")
+                                run_title = card_inner.add_run(title_el)
                                 run_title.bold = True
                                 run_title.font.name = font_name
                                 run_title.font.size = Pt(10.5)
                                 run_title.font.color.rgb = RGBColor(0x1a, 0x1a, 0x1a)
+                                run_title.add_break()
                                 
                             if desc_el:
-                                run_desc = card_inner.add_run(desc_el[0].strip() + "\\n")
+                                run_desc = card_inner.add_run(desc_el)
                                 run_desc.font.name = font_name
                                 run_desc.font.size = Pt(9.5)
                                 run_desc.font.color.rgb = RGBColor(0x33, 0x33, 0x33)
+                                run_desc.add_break()
                                 
                             if stack_el:
-                                stack_text = stack_el[0].text_content().strip()
-                                run_stack = card_inner.add_run(stack_text)
+                                run_stack = card_inner.add_run(stack_el)
                                 run_stack.font.name = font_name
                                 run_stack.font.size = Pt(8.5)
                                 run_stack.font.color.rgb = RGBColor(0x71, 0x80, 0x96)

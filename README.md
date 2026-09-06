@@ -51,7 +51,8 @@ To change resume wording, edit `build/content.py` — the single source of truth
 then run:
 
 ```
-python build/apply_content.py index.html   # rewrite all 20 sheets in the page
+python build/apply_content.py              # rewrite all 20 sheets in BOTH pages
+                                          # (index.html + resume_preview.html)
 python generate_downloads.py              # rebuild every download
 ```
 
@@ -62,7 +63,7 @@ python generate_downloads.py              # rebuild every download
 | File | Role |
 |---|---|
 | `build/content.py` | All resume copy, per version. Edit this. |
-| `build/apply_content.py` | Writes that copy into the 20 sheets in `index.html`. |
+| `build/apply_content.py` | Writes that copy into the 20 sheets in `index.html` **and** `resume_preview.html`. |
 | `build/render_pdfs.py` | Renders each sheet to a single-page PDF via headless Chrome. |
 | `build/gen_latex.py` | Generates `downloads/*.tex`. |
 | `build/gen_md.py` | Regenerates the `version*.md` documents. |

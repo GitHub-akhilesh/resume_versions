@@ -10,7 +10,10 @@ import io, re, sys, os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from content import VERSIONS
 
-SRC = sys.argv[1] if len(sys.argv) > 1 else "index.html"
+# index.html is the site; resume_preview.html is what generate_downloads.py
+# parses for the .docx files. Both must carry the same copy, so both are
+# rewritten by default -- passing paths explicitly still works.
+SRCS = sys.argv[1:] or ["index.html", "resume_preview.html"]
 
 def sheets_end(src):
     """Where the last resume sheet stops.
@@ -174,6 +177,17 @@ def rewrite_block(blk, name, data):
 
 
 def main():
+    rc = 0
+    for path in SRCS:
+        if not os.path.exists(path):
+            print("skipped %s (not found)" % path)
+            continue
+        rc |= rewrite_file(path)
+    return rc
+
+
+def rewrite_file(SRC):
+    del errors[:]
     src = io.open(SRC, encoding="utf-8").read()
     ids = [(m.start(), m.group(1)) for m in
            re.finditer(r'<div id="(version\d-\w+)" class="resume-sheet', src)]
