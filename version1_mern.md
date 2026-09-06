@@ -2,7 +2,7 @@
 > Single-stack by design. This version mentions only the technologies relevant to the target role.
 
 ## 1. Professional Summary
-500,000+ payment transactions a day for 2 million+ users on India's national e-governance platform. Cut p95 read latency 40% by rewriting the MongoDB aggregation pipelines behind it, and held AEPS and MATM settlement at a 99% success rate by making the payment path idempotent and self-reconciling. React, TypeScript and Node.js end to end — schema design through Dockerised CI/CD.
+Full stack engineer, 3+ years on India's national payments platform — 500,000+ transactions a day for 2 million+ users. Cut p95 read latency 40% by rewriting the MongoDB aggregation pipelines behind it, and held AEPS and MATM settlement at a 99% success rate by making the payment path idempotent and self-reconciling. React, TypeScript and Node.js end to end — schema design through Dockerised CI/CD.
 
 ## 2. Technical Skills
 * **Frontend:** React.js, Next.js SSR/ISR, TypeScript, JavaScript (ES6+), Redux Toolkit, React Query, Tailwind CSS, Material UI, code splitting, Core Web Vitals
@@ -112,7 +112,7 @@ Delivers live GPS positions and geofence alerts to 1,000+ field agents with no p
 \vspace{-10pt}
 
 \resumesection{Summary}
-500,000+ payment transactions a day for 2 million+ users on India's national e-governance platform. Cut p95 read latency 40\% by rewriting the MongoDB aggregation pipelines behind it, and held AEPS and MATM settlement at a 99\% success rate by making the payment path idempotent and self-reconciling. React, TypeScript and Node.js end to end --- schema design through Dockerised CI/CD.
+Full stack engineer, 3+ years on India's national payments platform --- 500,000+ transactions a day for 2 million+ users. Cut p95 read latency 40\% by rewriting the MongoDB aggregation pipelines behind it, and held AEPS and MATM settlement at a 99\% success rate by making the payment path idempotent and self-reconciling. React, TypeScript and Node.js end to end --- schema design through Dockerised CI/CD.
 
 \resumesection{Experience}
 {\textbf{Software Development Engineer}} \\

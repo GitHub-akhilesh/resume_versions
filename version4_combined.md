@@ -2,7 +2,7 @@
 > Single-stack by design. This version mentions only the technologies relevant to the target role.
 
 ## 1. Professional Summary
-Distributed systems for national e-governance and FinTech — 2 million+ users and 500,000+ transactions a day across Spring Boot, FastAPI and Node.js services. Cut p95 latency 45% across MySQL, PostgreSQL and MongoDB, lifted message throughput 35% on Kafka, and put every service behind Prometheus and Grafana. Hired and onboarded 4 engineers and moved the team onto Docker-based CI/CD.
+Software engineer, 3+ years building distributed systems for national e-governance and FinTech — 2 million+ users and 500,000+ transactions a day across Spring Boot, FastAPI and Node.js services. Cut p95 latency 45% across MySQL, PostgreSQL and MongoDB, lifted message throughput 35% on Kafka, and put every service behind Prometheus and Grafana. Hired and onboarded 4 engineers and moved the team onto Docker-based CI/CD.
 
 ## 2. Technical Skills
 * **Languages:** Java, Python, JavaScript (ES6+), TypeScript, SQL, C++, HTML5, CSS3
@@ -113,7 +113,7 @@ Industrial data and visual automation project documented end to end — business
 \vspace{-10pt}
 
 \resumesection{Summary}
-Distributed systems for national e-governance and FinTech --- 2 million+ users and 500,000+ transactions a day across Spring Boot, FastAPI and Node.js services. Cut p95 latency 45\% across MySQL, PostgreSQL and MongoDB, lifted message throughput 35\% on Kafka, and put every service behind Prometheus and Grafana. Hired and onboarded 4 engineers and moved the team onto Docker-based CI/CD.
+Software engineer, 3+ years building distributed systems for national e-governance and FinTech --- 2 million+ users and 500,000+ transactions a day across Spring Boot, FastAPI and Node.js services. Cut p95 latency 45\% across MySQL, PostgreSQL and MongoDB, lifted message throughput 35\% on Kafka, and put every service behind Prometheus and Grafana. Hired and onboarded 4 engineers and moved the team onto Docker-based CI/CD.
 
 \resumesection{Experience}
 {\textbf{Software Development Engineer}} \\

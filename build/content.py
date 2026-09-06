@@ -4,7 +4,7 @@
 V1 = {  # ---------------- MERN ----------------
  "ats": "96",
  "title": "Full Stack Engineer (MERN) | React &middot; Node.js &middot; MongoDB &mdash; Payments at 2M+ Users",
- "summary": "500,000+ payment transactions a day for 2 million+ users on India's national e-governance platform. Cut p95 read latency 40% by rewriting the MongoDB aggregation pipelines behind it, and held AEPS and MATM settlement at a 99% success rate by making the payment path idempotent and self-reconciling. React, TypeScript and Node.js end to end &mdash; schema design through Dockerised CI/CD.",
+ "summary": "Full stack engineer, 3+ years on India's national payments platform &mdash; 500,000+ transactions a day for 2 million+ users. Cut p95 read latency 40% by rewriting the MongoDB aggregation pipelines behind it, and held AEPS and MATM settlement at a 99% success rate by making the payment path idempotent and self-reconciling. React, TypeScript and Node.js end to end &mdash; schema design through Dockerised CI/CD.",
  "skills": [
    ("Frontend", "React.js, Next.js SSR/ISR, TypeScript, JavaScript (ES6+), Redux Toolkit, React Query, Tailwind CSS, Material UI, code splitting, Core Web Vitals"),
    ("Backend &amp; APIs", "Node.js, Express.js, REST API design, OpenAPI/Swagger, WebSockets, JWT, OAuth 2.0, RBAC, rate limiting, idempotency keys, API versioning"),
@@ -43,7 +43,7 @@ V1 = {  # ---------------- MERN ----------------
 V2 = {  # ---------------- Java ----------------
  "ats": "96",
  "title": "Java Full Stack Developer | Spring Boot &middot; Microservices &middot; REST APIs",
- "summary": "Backend engineer running payment infrastructure that clears 500,000+ transactions a day for 2M+ users. Java/Spring Boot, Kafka, microservices. Wallet and ledger services settle over 10 billion INR daily with balances that reconcile, and AEPS, MATM and VATM orchestration holds a 99% success rate at peak through idempotent request handling and automated reconciliation. Cut p95 database latency 45% with covering indexes and Redis caching.",
+ "summary": "Backend engineer, 3+ years running payment infrastructure that clears 500,000+ transactions a day for 2M+ users. Java/Spring Boot, Kafka, microservices. Wallet and ledger services settle over 10 billion INR daily with balances that reconcile, and AEPS, MATM and VATM orchestration holds a 99% success rate at peak through idempotent request handling and automated reconciliation. Cut p95 database latency 45% with covering indexes and Redis caching.",
  "skills": [
    ("Core", "Java, Spring Boot, Spring Security, Spring Data JPA, Hibernate, microservices, REST APIs"),
    ("Data &amp; Messaging", "Apache Kafka, MySQL, PostgreSQL, MongoDB, Redis, transaction boundaries, covering indexes, query tuning"),
@@ -82,7 +82,7 @@ V2 = {  # ---------------- Java ----------------
 V3 = {  # ---------------- Python ----------------
  "ats": "95",
  "title": "Python Full Stack Developer | Django &middot; FastAPI &middot; REST APIs",
- "summary": "500,000+ transactions a day for 2 million+ users on India national e-governance platforms, served by Django REST Framework and async FastAPI services. Took transaction query p95 down 45% by partitioning and indexing PostgreSQL, cleared 35% of the peak backlog onto Celery and Redis workers, and streams live status over WebSockets in under 500ms. Reads the query plan before adding the index.",
+ "summary": "Python backend engineer, 3+ years on services clearing 500,000+ transactions a day for 2 million+ users, served by Django REST Framework and async FastAPI services. Took transaction query p95 down 45% by partitioning and indexing PostgreSQL, cleared 35% of the peak backlog onto Celery and Redis workers, and streams live status over WebSockets in under 500ms. Reads the query plan before adding the index.",
  "skills": [
    ("Core Python", "Python, Django, Django REST Framework, FastAPI, Flask, Celery, SQLAlchemy, Alembic, asyncio"),
    ("APIs &amp; Security", "RESTful APIs, OpenAPI/Swagger, JWT, OAuth 2.0, RBAC, rate limiting, idempotency keys, FastAPI WebSockets, API versioning"),
@@ -121,7 +121,7 @@ V3 = {  # ---------------- Python ----------------
 V4 = {  # ---------------- Software Engineer (generalist) ----------------
  "ats": "95",
  "title": "Software Development Engineer | Microservices &middot; Distributed Systems &middot; Full Stack",
- "summary": "Distributed systems for national e-governance and FinTech &mdash; 2 million+ users and 500,000+ transactions a day across Spring Boot, FastAPI and Node.js services. Cut p95 latency 45% across MySQL, PostgreSQL and MongoDB, lifted message throughput 35% on Kafka, and put every service behind Prometheus and Grafana. Hired and onboarded 4 engineers and moved the team onto Docker-based CI/CD.",
+ "summary": "Software engineer, 3+ years building distributed systems for national e-governance and FinTech &mdash; 2 million+ users and 500,000+ transactions a day across Spring Boot, FastAPI and Node.js services. Cut p95 latency 45% across MySQL, PostgreSQL and MongoDB, lifted message throughput 35% on Kafka, and put every service behind Prometheus and Grafana. Hired and onboarded 4 engineers and moved the team onto Docker-based CI/CD.",
  "skills": [
    ("Languages", "Java, Python, JavaScript (ES6+), TypeScript, SQL, C++, HTML5, CSS3"),
    ("Backend &amp; Architecture", "Spring Boot, Django, FastAPI, Node.js, Express.js, React.js, Next.js, microservices, REST APIs, idempotency, rate limiting, WebSockets"),
